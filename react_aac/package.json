@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@shopify/polaris-icons": "^9.1.0"
+  },
+  "proxy": "https://aactest.myshopify.com",
+
+}
