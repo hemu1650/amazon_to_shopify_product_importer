@@ -1,0 +1,63 @@
+<div ng-controller="Preloader" class="">
+	<div style="margin: 5% auto; position: relative; width: 400px;">
+		<!-- this is demo - you can remove it -->
+		<div class="alert alert-warning">
+			<label>User : yep@gmail.com</label><br>
+			<label>Password : 123456</label>
+		</div>
+		<div class="alert alert-warning">
+			<b>Note:</b> If this is the first time you sign-in ngLaravel please wait a few seconds...
+		</div>
+		<!-- error alert panel -->
+		<div class="alert alert-danger" ng-if="signinError.data.error">
+			<strong>There was an error: </strong> {{signinError.data.error}}
+			<br>Please try again
+		</div>
+		<div id="sign-form" class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-center">
+							<h2>ngLaravel Admin Login</h2>
+							<h5 class="grey">Sign in with local account</h5>
+							<br>
+						</div>
+						<!--  ng-submit should be signin() -->
+						<form ng-submit="signin()" role="form" autocomplete="off" class="form-horizontal">
+							<fieldset ng-disabled="loader">
+								<div ng-hide="loader" class="text-center">
+									<img src="../assets/img/avatars/default.png" width="75" height="75" alt="avatar">
+								</div>
+								<div  ng-show="loader" class="text-center">
+									<img src="../assets/img/preloader/material.gif" alt="preloader">
+								</div>
+								<div class="spacing hidden-md"></div>
+								<div  class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span>
+									<input ng-model="user.email" type="text" class="form-control" id="email" placeholder="Email" required>
+								</div>
+								<div class="spacing"></div>
+								<div  class="input-group">
+									<span class="input-group-addon"><i class="fa fa-key"></i></span>
+									<input ng-model="user.password" type="password" class="form-control" id="password" placeholder="Password">
+								</div>
+								<div class="spacing"></div>
+								<button type="submit" class="btn btn-success btn-sm  pull-right">Sign In</button>
+
+							</fieldset>
+						</form>
+						<a ui-sref="forget-password" class="grey">Forget Password?</a>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+		<p>Copyright 2016 YEP Corporation. All right reserved.</p>
+	</div>
+
+</div>
+
+

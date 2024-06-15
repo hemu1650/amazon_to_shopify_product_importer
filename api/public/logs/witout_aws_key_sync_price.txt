@@ -1,0 +1,1837 @@
+2022-03-20 07:00:02 [INFO]: Execution Started
+2022-03-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-20 07:00:02 [StartTime]: 1647759602
+2022-03-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-20 07:00:02 [CRAWLING ROWS]: 0
+2022-03-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-20 07:00:02 [INFO]: Execution Finished
+2022-03-21 07:00:02 [INFO]: Execution Started
+2022-03-21 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-21 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-21 07:00:02 [StartTime]: 1647846002
+2022-03-21 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-21 07:00:03 [CRAWLING ROWS]: 0
+2022-03-21 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-21 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-03-21 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-21 07:00:03 [LOCK UPDATION]: lock updated
+2022-03-21 07:00:03 [INFO]: Execution Finished
+2022-03-22 07:00:01 [INFO]: Execution Started
+2022-03-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-22 07:00:01 [StartTime]: 1647932401
+2022-03-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-22 07:00:01 [CRAWLING ROWS]: 0
+2022-03-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-22 07:00:01 [INFO]: Execution Finished
+2022-03-23 07:00:01 [INFO]: Execution Started
+2022-03-23 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-23 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-23 07:00:01 [StartTime]: 1648018801
+2022-03-23 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-23 07:00:01 [CRAWLING ROWS]: 0
+2022-03-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-23 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-23 07:00:01 [INFO]: Execution Finished
+2022-03-24 07:00:01 [INFO]: Execution Started
+2022-03-24 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-24 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-24 07:00:01 [StartTime]: 1648105201
+2022-03-24 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-24 07:00:01 [CRAWLING ROWS]: 0
+2022-03-24 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-24 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-24 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-24 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-24 07:00:01 [INFO]: Execution Finished
+2022-03-25 07:00:01 [INFO]: Execution Started
+2022-03-25 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-25 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-25 07:00:01 [StartTime]: 1648191601
+2022-03-25 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-25 07:00:01 [CRAWLING ROWS]: 0
+2022-03-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-25 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-25 07:00:01 [INFO]: Execution Finished
+2022-03-26 07:00:01 [INFO]: Execution Started
+2022-03-26 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-26 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-26 07:00:01 [StartTime]: 1648278001
+2022-03-26 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-26 07:00:01 [CRAWLING ROWS]: 0
+2022-03-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-26 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-26 07:00:01 [INFO]: Execution Finished
+2022-03-27 07:00:01 [INFO]: Execution Started
+2022-03-27 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-27 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-27 07:00:01 [StartTime]: 1648364401
+2022-03-27 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-27 07:00:02 [CRAWLING ROWS]: 0
+2022-03-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-03-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-27 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-27 07:00:02 [INFO]: Execution Finished
+2022-03-28 07:00:02 [INFO]: Execution Started
+2022-03-28 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-28 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-28 07:00:02 [StartTime]: 1648450802
+2022-03-28 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-28 07:00:02 [CRAWLING ROWS]: 0
+2022-03-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-28 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-28 07:00:02 [INFO]: Execution Finished
+2022-03-29 07:00:01 [INFO]: Execution Started
+2022-03-29 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-29 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-29 07:00:02 [StartTime]: 1648537202
+2022-03-29 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-29 07:00:02 [CRAWLING ROWS]: 0
+2022-03-29 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-29 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-29 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-29 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-29 07:00:02 [INFO]: Execution Finished
+2022-03-30 07:00:01 [INFO]: Execution Started
+2022-03-30 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-30 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-30 07:00:01 [StartTime]: 1648623601
+2022-03-30 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-03-30 07:00:01 [CRAWLING ROWS]: 0
+2022-03-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-03-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-30 07:00:01 [LOCK UPDATION]: lock updated
+2022-03-30 07:00:01 [INFO]: Execution Finished
+2022-03-31 07:00:02 [INFO]: Execution Started
+2022-03-31 07:00:02 [LOCK UPDATION]: lock updated
+2022-03-31 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-31 07:00:02 [StartTime]: 1648710002
+2022-03-31 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-03-31 07:00:02 [CRAWLING ROWS]: 0
+2022-03-31 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-31 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-03-31 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-03-31 07:00:03 [LOCK UPDATION]: lock updated
+2022-03-31 07:00:03 [INFO]: Execution Finished
+2022-04-01 07:00:01 [INFO]: Execution Started
+2022-04-01 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-01 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-01 07:00:02 [StartTime]: 1648796402
+2022-04-01 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-01 07:00:02 [CRAWLING ROWS]: 0
+2022-04-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-01 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-01 07:00:02 [INFO]: Execution Finished
+2022-04-02 07:00:02 [INFO]: Execution Started
+2022-04-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-02 07:00:02 [StartTime]: 1648882802
+2022-04-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-02 07:00:02 [CRAWLING ROWS]: 0
+2022-04-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-02 07:00:02 [INFO]: Execution Finished
+2022-04-03 07:00:02 [INFO]: Execution Started
+2022-04-03 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-03 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-03 07:00:02 [StartTime]: 1648969202
+2022-04-03 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-03 07:00:02 [CRAWLING ROWS]: 0
+2022-04-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-03 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-03 07:00:02 [INFO]: Execution Finished
+2022-04-04 07:00:02 [INFO]: Execution Started
+2022-04-04 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-04 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-04 07:00:02 [StartTime]: 1649055602
+2022-04-04 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-04 07:00:02 [CRAWLING ROWS]: 0
+2022-04-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-04 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-04 07:00:02 [INFO]: Execution Finished
+2022-04-05 07:00:01 [INFO]: Execution Started
+2022-04-05 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-05 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-05 07:00:02 [StartTime]: 1649142002
+2022-04-05 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-05 07:00:02 [CRAWLING ROWS]: 0
+2022-04-05 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-05 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-05 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-05 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-05 07:00:02 [INFO]: Execution Finished
+2022-04-06 07:00:01 [INFO]: Execution Started
+2022-04-06 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-06 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-06 07:00:01 [StartTime]: 1649228401
+2022-04-06 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-06 07:00:01 [CRAWLING ROWS]: 0
+2022-04-06 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-06 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-06 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-06 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-06 07:00:01 [INFO]: Execution Finished
+2022-04-07 07:00:01 [INFO]: Execution Started
+2022-04-07 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-07 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-07 07:00:01 [StartTime]: 1649314801
+2022-04-07 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-07 07:00:01 [CRAWLING ROWS]: 0
+2022-04-07 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-07 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-07 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-07 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-07 07:00:01 [INFO]: Execution Finished
+2022-04-08 07:00:01 [INFO]: Execution Started
+2022-04-08 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-08 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-08 07:00:01 [StartTime]: 1649401201
+2022-04-08 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-08 07:00:01 [CRAWLING ROWS]: 0
+2022-04-08 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-08 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-08 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-08 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-08 07:00:01 [INFO]: Execution Finished
+2022-04-09 07:00:02 [INFO]: Execution Started
+2022-04-09 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-09 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-09 07:00:02 [StartTime]: 1649487602
+2022-04-09 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-09 07:00:02 [CRAWLING ROWS]: 0
+2022-04-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-09 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-09 07:00:02 [INFO]: Execution Finished
+2022-04-10 07:00:01 [INFO]: Execution Started
+2022-04-10 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-10 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-10 07:00:02 [StartTime]: 1649574002
+2022-04-10 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-10 07:00:03 [CRAWLING ROWS]: 0
+2022-04-10 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-10 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-04-10 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-10 07:00:03 [LOCK UPDATION]: lock updated
+2022-04-10 07:00:03 [INFO]: Execution Finished
+2022-04-11 07:00:02 [INFO]: Execution Started
+2022-04-11 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-11 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-11 07:00:02 [StartTime]: 1649660402
+2022-04-11 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-11 07:00:03 [CRAWLING ROWS]: 0
+2022-04-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-04-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-11 07:00:03 [LOCK UPDATION]: lock updated
+2022-04-11 07:00:03 [INFO]: Execution Finished
+2022-04-12 07:00:01 [INFO]: Execution Started
+2022-04-12 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-12 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-12 07:00:01 [StartTime]: 1649746801
+2022-04-12 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-12 07:00:01 [CRAWLING ROWS]: 0
+2022-04-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-12 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-12 07:00:01 [INFO]: Execution Finished
+2022-04-13 07:00:01 [INFO]: Execution Started
+2022-04-13 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-13 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-13 07:00:01 [StartTime]: 1649833201
+2022-04-13 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-13 07:00:01 [CRAWLING ROWS]: 0
+2022-04-13 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-13 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-13 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-13 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-13 07:00:01 [INFO]: Execution Finished
+2022-04-14 07:00:01 [INFO]: Execution Started
+2022-04-14 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-14 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-14 07:00:01 [StartTime]: 1649919601
+2022-04-14 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-14 07:00:01 [CRAWLING ROWS]: 0
+2022-04-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-14 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-14 07:00:01 [INFO]: Execution Finished
+2022-04-15 07:00:01 [INFO]: Execution Started
+2022-04-15 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-15 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-15 07:00:01 [StartTime]: 1650006001
+2022-04-15 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-15 07:00:01 [CRAWLING ROWS]: 0
+2022-04-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-15 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-15 07:00:01 [INFO]: Execution Finished
+2022-04-16 07:00:02 [INFO]: Execution Started
+2022-04-16 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-16 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-16 07:00:02 [StartTime]: 1650092402
+2022-04-16 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-16 07:00:02 [CRAWLING ROWS]: 0
+2022-04-16 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-16 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-16 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-16 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-16 07:00:02 [INFO]: Execution Finished
+2022-04-17 07:00:01 [INFO]: Execution Started
+2022-04-17 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-17 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-17 07:00:01 [StartTime]: 1650178801
+2022-04-17 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-17 07:00:01 [CRAWLING ROWS]: 0
+2022-04-17 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-17 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-17 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-17 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-17 07:00:01 [INFO]: Execution Finished
+2022-04-18 07:00:01 [INFO]: Execution Started
+2022-04-18 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-18 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-18 07:00:02 [StartTime]: 1650265202
+2022-04-18 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-18 07:00:02 [CRAWLING ROWS]: 0
+2022-04-18 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-18 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-18 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-18 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-18 07:00:02 [INFO]: Execution Finished
+2022-04-19 07:00:02 [INFO]: Execution Started
+2022-04-19 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-19 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-19 07:00:02 [StartTime]: 1650351602
+2022-04-19 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-19 07:00:02 [CRAWLING ROWS]: 0
+2022-04-19 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-19 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-19 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-19 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-19 07:00:02 [INFO]: Execution Finished
+2022-04-20 07:00:02 [INFO]: Execution Started
+2022-04-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-20 07:00:02 [StartTime]: 1650438002
+2022-04-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-20 07:00:03 [CRAWLING ROWS]: 0
+2022-04-20 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-20 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-04-20 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-20 07:00:03 [LOCK UPDATION]: lock updated
+2022-04-20 07:00:03 [INFO]: Execution Finished
+2022-04-21 07:00:01 [INFO]: Execution Started
+2022-04-21 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-21 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-21 07:00:01 [StartTime]: 1650524401
+2022-04-21 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-21 07:00:01 [CRAWLING ROWS]: 0
+2022-04-21 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-21 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-21 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-21 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-21 07:00:01 [INFO]: Execution Finished
+2022-04-22 07:00:01 [INFO]: Execution Started
+2022-04-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-22 07:00:01 [StartTime]: 1650610801
+2022-04-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-22 07:00:01 [CRAWLING ROWS]: 0
+2022-04-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-22 07:00:01 [INFO]: Execution Finished
+2022-04-23 07:00:02 [INFO]: Execution Started
+2022-04-23 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-23 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-23 07:00:02 [StartTime]: 1650697202
+2022-04-23 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-23 07:00:02 [CRAWLING ROWS]: 0
+2022-04-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-23 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-23 07:00:02 [INFO]: Execution Finished
+2022-04-24 07:00:02 [INFO]: Execution Started
+2022-04-24 07:00:03 [LOCK UPDATION]: lock updated
+2022-04-24 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-04-24 07:00:03 [StartTime]: 1650783603
+2022-04-24 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-04-24 07:00:03 [CRAWLING ROWS]: 0
+2022-04-24 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-24 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-24 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-24 07:00:03 [LOCK UPDATION]: lock updated
+2022-04-24 07:00:03 [INFO]: Execution Finished
+2022-04-25 07:00:01 [INFO]: Execution Started
+2022-04-25 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-25 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-25 07:00:01 [StartTime]: 1650870001
+2022-04-25 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-25 07:00:01 [CRAWLING ROWS]: 0
+2022-04-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-25 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-25 07:00:01 [INFO]: Execution Finished
+2022-04-26 07:00:01 [INFO]: Execution Started
+2022-04-26 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-26 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-26 07:00:01 [StartTime]: 1650956401
+2022-04-26 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-26 07:00:01 [CRAWLING ROWS]: 0
+2022-04-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-26 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-26 07:00:01 [INFO]: Execution Finished
+2022-04-27 07:00:02 [INFO]: Execution Started
+2022-04-27 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-27 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-27 07:00:02 [StartTime]: 1651042802
+2022-04-27 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-04-27 07:00:02 [CRAWLING ROWS]: 0
+2022-04-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-27 07:00:02 [LOCK UPDATION]: lock updated
+2022-04-27 07:00:02 [INFO]: Execution Finished
+2022-04-28 07:00:01 [INFO]: Execution Started
+2022-04-28 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-28 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-28 07:00:01 [StartTime]: 1651129201
+2022-04-28 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-28 07:00:01 [CRAWLING ROWS]: 0
+2022-04-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-28 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-28 07:00:01 [INFO]: Execution Finished
+2022-04-29 07:00:01 [INFO]: Execution Started
+2022-04-29 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-29 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-29 07:00:01 [StartTime]: 1651215601
+2022-04-29 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-29 07:00:01 [CRAWLING ROWS]: 0
+2022-04-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-29 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-29 07:00:01 [INFO]: Execution Finished
+2022-04-30 07:00:01 [INFO]: Execution Started
+2022-04-30 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-30 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-30 07:00:01 [StartTime]: 1651302001
+2022-04-30 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-04-30 07:00:01 [CRAWLING ROWS]: 0
+2022-04-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-04-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-04-30 07:00:01 [LOCK UPDATION]: lock updated
+2022-04-30 07:00:01 [INFO]: Execution Finished
+2022-05-01 07:00:02 [INFO]: Execution Started
+2022-05-01 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-01 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-01 07:00:02 [StartTime]: 1651388402
+2022-05-01 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-01 07:00:02 [CRAWLING ROWS]: 0
+2022-05-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-01 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-01 07:00:02 [INFO]: Execution Finished
+2022-05-02 07:00:01 [INFO]: Execution Started
+2022-05-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-02 07:00:02 [StartTime]: 1651474802
+2022-05-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-02 07:00:02 [CRAWLING ROWS]: 0
+2022-05-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-02 07:00:02 [INFO]: Execution Finished
+2022-05-03 07:00:01 [INFO]: Execution Started
+2022-05-03 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-03 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-03 07:00:02 [StartTime]: 1651561202
+2022-05-03 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-03 07:00:02 [CRAWLING ROWS]: 0
+2022-05-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-03 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-03 07:00:02 [INFO]: Execution Finished
+2022-05-04 07:00:02 [INFO]: Execution Started
+2022-05-04 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-04 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-04 07:00:02 [StartTime]: 1651647602
+2022-05-04 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-04 07:00:02 [CRAWLING ROWS]: 0
+2022-05-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-04 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-04 07:00:02 [INFO]: Execution Finished
+2022-05-05 07:00:01 [INFO]: Execution Started
+2022-05-05 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-05 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-05 07:00:01 [StartTime]: 1651734001
+2022-05-05 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-05 07:00:01 [CRAWLING ROWS]: 0
+2022-05-05 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-05 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-05 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-05 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-05 07:00:01 [INFO]: Execution Finished
+2022-05-06 07:00:02 [INFO]: Execution Started
+2022-05-06 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-06 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-06 07:00:02 [StartTime]: 1651820402
+2022-05-06 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-06 07:00:02 [CRAWLING ROWS]: 0
+2022-05-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-06 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-06 07:00:02 [INFO]: Execution Finished
+2022-05-07 07:00:02 [INFO]: Execution Started
+2022-05-07 07:00:03 [LOCK UPDATION]: lock updated
+2022-05-07 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-05-07 07:00:03 [StartTime]: 1651906803
+2022-05-07 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-05-07 07:00:03 [CRAWLING ROWS]: 0
+2022-05-07 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-07 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-07 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-07 07:00:03 [LOCK UPDATION]: lock updated
+2022-05-07 07:00:03 [INFO]: Execution Finished
+2022-05-08 07:00:02 [INFO]: Execution Started
+2022-05-08 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-08 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-08 07:00:02 [StartTime]: 1651993202
+2022-05-08 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-08 07:00:02 [CRAWLING ROWS]: 0
+2022-05-08 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-08 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-08 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-08 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-08 07:00:02 [INFO]: Execution Finished
+2022-05-09 07:00:01 [INFO]: Execution Started
+2022-05-09 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-09 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-09 07:00:02 [StartTime]: 1652079602
+2022-05-09 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-09 07:00:02 [CRAWLING ROWS]: 0
+2022-05-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-09 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-09 07:00:02 [INFO]: Execution Finished
+2022-05-10 07:00:01 [INFO]: Execution Started
+2022-05-10 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-10 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-10 07:00:01 [StartTime]: 1652166001
+2022-05-10 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-10 07:00:01 [CRAWLING ROWS]: 0
+2022-05-10 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-10 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-10 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-10 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-10 07:00:01 [INFO]: Execution Finished
+2022-05-11 07:00:01 [INFO]: Execution Started
+2022-05-11 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-11 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-11 07:00:01 [StartTime]: 1652252401
+2022-05-11 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-11 07:00:01 [CRAWLING ROWS]: 0
+2022-05-11 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-11 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-11 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-11 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-11 07:00:01 [INFO]: Execution Finished
+2022-05-12 07:00:01 [INFO]: Execution Started
+2022-05-12 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-12 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-12 07:00:01 [StartTime]: 1652338801
+2022-05-12 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-12 07:00:01 [CRAWLING ROWS]: 0
+2022-05-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-12 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-12 07:00:01 [INFO]: Execution Finished
+2022-05-13 07:00:02 [INFO]: Execution Started
+2022-05-13 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-13 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-13 07:00:02 [StartTime]: 1652425202
+2022-05-13 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-13 07:00:02 [CRAWLING ROWS]: 0
+2022-05-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-13 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-13 07:00:02 [INFO]: Execution Finished
+2022-05-14 07:00:01 [INFO]: Execution Started
+2022-05-14 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-14 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-14 07:00:01 [StartTime]: 1652511601
+2022-05-14 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-14 07:00:01 [CRAWLING ROWS]: 0
+2022-05-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-14 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-14 07:00:01 [INFO]: Execution Finished
+2022-05-15 07:00:01 [INFO]: Execution Started
+2022-05-15 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-15 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-15 07:00:01 [StartTime]: 1652598001
+2022-05-15 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-15 07:00:01 [CRAWLING ROWS]: 0
+2022-05-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-15 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-15 07:00:01 [INFO]: Execution Finished
+2022-05-16 07:00:07 [INFO]: Execution Started
+2022-05-16 07:00:08 [LOCK UPDATION]: lock updated
+2022-05-16 07:00:08 [StartTime]: ///////////////////////////////////////////////
+2022-05-16 07:00:08 [StartTime]: 1652684408
+2022-05-16 07:00:08 [StartTime]: ///////////////////////////////////////////////
+2022-05-16 07:00:08 [CRAWLING ROWS]: 0
+2022-05-16 07:00:08 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-16 07:00:08 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-16 07:00:08 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-16 07:00:08 [LOCK UPDATION]: lock updated
+2022-05-16 07:00:08 [INFO]: Execution Finished
+2022-05-17 07:00:02 [INFO]: Execution Started
+2022-05-17 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-17 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-17 07:00:02 [StartTime]: 1652770802
+2022-05-17 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-17 07:00:02 [CRAWLING ROWS]: 0
+2022-05-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-17 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-17 07:00:02 [INFO]: Execution Finished
+2022-05-18 07:00:01 [INFO]: Execution Started
+2022-05-18 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-18 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-18 07:00:01 [StartTime]: 1652857201
+2022-05-18 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-18 07:00:01 [CRAWLING ROWS]: 0
+2022-05-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-18 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-18 07:00:01 [INFO]: Execution Finished
+2022-05-19 07:00:01 [INFO]: Execution Started
+2022-05-19 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-19 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-19 07:00:01 [StartTime]: 1652943601
+2022-05-19 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-19 07:00:01 [CRAWLING ROWS]: 0
+2022-05-19 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-19 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-19 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-19 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-19 07:00:01 [INFO]: Execution Finished
+2022-05-20 07:00:02 [INFO]: Execution Started
+2022-05-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-20 07:00:02 [StartTime]: 1653030002
+2022-05-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-20 07:00:02 [CRAWLING ROWS]: 0
+2022-05-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-20 07:00:02 [INFO]: Execution Finished
+2022-05-21 07:00:01 [INFO]: Execution Started
+2022-05-21 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-21 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-21 07:00:02 [StartTime]: 1653116402
+2022-05-21 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-21 07:00:02 [CRAWLING ROWS]: 0
+2022-05-21 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-21 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-21 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-21 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-21 07:00:02 [INFO]: Execution Finished
+2022-05-22 07:00:01 [INFO]: Execution Started
+2022-05-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-22 07:00:01 [StartTime]: 1653202801
+2022-05-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-22 07:00:01 [CRAWLING ROWS]: 0
+2022-05-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-22 07:00:01 [INFO]: Execution Finished
+2022-05-23 07:00:01 [INFO]: Execution Started
+2022-05-23 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-23 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-23 07:00:01 [StartTime]: 1653289201
+2022-05-23 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-23 07:00:01 [CRAWLING ROWS]: 0
+2022-05-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-23 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-23 07:00:01 [INFO]: Execution Finished
+2022-05-24 07:00:01 [INFO]: Execution Started
+2022-05-24 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-24 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-24 07:00:02 [StartTime]: 1653375602
+2022-05-24 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-24 07:00:02 [CRAWLING ROWS]: 0
+2022-05-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-24 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-24 07:00:02 [INFO]: Execution Finished
+2022-05-25 07:00:01 [INFO]: Execution Started
+2022-05-25 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-25 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-25 07:00:02 [StartTime]: 1653462002
+2022-05-25 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-25 07:00:02 [CRAWLING ROWS]: 0
+2022-05-25 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-25 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-25 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-25 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-25 07:00:02 [INFO]: Execution Finished
+2022-05-26 07:00:01 [INFO]: Execution Started
+2022-05-26 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-26 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-26 07:00:01 [StartTime]: 1653548401
+2022-05-26 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-05-26 07:00:01 [CRAWLING ROWS]: 0
+2022-05-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-26 07:00:01 [LOCK UPDATION]: lock updated
+2022-05-26 07:00:01 [INFO]: Execution Finished
+2022-05-27 07:00:01 [INFO]: Execution Started
+2022-05-27 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-27 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-27 07:00:02 [StartTime]: 1653634802
+2022-05-27 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-27 07:00:02 [CRAWLING ROWS]: 0
+2022-05-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-27 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-27 07:00:02 [INFO]: Execution Finished
+2022-05-28 07:00:02 [INFO]: Execution Started
+2022-05-28 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-28 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-28 07:00:02 [StartTime]: 1653721202
+2022-05-28 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-28 07:00:02 [CRAWLING ROWS]: 0
+2022-05-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-28 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-28 07:00:02 [INFO]: Execution Finished
+2022-05-29 07:00:02 [INFO]: Execution Started
+2022-05-29 07:00:03 [LOCK UPDATION]: lock updated
+2022-05-29 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-05-29 07:00:03 [StartTime]: 1653807603
+2022-05-29 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-05-29 07:00:03 [CRAWLING ROWS]: 0
+2022-05-29 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-29 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-29 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-29 07:00:03 [LOCK UPDATION]: lock updated
+2022-05-29 07:00:03 [INFO]: Execution Finished
+2022-05-30 07:00:02 [INFO]: Execution Started
+2022-05-30 07:00:03 [LOCK UPDATION]: lock updated
+2022-05-30 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-05-30 07:00:03 [StartTime]: 1653894003
+2022-05-30 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-05-30 07:00:03 [CRAWLING ROWS]: 0
+2022-05-30 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-30 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-30 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-30 07:00:03 [LOCK UPDATION]: lock updated
+2022-05-30 07:00:03 [INFO]: Execution Finished
+2022-05-31 07:00:02 [INFO]: Execution Started
+2022-05-31 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-31 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-31 07:00:02 [StartTime]: 1653980402
+2022-05-31 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-05-31 07:00:02 [CRAWLING ROWS]: 0
+2022-05-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-05-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-05-31 07:00:02 [LOCK UPDATION]: lock updated
+2022-05-31 07:00:02 [INFO]: Execution Finished
+2022-06-01 07:00:01 [INFO]: Execution Started
+2022-06-01 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-01 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-01 07:00:01 [StartTime]: 1654066801
+2022-06-01 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-01 07:00:01 [CRAWLING ROWS]: 0
+2022-06-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-01 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-01 07:00:01 [INFO]: Execution Finished
+2022-06-02 07:00:02 [INFO]: Execution Started
+2022-06-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-02 07:00:02 [StartTime]: 1654153202
+2022-06-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-02 07:00:02 [CRAWLING ROWS]: 0
+2022-06-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-02 07:00:02 [INFO]: Execution Finished
+2022-06-03 07:00:01 [INFO]: Execution Started
+2022-06-03 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-03 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-03 07:00:01 [StartTime]: 1654239601
+2022-06-03 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-03 07:00:01 [CRAWLING ROWS]: 0
+2022-06-03 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-03 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-03 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-03 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-03 07:00:01 [INFO]: Execution Finished
+2022-06-04 07:00:01 [INFO]: Execution Started
+2022-06-04 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-04 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-04 07:00:01 [StartTime]: 1654326001
+2022-06-04 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-04 07:00:01 [CRAWLING ROWS]: 0
+2022-06-04 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-04 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-04 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-04 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-04 07:00:01 [INFO]: Execution Finished
+2022-06-05 07:00:03 [INFO]: Execution Started
+2022-06-05 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-05 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-06-05 07:00:03 [StartTime]: 1654412403
+2022-06-05 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-06-05 07:00:03 [CRAWLING ROWS]: 0
+2022-06-05 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-05 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-05 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-05 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-05 07:00:03 [INFO]: Execution Finished
+2022-06-06 07:00:02 [INFO]: Execution Started
+2022-06-06 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-06 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-06 07:00:02 [StartTime]: 1654498802
+2022-06-06 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-06 07:00:02 [CRAWLING ROWS]: 0
+2022-06-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-06 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-06 07:00:02 [INFO]: Execution Finished
+2022-06-07 07:00:02 [INFO]: Execution Started
+2022-06-07 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-07 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-06-07 07:00:03 [StartTime]: 1654585203
+2022-06-07 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-06-07 07:00:03 [CRAWLING ROWS]: 0
+2022-06-07 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-07 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-07 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-07 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-07 07:00:03 [INFO]: Execution Finished
+2022-06-08 07:00:03 [INFO]: Execution Started
+2022-06-08 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-08 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-06-08 07:00:03 [StartTime]: 1654671603
+2022-06-08 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-06-08 07:00:03 [CRAWLING ROWS]: 0
+2022-06-08 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-08 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-08 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-08 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-08 07:00:03 [INFO]: Execution Finished
+2022-06-09 07:00:01 [INFO]: Execution Started
+2022-06-09 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-09 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-09 07:00:02 [StartTime]: 1654758002
+2022-06-09 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-09 07:00:03 [CRAWLING ROWS]: 0
+2022-06-09 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-09 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-06-09 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-09 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-09 07:00:03 [INFO]: Execution Finished
+2022-06-10 07:00:02 [INFO]: Execution Started
+2022-06-10 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-10 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-10 07:00:02 [StartTime]: 1654844402
+2022-06-10 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-10 07:00:02 [CRAWLING ROWS]: 0
+2022-06-10 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-10 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-10 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-10 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-10 07:00:02 [INFO]: Execution Finished
+2022-06-11 07:00:02 [INFO]: Execution Started
+2022-06-11 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-11 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-11 07:00:02 [StartTime]: 1654930802
+2022-06-11 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-11 07:00:02 [CRAWLING ROWS]: 0
+2022-06-11 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-11 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-11 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-11 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-11 07:00:02 [INFO]: Execution Finished
+2022-06-12 07:00:05 [INFO]: Execution Started
+2022-06-12 07:00:06 [LOCK UPDATION]: lock updated
+2022-06-12 07:00:06 [StartTime]: ///////////////////////////////////////////////
+2022-06-12 07:00:06 [StartTime]: 1655017206
+2022-06-12 07:00:06 [StartTime]: ///////////////////////////////////////////////
+2022-06-12 07:00:06 [CRAWLING ROWS]: 0
+2022-06-12 07:00:06 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-12 07:00:06 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-12 07:00:06 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-12 07:00:06 [LOCK UPDATION]: lock updated
+2022-06-12 07:00:06 [INFO]: Execution Finished
+2022-06-13 07:00:02 [INFO]: Execution Started
+2022-06-13 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-13 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-13 07:00:02 [StartTime]: 1655103602
+2022-06-13 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-13 07:00:03 [CRAWLING ROWS]: 0
+2022-06-13 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-13 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-06-13 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-13 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-13 07:00:03 [INFO]: Execution Finished
+2022-06-14 07:00:02 [INFO]: Execution Started
+2022-06-14 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-14 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-14 07:00:02 [StartTime]: 1655190002
+2022-06-14 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-14 07:00:03 [CRAWLING ROWS]: 0
+2022-06-14 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-14 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-06-14 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-14 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-14 07:00:03 [INFO]: Execution Finished
+2022-06-15 07:00:03 [INFO]: Execution Started
+2022-06-15 07:00:03 [LOCK UPDATION]: lock updated
+2022-06-15 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-06-15 07:00:03 [StartTime]: 1655276403
+2022-06-15 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-06-15 07:00:04 [CRAWLING ROWS]: 0
+2022-06-15 07:00:04 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-15 07:00:04 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-06-15 07:00:04 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-15 07:00:04 [LOCK UPDATION]: lock updated
+2022-06-15 07:00:04 [INFO]: Execution Finished
+2022-06-16 07:00:01 [INFO]: Execution Started
+2022-06-16 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-16 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-16 07:00:01 [StartTime]: 1655362801
+2022-06-16 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-16 07:00:01 [CRAWLING ROWS]: 0
+2022-06-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-16 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-16 07:00:01 [INFO]: Execution Finished
+2022-06-17 07:00:02 [INFO]: Execution Started
+2022-06-17 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-17 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-17 07:00:02 [StartTime]: 1655449202
+2022-06-17 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-17 07:00:02 [CRAWLING ROWS]: 0
+2022-06-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-17 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-17 07:00:02 [INFO]: Execution Finished
+2022-06-18 07:00:01 [INFO]: Execution Started
+2022-06-18 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-18 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-18 07:00:01 [StartTime]: 1655535601
+2022-06-18 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-18 07:00:01 [CRAWLING ROWS]: 0
+2022-06-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-18 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-18 07:00:01 [INFO]: Execution Finished
+2022-06-19 07:00:02 [INFO]: Execution Started
+2022-06-19 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-19 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-19 07:00:02 [StartTime]: 1655622002
+2022-06-19 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-19 07:00:02 [CRAWLING ROWS]: 0
+2022-06-19 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-19 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-19 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-19 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-19 07:00:02 [INFO]: Execution Finished
+2022-06-20 07:00:02 [INFO]: Execution Started
+2022-06-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-20 07:00:02 [StartTime]: 1655708402
+2022-06-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-20 07:00:02 [CRAWLING ROWS]: 0
+2022-06-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-20 07:00:02 [INFO]: Execution Finished
+2022-06-21 07:00:01 [INFO]: Execution Started
+2022-06-21 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-21 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-21 07:00:01 [StartTime]: 1655794801
+2022-06-21 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-21 07:00:01 [CRAWLING ROWS]: 0
+2022-06-21 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-21 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-21 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-21 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-21 07:00:01 [INFO]: Execution Finished
+2022-06-22 07:00:01 [INFO]: Execution Started
+2022-06-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-22 07:00:01 [StartTime]: 1655881201
+2022-06-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-22 07:00:01 [CRAWLING ROWS]: 0
+2022-06-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-22 07:00:01 [INFO]: Execution Finished
+2022-06-23 07:00:02 [INFO]: Execution Started
+2022-06-23 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-23 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-23 07:00:02 [StartTime]: 1655967602
+2022-06-23 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-23 07:00:02 [CRAWLING ROWS]: 0
+2022-06-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-23 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-23 07:00:02 [INFO]: Execution Finished
+2022-06-24 07:00:02 [INFO]: Execution Started
+2022-06-24 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-24 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-24 07:00:02 [StartTime]: 1656054002
+2022-06-24 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-24 07:00:02 [CRAWLING ROWS]: 0
+2022-06-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-24 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-24 07:00:02 [INFO]: Execution Finished
+2022-06-25 07:00:01 [INFO]: Execution Started
+2022-06-25 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-25 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-25 07:00:01 [StartTime]: 1656140401
+2022-06-25 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-25 07:00:01 [CRAWLING ROWS]: 0
+2022-06-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-25 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-25 07:00:01 [INFO]: Execution Finished
+2022-06-26 07:00:01 [INFO]: Execution Started
+2022-06-26 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-26 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-26 07:00:02 [StartTime]: 1656226802
+2022-06-26 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-26 07:00:02 [CRAWLING ROWS]: 0
+2022-06-26 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-26 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-26 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-26 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-26 07:00:02 [INFO]: Execution Finished
+2022-06-27 07:00:01 [INFO]: Execution Started
+2022-06-27 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-27 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-27 07:00:02 [StartTime]: 1656313202
+2022-06-27 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-06-27 07:00:02 [CRAWLING ROWS]: 0
+2022-06-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-27 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-27 07:00:02 [LOCK UPDATION]: lock updated
+2022-06-27 07:00:02 [INFO]: Execution Finished
+2022-06-28 07:00:01 [INFO]: Execution Started
+2022-06-28 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-28 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-28 07:00:01 [StartTime]: 1656399601
+2022-06-28 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-28 07:00:01 [CRAWLING ROWS]: 0
+2022-06-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-28 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-28 07:00:01 [INFO]: Execution Finished
+2022-06-29 07:00:01 [INFO]: Execution Started
+2022-06-29 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-29 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-29 07:00:01 [StartTime]: 1656486001
+2022-06-29 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-29 07:00:01 [CRAWLING ROWS]: 0
+2022-06-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-29 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-29 07:00:01 [INFO]: Execution Finished
+2022-06-30 07:00:01 [INFO]: Execution Started
+2022-06-30 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-30 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-30 07:00:01 [StartTime]: 1656572401
+2022-06-30 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-06-30 07:00:01 [CRAWLING ROWS]: 0
+2022-06-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-06-30 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-06-30 07:00:01 [LOCK UPDATION]: lock updated
+2022-06-30 07:00:01 [INFO]: Execution Finished
+2022-07-01 07:00:02 [INFO]: Execution Started
+2022-07-01 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-01 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-01 07:00:02 [StartTime]: 1656658802
+2022-07-01 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-01 07:00:02 [CRAWLING ROWS]: 0
+2022-07-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-01 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-01 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-01 07:00:02 [INFO]: Execution Finished
+2022-07-02 07:00:02 [INFO]: Execution Started
+2022-07-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-02 07:00:02 [StartTime]: 1656745202
+2022-07-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-02 07:00:02 [CRAWLING ROWS]: 0
+2022-07-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-02 07:00:02 [INFO]: Execution Finished
+2022-07-03 07:00:02 [INFO]: Execution Started
+2022-07-03 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-03 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-03 07:00:02 [StartTime]: 1656831602
+2022-07-03 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-03 07:00:02 [CRAWLING ROWS]: 0
+2022-07-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-03 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-03 07:00:02 [INFO]: Execution Finished
+2022-07-04 07:00:01 [INFO]: Execution Started
+2022-07-04 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-04 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-04 07:00:01 [StartTime]: 1656918001
+2022-07-04 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-04 07:00:01 [CRAWLING ROWS]: 0
+2022-07-04 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-04 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-04 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-04 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-04 07:00:01 [INFO]: Execution Finished
+2022-07-05 07:00:02 [INFO]: Execution Started
+2022-07-05 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-05 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-05 07:00:02 [StartTime]: 1657004402
+2022-07-05 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-05 07:00:03 [CRAWLING ROWS]: 0
+2022-07-05 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-05 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-07-05 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-05 07:00:03 [LOCK UPDATION]: lock updated
+2022-07-05 07:00:03 [INFO]: Execution Finished
+2022-07-06 07:00:02 [INFO]: Execution Started
+2022-07-06 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-06 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-06 07:00:02 [StartTime]: 1657090802
+2022-07-06 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-06 07:00:02 [CRAWLING ROWS]: 0
+2022-07-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-06 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-06 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-06 07:00:02 [INFO]: Execution Finished
+2022-07-07 07:00:02 [INFO]: Execution Started
+2022-07-07 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-07 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-07 07:00:02 [StartTime]: 1657177202
+2022-07-07 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-07 07:00:02 [CRAWLING ROWS]: 0
+2022-07-07 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-07 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-07 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-07 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-07 07:00:02 [INFO]: Execution Finished
+2022-07-08 07:00:02 [INFO]: Execution Started
+2022-07-08 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-08 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-08 07:00:02 [StartTime]: 1657263602
+2022-07-08 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-08 07:00:03 [CRAWLING ROWS]: 0
+2022-07-08 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-08 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-07-08 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-08 07:00:03 [LOCK UPDATION]: lock updated
+2022-07-08 07:00:03 [INFO]: Execution Finished
+2022-07-09 07:00:01 [INFO]: Execution Started
+2022-07-09 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-09 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-09 07:00:01 [StartTime]: 1657350001
+2022-07-09 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-09 07:00:01 [CRAWLING ROWS]: 0
+2022-07-09 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-09 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-09 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-09 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-09 07:00:01 [INFO]: Execution Finished
+2022-07-10 07:00:01 [INFO]: Execution Started
+2022-07-10 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-10 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-10 07:00:01 [StartTime]: 1657436401
+2022-07-10 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-10 07:00:01 [CRAWLING ROWS]: 0
+2022-07-10 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-10 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-10 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-10 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-10 07:00:01 [INFO]: Execution Finished
+2022-07-11 07:00:03 [INFO]: Execution Started
+2022-07-11 07:00:03 [LOCK UPDATION]: lock updated
+2022-07-11 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-07-11 07:00:03 [StartTime]: 1657522803
+2022-07-11 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-07-11 07:00:03 [CRAWLING ROWS]: 0
+2022-07-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-11 07:00:03 [LOCK UPDATION]: lock updated
+2022-07-11 07:00:03 [INFO]: Execution Finished
+2022-07-12 07:00:01 [INFO]: Execution Started
+2022-07-12 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-12 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-12 07:00:01 [StartTime]: 1657609201
+2022-07-12 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-12 07:00:01 [CRAWLING ROWS]: 0
+2022-07-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-12 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-12 07:00:01 [INFO]: Execution Finished
+2022-07-13 07:00:01 [INFO]: Execution Started
+2022-07-13 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-13 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-13 07:00:02 [StartTime]: 1657695602
+2022-07-13 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-13 07:00:02 [CRAWLING ROWS]: 0
+2022-07-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-13 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-13 07:00:02 [INFO]: Execution Finished
+2022-07-14 07:00:01 [INFO]: Execution Started
+2022-07-14 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-14 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-14 07:00:01 [StartTime]: 1657782001
+2022-07-14 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-14 07:00:01 [CRAWLING ROWS]: 0
+2022-07-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-14 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-14 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-14 07:00:01 [INFO]: Execution Finished
+2022-07-15 07:00:02 [INFO]: Execution Started
+2022-07-15 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-15 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-15 07:00:02 [StartTime]: 1657868402
+2022-07-15 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-15 07:00:02 [CRAWLING ROWS]: 0
+2022-07-15 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-15 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-15 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-15 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-15 07:00:02 [INFO]: Execution Finished
+2022-07-16 07:00:01 [INFO]: Execution Started
+2022-07-16 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-16 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-16 07:00:01 [StartTime]: 1657954801
+2022-07-16 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-16 07:00:01 [CRAWLING ROWS]: 0
+2022-07-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-16 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-16 07:00:01 [INFO]: Execution Finished
+2022-07-17 07:00:02 [INFO]: Execution Started
+2022-07-17 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-17 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-17 07:00:02 [StartTime]: 1658041202
+2022-07-17 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-17 07:00:02 [CRAWLING ROWS]: 0
+2022-07-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-17 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-17 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-17 07:00:02 [INFO]: Execution Finished
+2022-07-18 07:00:02 [INFO]: Execution Started
+2022-07-18 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-18 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-18 07:00:02 [StartTime]: 1658127602
+2022-07-18 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-18 07:00:02 [CRAWLING ROWS]: 0
+2022-07-18 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-18 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-18 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-18 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-18 07:00:02 [INFO]: Execution Finished
+2022-07-19 07:00:01 [INFO]: Execution Started
+2022-07-19 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-19 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-19 07:00:01 [StartTime]: 1658214001
+2022-07-19 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-19 07:00:01 [CRAWLING ROWS]: 0
+2022-07-19 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-19 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-19 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-19 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-19 07:00:01 [INFO]: Execution Finished
+2022-07-20 07:00:01 [INFO]: Execution Started
+2022-07-20 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-20 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-20 07:00:01 [StartTime]: 1658300401
+2022-07-20 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-20 07:00:01 [CRAWLING ROWS]: 0
+2022-07-20 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-20 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-20 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-20 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-20 07:00:01 [INFO]: Execution Finished
+2022-07-21 07:00:02 [INFO]: Execution Started
+2022-07-21 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-21 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-21 07:00:02 [StartTime]: 1658386802
+2022-07-21 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-21 07:00:02 [CRAWLING ROWS]: 0
+2022-07-21 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-21 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-21 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-21 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-21 07:00:02 [INFO]: Execution Finished
+2022-07-22 07:00:03 [INFO]: Execution Started
+2022-07-22 07:00:03 [LOCK UPDATION]: lock updated
+2022-07-22 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-07-22 07:00:03 [StartTime]: 1658473203
+2022-07-22 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-07-22 07:00:03 [CRAWLING ROWS]: 0
+2022-07-22 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-22 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-22 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-22 07:00:03 [LOCK UPDATION]: lock updated
+2022-07-22 07:00:03 [INFO]: Execution Finished
+2022-07-23 07:00:01 [INFO]: Execution Started
+2022-07-23 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-23 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-23 07:00:01 [StartTime]: 1658559601
+2022-07-23 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-23 07:00:01 [CRAWLING ROWS]: 0
+2022-07-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-23 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-23 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-23 07:00:01 [INFO]: Execution Finished
+2022-07-24 07:00:02 [INFO]: Execution Started
+2022-07-24 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-24 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-24 07:00:02 [StartTime]: 1658646002
+2022-07-24 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-24 07:00:02 [CRAWLING ROWS]: 0
+2022-07-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-24 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-24 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-24 07:00:02 [INFO]: Execution Finished
+2022-07-25 07:00:01 [INFO]: Execution Started
+2022-07-25 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-25 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-25 07:00:01 [StartTime]: 1658732401
+2022-07-25 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-25 07:00:01 [CRAWLING ROWS]: 0
+2022-07-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-25 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-25 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-25 07:00:01 [INFO]: Execution Finished
+2022-07-26 07:00:01 [INFO]: Execution Started
+2022-07-26 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-26 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-26 07:00:01 [StartTime]: 1658818801
+2022-07-26 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-26 07:00:01 [CRAWLING ROWS]: 0
+2022-07-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-26 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-26 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-26 07:00:01 [INFO]: Execution Finished
+2022-07-27 07:00:01 [INFO]: Execution Started
+2022-07-27 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-27 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-27 07:00:01 [StartTime]: 1658905201
+2022-07-27 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-27 07:00:01 [CRAWLING ROWS]: 0
+2022-07-27 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-27 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-27 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-27 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-27 07:00:01 [INFO]: Execution Finished
+2022-07-28 07:00:01 [INFO]: Execution Started
+2022-07-28 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-28 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-28 07:00:02 [StartTime]: 1658991602
+2022-07-28 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-28 07:00:02 [CRAWLING ROWS]: 0
+2022-07-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-28 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-28 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-28 07:00:02 [INFO]: Execution Finished
+2022-07-29 07:00:01 [INFO]: Execution Started
+2022-07-29 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-29 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-29 07:00:01 [StartTime]: 1659078001
+2022-07-29 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-07-29 07:00:01 [CRAWLING ROWS]: 0
+2022-07-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-29 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-29 07:00:01 [LOCK UPDATION]: lock updated
+2022-07-29 07:00:01 [INFO]: Execution Finished
+2022-07-30 07:00:02 [INFO]: Execution Started
+2022-07-30 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-30 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-30 07:00:02 [StartTime]: 1659164402
+2022-07-30 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-30 07:00:02 [CRAWLING ROWS]: 0
+2022-07-30 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-30 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-30 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-30 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-30 07:00:02 [INFO]: Execution Finished
+2022-07-31 07:00:01 [INFO]: Execution Started
+2022-07-31 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-31 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-31 07:00:02 [StartTime]: 1659250802
+2022-07-31 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-07-31 07:00:02 [CRAWLING ROWS]: 0
+2022-07-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-07-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-07-31 07:00:02 [LOCK UPDATION]: lock updated
+2022-07-31 07:00:02 [INFO]: Execution Finished
+2022-08-01 07:00:01 [INFO]: Execution Started
+2022-08-01 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-01 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-01 07:00:01 [StartTime]: 1659337201
+2022-08-01 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-01 07:00:01 [CRAWLING ROWS]: 0
+2022-08-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-01 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-01 07:00:01 [INFO]: Execution Finished
+2022-08-02 07:00:02 [INFO]: Execution Started
+2022-08-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-02 07:00:02 [StartTime]: 1659423602
+2022-08-02 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-02 07:00:02 [CRAWLING ROWS]: 0
+2022-08-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-02 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-02 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-02 07:00:02 [INFO]: Execution Finished
+2022-08-03 07:00:02 [INFO]: Execution Started
+2022-08-03 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-03 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-03 07:00:02 [StartTime]: 1659510002
+2022-08-03 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-03 07:00:02 [CRAWLING ROWS]: 0
+2022-08-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-03 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-03 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-03 07:00:02 [INFO]: Execution Finished
+2022-08-04 07:00:02 [INFO]: Execution Started
+2022-08-04 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-04 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-04 07:00:02 [StartTime]: 1659596402
+2022-08-04 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-04 07:00:02 [CRAWLING ROWS]: 0
+2022-08-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-04 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-04 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-04 07:00:02 [INFO]: Execution Finished
+2022-08-05 07:00:01 [INFO]: Execution Started
+2022-08-05 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-05 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-05 07:00:01 [StartTime]: 1659682801
+2022-08-05 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-05 07:00:02 [CRAWLING ROWS]: 0
+2022-08-05 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-05 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-08-05 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-05 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-05 07:00:02 [INFO]: Execution Finished
+2022-08-06 07:00:03 [INFO]: Execution Started
+2022-08-06 07:00:03 [LOCK UPDATION]: lock updated
+2022-08-06 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-08-06 07:00:03 [StartTime]: 1659769203
+2022-08-06 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-08-06 07:00:03 [CRAWLING ROWS]: 0
+2022-08-06 07:00:04 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-06 07:00:04 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-08-06 07:00:04 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-06 07:00:04 [LOCK UPDATION]: lock updated
+2022-08-06 07:00:04 [INFO]: Execution Finished
+2022-08-07 07:00:01 [INFO]: Execution Started
+2022-08-07 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-07 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-07 07:00:01 [StartTime]: 1659855601
+2022-08-07 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-07 07:00:01 [CRAWLING ROWS]: 0
+2022-08-07 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-07 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-07 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-07 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-07 07:00:01 [INFO]: Execution Finished
+2022-08-08 07:00:01 [INFO]: Execution Started
+2022-08-08 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-08 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-08 07:00:01 [StartTime]: 1659942001
+2022-08-08 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-08 07:00:01 [CRAWLING ROWS]: 0
+2022-08-08 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-08 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-08 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-08 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-08 07:00:01 [INFO]: Execution Finished
+2022-08-09 07:00:02 [INFO]: Execution Started
+2022-08-09 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-09 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-09 07:00:02 [StartTime]: 1660028402
+2022-08-09 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-09 07:00:02 [CRAWLING ROWS]: 0
+2022-08-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-09 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-09 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-09 07:00:02 [INFO]: Execution Finished
+2022-08-10 07:00:01 [INFO]: Execution Started
+2022-08-10 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-10 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-10 07:00:01 [StartTime]: 1660114801
+2022-08-10 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-10 07:00:02 [CRAWLING ROWS]: 0
+2022-08-10 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-10 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-08-10 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-10 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-10 07:00:02 [INFO]: Execution Finished
+2022-08-11 07:00:02 [INFO]: Execution Started
+2022-08-11 07:00:03 [LOCK UPDATION]: lock updated
+2022-08-11 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-08-11 07:00:03 [StartTime]: 1660201203
+2022-08-11 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-08-11 07:00:03 [CRAWLING ROWS]: 0
+2022-08-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-11 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-11 07:00:03 [LOCK UPDATION]: lock updated
+2022-08-11 07:00:03 [INFO]: Execution Finished
+2022-08-12 07:00:01 [INFO]: Execution Started
+2022-08-12 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-12 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-12 07:00:01 [StartTime]: 1660287601
+2022-08-12 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-12 07:00:01 [CRAWLING ROWS]: 0
+2022-08-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-12 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-12 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-12 07:00:01 [INFO]: Execution Finished
+2022-08-13 07:00:02 [INFO]: Execution Started
+2022-08-13 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-13 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-13 07:00:02 [StartTime]: 1660374002
+2022-08-13 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-13 07:00:02 [CRAWLING ROWS]: 0
+2022-08-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-13 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-13 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-13 07:00:02 [INFO]: Execution Finished
+2022-08-14 07:00:02 [INFO]: Execution Started
+2022-08-14 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-14 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-14 07:00:02 [StartTime]: 1660460402
+2022-08-14 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-14 07:00:02 [CRAWLING ROWS]: 0
+2022-08-14 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-14 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-14 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-14 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-14 07:00:02 [INFO]: Execution Finished
+2022-08-15 07:00:01 [INFO]: Execution Started
+2022-08-15 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-15 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-15 07:00:01 [StartTime]: 1660546801
+2022-08-15 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-15 07:00:01 [CRAWLING ROWS]: 0
+2022-08-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-15 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-15 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-15 07:00:01 [INFO]: Execution Finished
+2022-08-16 07:00:01 [INFO]: Execution Started
+2022-08-16 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-16 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-16 07:00:01 [StartTime]: 1660633201
+2022-08-16 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-16 07:00:01 [CRAWLING ROWS]: 0
+2022-08-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-16 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-16 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-16 07:00:01 [INFO]: Execution Finished
+2022-08-17 07:00:01 [INFO]: Execution Started
+2022-08-17 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-17 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-17 07:00:01 [StartTime]: 1660719601
+2022-08-17 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-17 07:00:01 [CRAWLING ROWS]: 0
+2022-08-17 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-17 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-17 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-17 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-17 07:00:01 [INFO]: Execution Finished
+2022-08-18 07:00:01 [INFO]: Execution Started
+2022-08-18 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-18 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-18 07:00:01 [StartTime]: 1660806001
+2022-08-18 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-18 07:00:01 [CRAWLING ROWS]: 0
+2022-08-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-18 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-18 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-18 07:00:01 [INFO]: Execution Finished
+2022-08-19 07:00:02 [INFO]: Execution Started
+2022-08-19 07:00:03 [LOCK UPDATION]: lock updated
+2022-08-19 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-08-19 07:00:03 [StartTime]: 1660892403
+2022-08-19 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-08-19 07:00:03 [CRAWLING ROWS]: 0
+2022-08-19 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-19 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-19 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-19 07:00:03 [LOCK UPDATION]: lock updated
+2022-08-19 07:00:03 [INFO]: Execution Finished
+2022-08-20 07:00:02 [INFO]: Execution Started
+2022-08-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-20 07:00:02 [StartTime]: 1660978802
+2022-08-20 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-20 07:00:02 [CRAWLING ROWS]: 0
+2022-08-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-20 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-20 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-20 07:00:02 [INFO]: Execution Finished
+2022-08-21 07:00:02 [INFO]: Execution Started
+2022-08-21 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-21 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-21 07:00:02 [StartTime]: 1661065202
+2022-08-21 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-21 07:00:03 [CRAWLING ROWS]: 0
+2022-08-21 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-21 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 1
+2022-08-21 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-21 07:00:03 [LOCK UPDATION]: lock updated
+2022-08-21 07:00:03 [INFO]: Execution Finished
+2022-08-22 07:00:01 [INFO]: Execution Started
+2022-08-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-22 07:00:01 [StartTime]: 1661151601
+2022-08-22 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-22 07:00:01 [CRAWLING ROWS]: 0
+2022-08-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-22 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-22 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-22 07:00:01 [INFO]: Execution Finished
+2022-08-23 07:00:01 [INFO]: Execution Started
+2022-08-23 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-23 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-23 07:00:02 [StartTime]: 1661238002
+2022-08-23 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-23 07:00:02 [CRAWLING ROWS]: 0
+2022-08-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-23 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-23 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-23 07:00:02 [INFO]: Execution Finished
+2022-08-24 07:00:01 [INFO]: Execution Started
+2022-08-24 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-24 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-24 07:00:01 [StartTime]: 1661324401
+2022-08-24 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-24 07:00:01 [CRAWLING ROWS]: 0
+2022-08-24 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-24 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-24 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-24 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-24 07:00:01 [INFO]: Execution Finished
+2022-08-25 07:00:02 [INFO]: Execution Started
+2022-08-25 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-25 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-25 07:00:02 [StartTime]: 1661410802
+2022-08-25 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-25 07:00:02 [CRAWLING ROWS]: 0
+2022-08-25 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-25 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-25 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-25 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-25 07:00:02 [INFO]: Execution Finished
+2022-08-26 07:00:02 [INFO]: Execution Started
+2022-08-26 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-26 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-26 07:00:02 [StartTime]: 1661497202
+2022-08-26 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-26 07:00:02 [CRAWLING ROWS]: 0
+2022-08-26 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-26 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-26 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-26 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-26 07:00:02 [INFO]: Execution Finished
+2022-08-27 07:00:01 [INFO]: Execution Started
+2022-08-27 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-27 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-27 07:00:01 [StartTime]: 1661583601
+2022-08-27 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-27 07:00:01 [CRAWLING ROWS]: 0
+2022-08-27 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-27 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-27 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-27 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-27 07:00:01 [INFO]: Execution Finished
+2022-08-28 07:00:01 [INFO]: Execution Started
+2022-08-28 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-28 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-28 07:00:01 [StartTime]: 1661670001
+2022-08-28 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-08-28 07:00:01 [CRAWLING ROWS]: 0
+2022-08-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-28 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-28 07:00:01 [LOCK UPDATION]: lock updated
+2022-08-28 07:00:01 [INFO]: Execution Finished
+2022-08-29 07:00:02 [INFO]: Execution Started
+2022-08-29 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-29 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-29 07:00:02 [StartTime]: 1661756402
+2022-08-29 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-29 07:00:02 [CRAWLING ROWS]: 0
+2022-08-29 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-29 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-29 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-29 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-29 07:00:02 [INFO]: Execution Finished
+2022-08-30 07:00:02 [INFO]: Execution Started
+2022-08-30 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-30 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-30 07:00:02 [StartTime]: 1661842802
+2022-08-30 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-30 07:00:02 [CRAWLING ROWS]: 0
+2022-08-30 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-30 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-30 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-30 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-30 07:00:02 [INFO]: Execution Finished
+2022-08-31 07:00:01 [INFO]: Execution Started
+2022-08-31 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-31 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-31 07:00:02 [StartTime]: 1661929202
+2022-08-31 07:00:02 [StartTime]: ///////////////////////////////////////////////
+2022-08-31 07:00:02 [CRAWLING ROWS]: 0
+2022-08-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-08-31 07:00:02 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-08-31 07:00:02 [LOCK UPDATION]: lock updated
+2022-08-31 07:00:02 [INFO]: Execution Finished
+2022-09-01 07:00:01 [INFO]: Execution Started
+2022-09-01 07:00:01 [LOCK UPDATION]: lock updated
+2022-09-01 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-09-01 07:00:01 [StartTime]: 1662015601
+2022-09-01 07:00:01 [StartTime]: ///////////////////////////////////////////////
+2022-09-01 07:00:01 [CRAWLING ROWS]: 0
+2022-09-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-09-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-09-01 07:00:01 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-09-01 07:00:01 [LOCK UPDATION]: lock updated
+2022-09-01 07:00:01 [INFO]: Execution Finished
+2022-09-02 07:00:01 [INFO]: Execution Started
+2022-09-02 07:00:01 [LOCK UPDATION]: lock updated
+2022-09-02 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-09-02 07:00:03 [StartTime]: 1662102003
+2022-09-02 07:00:03 [StartTime]: ///////////////////////////////////////////////
+2022-09-02 07:00:03 [CRAWLING ROWS]: 0
+2022-09-02 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-09-02 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: 0
+2022-09-02 07:00:03 [TOTAL TIME IN ALL USERS CRAWLING]: ///////////////////////////////////////////////
+2022-09-02 07:00:03 [LOCK UPDATION]: lock updated
+2022-09-02 07:00:03 [INFO]: Execution Finished

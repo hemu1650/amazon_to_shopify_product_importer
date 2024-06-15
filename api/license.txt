@@ -1,0 +1,6 @@
+---------------------------------------- Laravel Component --------------------------------
+laravel/laravel v5.1.* - MIT License - https://github.com/laravel/laravel
+nicolaslopezj/searchable v1.* - MIT license - https://github.com/nicolaslopezj/searchable/
+php-soft/laravel-users dev-master - MIT License - https://github.com/php-soft/laravel-users
+tymon/jwt-auth v0.5.* - MIT License - https://github.com/tymondesigns/jwt-auth
+zizaco/entrust v5.2.x-dev - MIT License - https://github.com/Zizaco/entrust

@@ -1,0 +1,15 @@
+{
+  "role":{
+    "form":{
+      "roleName":"اسم",
+      "displayName":"display_name",
+      "description":"وصف",
+      "permissions":"أذونات",
+      "roleAddSuccess":"دور أضيف بنجاح",
+      "roleUpdateSuccess":"دور تحديثها بنجاح"
+    },
+    "list":{
+      "createdTime":"الوقت خلق"
+    }
+  }
+}

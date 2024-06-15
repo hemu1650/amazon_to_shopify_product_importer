@@ -1,0 +1,10 @@
+{
+  "permission":{
+    "form":{
+      "permissionName":"Nome permissão",
+      "displayName":"display_name",
+      "description":"Descrição",
+      "permissionAddSuccess":"Permissão adicionado com sucesso"
+    }
+  }
+}

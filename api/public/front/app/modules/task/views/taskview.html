@@ -1,0 +1,142 @@
+<!-- main content -->
+<div id="content">
+    <div class="col-md-12">
+        <div class="panel panel-default yep-card">
+            <div class="panel-heading card-head">
+                <div class="panel-title">
+                    <a ui-sref="admin.tasks" class="btn btn-link has-ripple" >
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <span class="bold head-title"> {{$state.current.ncyBreadcrumb.label | translate}}</span>
+                </div>
+            </div>
+            <div class="panel-body ">
+                <hr>
+                <!-- column 1-->
+                <div class="col-md-8 layout no-padding">
+                    <div class="well" style="min-height: 330px;">
+                        <h4>{{task.title}}</h4>
+                        <div ng-bind-html="task.description"></div>
+                        <hr>
+                        <div class="row gallery-fancy ">
+                            <div class="col-md-2 col-sm-3 col-xs-4" ng-repeat="img in task.gallery">
+                                <a fancyboxable href="{{'../laravel-backend/public/uploads/'+img.filename}}" >
+                                    <img class="img-responsive" ng-src="{{'../laravel-backend/public/uploads/'+img.filename}}" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <h4 style="margin-top: -30px; position: absolute; background-color: #fff;text-transform: uppercase;">
+                            {{"task.form.comments" | translate}}
+                        </h4>
+                    </div>
+
+                    <!-- description box -->
+                    <div class="chat-panel lg" show-if-has-permit="view_comment">
+                        <ul class="chat invert">
+                            <li class="left clearfix" ng-repeat="comment in task.comment">
+                                <span class="chat-img pull-left">
+                                   <img ng-src="{{comment.user.avatar_url !=='' && '../laravel-backend/public/uploads/'+comment.user.avatar_url || '../laravel-backend/public/uploads/no_avatar.jpg'}}" width="54" alt="User Avatar" class="img-thumbnail">
+                                </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header text-left">
+                                        <strong class=" primary-font">{{comment.user.name}}</strong>
+                                    </div>
+                                    <p>
+                                        {{comment.comment_text}}
+                                    </p>
+                                </div>
+                                <small class="pull-left text-muted">
+                                    <span class="glyphicon glyphicon-time"></span> {{comment.created_at}} |
+                                    <a href="" data-target="#" ng-click="deleteComment(comment.id)" show-if-has-permit="delete_comment"><span class="fa fa-trash red"></span> {{"app.shared.common.delete" | translate}}</a>
+                                </small>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- description box -->
+                </div>
+                <!-- column 1-->
+
+                <!-- column 2-->
+                <div class="col-md-4 ">
+                    <div class="form-group">
+                        <label>
+                            {{"task.form.startAndEndDate" | translate}}
+                        </label>
+                        <input date-range-picker class="form-control date-picker reportrange no-border" type="text" ng-model="date" />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{"task.form.status" | translate }}
+                        </label>
+                        <select ng-model="task.task_status" ng-options='status.id as status.name for status in statusList' class="form-control no-border">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{"task.form.category" | translate}}
+                        </label>
+                        <ui-select ng-model="task.category_id" theme="select2" style="min-width: 100%;" class="no-border">
+                            <ui-select-match>{{$select.selected.name || $select.selected}}</ui-select-match>
+                            <ui-select-choices repeat="category.id as category in categories | propertyFilter: {name: $select.search}">
+                                <div ng-bind-html="category.name | highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                    <div class="form-group">
+                        <label >
+                            {{"task.form.user" | translate}}
+                        </label>
+                        <ui-select ng-model="task.user_id" theme="select2" style="width: 100%;" class="no-border">
+                            <ui-select-match placeholder="Select a person">
+                                <img ng-src="{{$select.selected.avatar_url !=='' && '../laravel-backend/public/uploads/'+$select.selected.avatar_url || '../laravel-backend/public/uploads/no_avatar.jpg' }}" width="20" />
+                                {{$select.selected.name}}
+                            </ui-select-match>
+                            <ui-select-choices repeat="user.id as user in users | propertyFilter: {name: $select.search, email: $select.search}">
+                                <div ng-bind-html="user.name | highlight: $select.search"></div>
+                                <img ng-src="{{user.avatar_url !=='' && '../laravel-backend/public/uploads/'+user.avatar_url || '../laravel-backend/public/uploads/no_avatar.jpg'}}" width="20"/>
+                                <small>
+                                    {{"task.form.userEmail" | translate}} {{user.email}}
+                                </small>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            {{"task.form.keyword" | translate}}
+                        </label>
+                        <ui-select multiple tagging="tagTransform" tagging-label="new tag" ng-model="task.tags" theme="bootstrap" style="width: 100%" class="no-border">
+                            <ui-select-match placeholder="Select tags...">{{$item.tag}}</ui-select-match>
+                            <ui-select-choices repeat="tag.id as tag in tags | propertyFilter: {tag: $select.search}">
+                                <div ng-bind-html="tag.tag | highlight: $select.search"></div>
+                                <div ng-if="tag.isTag" ng-bind-html="tag.tag +' <small>[Add new tag]</small>'| highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <!-- column 2-->
+            </div>
+            <div class="panel-footer">
+                    <!-- replay box-->
+                    <div class="panel-flat panel-flat-show-comment margin-right-33" >
+                        <div class="panel-flat-comment" show-if-has-permit="add_comment">
+                            <img class="img-thumbnail" ng-src="{{profile.avatar_url !=='' && '../laravel-backend/public/uploads/'+profile.avatar_url || '../laravel-backend/public/uploads/no_avatar.jpg'}}" width="50" height="50" alt="User Image">
+                            <div class="panel-flat-textarea">
+                                <textarea rows="5" ng-model="comment.comment_text" ng-disabled="isDisabled"></textarea>
+                                <input type="hidden" ng-model="comment.task_id" ng-init="comment.task_id = task.id" ng-if="task.id!==undefined">
+                                <input type="hidden" ng-model="comment.user_id" ng-init="comment.user_id = profile.id">
+                                <button type="submit" class="btn btn-success" ng-click="createComment(comment)" ng-disabled="isDisabled">
+                                    {{"task.form.sendComment" | translate}}
+                                </button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- replay box-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./end content  -->
