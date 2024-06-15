@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/New folder
+# /New folder
 /.pnp
 .pnp.js
 
