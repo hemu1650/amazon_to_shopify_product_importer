@@ -1,0 +1,350 @@
+.Polaris-DataTable__Cell {
+    white-space: initial;
+}
+
+p {
+    line-break: anywhere;
+}
+
+.Polaris-Tabs__Panel .Polaris-FormLayout {
+    margin-top: 0px;
+}
+
+.apphome_img_center {
+    margin: 10px;
+}
+
+.apphome_img_center .Polaris-Thumbnail {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dashboard_img_center {
+    margin: 10px 0px;
+    background: #FFF;
+}
+
+.dashboard_img_center img {
+    width: 100px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    max-height: 200px;
+    padding: 10px;
+}
+
+.dashboard_img_center .box_heading {
+    background: #DDD;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.app_step_head .Polaris-Heading {
+    font-size: 2.6rem;
+}
+
+.apphome_img_center .Polaris-Thumbnail__Image {
+    width: 100px;
+}
+
+.tox-statusbar__branding {
+    display: none;
+}
+
+.formSection {
+    margin-top: 2rem;
+}
+
+.videoSection {
+    margin-top: 2rem;
+}
+
+.formSection button.Polaris-Button.Polaris-Button--primary {
+    margin-top: 1rem;
+}
+
+.topButton {
+    display: flex;
+    /* Use flexbox to align items horizontally */
+    justify-content: flex-end;
+    /* Align items vertically at the center */
+    gap: 10px;
+}
+
+select#itemsPerPage {
+    padding: 10px 10px 10px 10px;
+    border: 0.1rem solid var(--p-border, #c4cdd5);
+    border-radius: 3px;
+    line-height: 1;
+    color: var(--p-text, #212b36);
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    transition-property: color, background, border, box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.64, 0, 0.35, 1);
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    /* Align items vertically at the center */
+    gap: 10px;
+    text-align-last: center;
+}
+
+.previousButton {
+    background: #f4f6f8;
+    color: #919eab;
+    cursor: pointer;
+    box-shadow: none;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    min-width: 3.6rem;
+    margin: 0;
+    padding: 0.7rem 0.8rem;
+    border: 0.1rem solid var(--p-border, #c4cdd5);
+    border-radius: 3px;
+    line-height: 1;
+    text-align: center;
+    user-select: none;
+    text-decoration: none;
+    transition-property: color, background, border, box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.64, 0, 0.35, 1);
+}
+
+.nextButton {
+    background: #f4f6f8;
+    color: #919eab;
+    cursor: pointer;
+    box-shadow: none;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    min-width: 3.6rem;
+    margin: 0;
+    padding: 0.7rem 0.8rem;
+    border: 0.1rem solid var(--p-border, #c4cdd5);
+    border-radius: 3px;
+    line-height: 1;
+    text-align: center;
+    user-select: none;
+    text-decoration: none;
+    transition-property: color, background, border, box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.64, 0, 0.35, 1);
+}
+
+button.nextButton svg.Polaris-Icon__Svg {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    fill: var(--p-icon, #637381);
+}
+
+button.previousButton svg.Polaris-Icon__Svg {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    fill: var(--p-icon, #637381);
+}
+
+button.previousButton[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button.nextButton[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.topButton2 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.lastloginpopup .Polaris-Frame {
+    min-height: 0 !important;
+}
+
+.videoIframepopup .Polaris-Frame {
+    min-height: 0 !important;
+}
+
+.Polaris-Filters__FiltersContainerFooter .Polaris-Button:nth-child(1) {
+
+    margin-left: 80px;
+}
+
+.Polaris-Filters__FiltersContainerFooter .Polaris-Button:nth-child(2) {
+    position: absolute;
+    margin-right: 10px;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+
+p.note {
+    color: red;
+    padding: 0px 0 15px 0;
+}
+
+.note p {
+    text-align: center;
+    padding: 25px 0 0 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-button {
+    /* Add any styling you want for the buttons */
+}
+
+.Polaris-TopBar {
+    background-color: rgb(28 34 96) !important;
+}
+
+.dashboard-image-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.dashboard-product-image {
+    max-width: 50%;
+}
+
+.boxText p.Polaris-Text--root {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-legacy-card {
+    height: 300px !important;
+    /* Set a fixed height */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    /* Vertically center content */
+    text-align: center !important;
+    /* Horizontally center text */
+}
+
+
+td.title-cell {
+    white-space: break-spaces !important;
+}
+
+
+
+.installinstruction p {
+    font-size: 15px !important;
+    padding-top: 10px !important;
+}
+
+/* login form CSS */
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Set the height of the container to full viewport height */
+}
+
+.login-form {
+    /* width: 300px; */
+    padding: 40px 20px 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 250px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.login-form p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    text-align: center;
+}
+
+.producturl-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .producturl {
+    flex: 9;
+  }
+  
+  .producturl-submit-button {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  .producturl-submit-button button.Polaris-Button.Polaris-Button--pressable.Polaris-Button--variantSecondary.Polaris-Button--sizeMedium.Polaris-Button--textAlignCenter {
+    /* top: 12px; */
+    background-color: #1c2260;
+    color: #fff;
+    border-color: #1c2260 !important;
+}
+
+.preview-imported-products span.Polaris-Checkbox {
+    display: none;
+}
+
+.padded-tag {
+    padding: 10px; /* Adjust the padding value as needed */
+  }
+
+  .Polaris-InlineStack span.Polaris-Tag {
+    margin: 3px;
+}
+
+.preview-imported-products .Polaris-Box {
+    padding: 0 0 20px 0;
+}
+
+/* .bulkproductlist td.Polaris-IndexTable__TableCell.Polaris-IndexTable__TableCell--first {
+    display: none !important;
+}
+
+.bulkproductlist span.Polaris-Checkbox {
+    display: none;
+} */
+
+
+/* .bulkproductlist span.Polaris-Checkbox {
+    display: none;
+} */
