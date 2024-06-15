@@ -2,6 +2,8 @@
 
 # dependencies
 /react_aac/node_modules
+/api/vendor
+/api/node_modules
 /.pnp
 .pnp.js
 
