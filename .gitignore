@@ -2,6 +2,7 @@
 
 # dependencies
 /react_aac/node_modules
+/aac
 /aac/api
 /aac/api/vendor
 /aac/api/node_modules
