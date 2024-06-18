@@ -1,0 +1,354 @@
+<!-- main content -->
+
+<div  class="text-center preloader" ng-show="loader">
+
+	<span><img src="loading.gif" width="150px" height="150px" />  Loading...</span>
+
+</div>
+
+<div id="content">
+
+	<div id="sortable-panel" class="">
+
+		<div class="col-md-12 ">
+
+			<div class="panel panel-default">
+
+				<div class="panel-body">   
+
+					<div ng-show="products != []">  
+
+						<div class="col-md-12 panel-body">
+						    <div class="col-sm-12" ng-if="alert">
+            			        <p style="color:red;">This feature is available for Professional and Enterprise plan. <a ui-sref="admin.plans">Click here to upgrade.</a></p>
+            			    </div>
+            			  
+            			     <!--<div class="col-sm-12" ng-if="profile.buynow != 1">
+            			        <p style="color:red;">You have not yet enabled redirection to redirect your store’s visitors to Amazon page. <a href="https://infoshoreapps.zendesk.com/hc/en-us/articles/360017711113-How-to-configure-Buy-Now-Link-Settings">Click here to know how to do that.</a></p>
+            			    </div>
+                             <div class="col-sm-12" ng-if="profile.buynow == '1' ">
+            			        
+            			     <div  ng-if="profile.associate_id == '' ">    
+            			        <p style="color:red;">You have not yet added your Amazon Associate tag to earn amazon affiliate commision.  <a href="https://infoshoreapps.zendesk.com/hc/en-us/articles/360017543714-How-to-get-AWS-keys-of-your-Amazon-Associate-Account">Click here to know how to do that.</a></p>
+            			    </div>
+                             -->
+                          <!--  <div  ng-if="profile.aws_access_id == ''  && profile.aws_secret_key == '' ">    
+            			        <p style="color:red;">Make sure you have installed the app’s code in your Shopify’s theme.  <a href="https://infoshoreapps.zendesk.com/hc/en-us/articles/360016351993-Code-install-instructions-">Click here for the instructions or contact us at epihelp@infoshore.biz for FREE code installation.</a></p>
+            			    </div>-->
+            			    
+            			    </div>
+                            
+                            
+                            
+							<div class="form-inline pull-left">
+
+								<button class="btn btn-primary" ui-sref="admin.addproduct" ng-show="profile.amztoken == 0"><i class="fa fa-plus"></i> {{"product.form.addNew" | translate}}</button>
+
+								<button class="btn btn-primary" ui-sref="admin.asinProduct" ng-show="profile.amztoken == 1"><i class="fa fa-plus"></i> {{"product.form.addNew" | translate}}</button>
+                                
+                                <!--<button class="btn btn-primary" ng-click="forceSyncSelected()" ng-show = "checkedStatus" ><i class="fa fa-plus"></i> Sync Selected </button>-->
+                                
+                                <div class="btn-group" ng-show = "checkedStatus">
+									<button class="btn btn-primary dropdown-toggle has-ripple" data-toggle="dropdown" aria-expanded="false">Action<span class="caret"></span>
+									<span class="ripple ripple-animate" style="height: 78px; width: 78px; animation-duration: 0.4s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.2; top: -21px; left: -6px;"></span></button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="" ng-click="forceSyncSelected()"  ><i class="fa fa-plus"></i> Sync Selected </a>
+										</li>
+										<li>
+											<a href="" ng-click="exportProducts(profile.plan)"><i class="fa fa-download" aria-hidden="true"></i> Export Selected</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="form-inline pull-right">
+                                <a href="https://infoshoreapps.zendesk.com/hc/en-us/sections/360003163653-Manage-Products" target="_blank" class="btn btn-danger has-ripple">Need help?<span class="ripple ripple-animate" style="height: 95px; width: 95px; animation-duration: 0.4s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.2; top: -26.5px; left: 12.375px;"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type="text" class="form-control" placeholder="Search" ng-model="query" ng-keypress="($event.which === 13)?search(perPage):0">
+
+								<button type="button" class="btn btn-primary" ng-click="search(perPage)">{{"product.form.search" | translate}}</button>
+
+								<button type="button" class="btn btn-primary" ng-click="refresh()">{{"product.form.resetFilter" | translate}}</button>
+
+							</div>
+
+						</div>
+
+						<div class="panel-body col-sm-12" ng-hide="pagination.total == 0">
+
+							<div class="res-table">         
+
+								<table class="table table-bordered">
+
+									<thead>
+
+										<tr>
+
+											<th width="5%" style="text-align:center;"><div class="checkbox checkbox-primary">
+
+												<input type="checkbox" ng-model="selectedAll" ng-click="checkAll()" class="conchkNumber"> <label></label></div>
+
+											</th>
+
+											<th style="text-align:center;" width="10%"></th>
+
+											<th width="35%">{{"product.form.title" | translate}}</th>
+
+											<!--<th width="10%">{{"product.form.variants" | translate}}</th>-->
+
+											<th width="10%">{{"product.form.price" | translate}}</th>
+
+											<th width="10%">{{"product.form.status" | translate}}</th>
+
+											<th width="15%">{{"product.form.actions" | translate}}</th> 
+
+										</tr>
+
+									</thead>
+
+									<tbody ng-repeat="product in products">
+
+										<tr> 
+
+											<td style="text-align:center;">
+
+												<div class="checkbox checkbox-primary">
+
+													<input id="{{product.product_id}}" type="checkbox" class="conchkNumber" value="{{product.title}}" ng-checked="selection.indexOf(product.product_id) > -1" ng-click="toggleSelection(product.product_id)" ng-model="product.Selected" >
+
+													<label for="{{product.product_id}}"></label>
+
+												</div>
+
+											</td>
+
+											<td style="text-align:center;" width="10%"> <img ng-src="{{product.variants[0].main_image.imgurl}}" alt="avatar" class="img-circle img-responsive" fallback-src="{{'../assets/img/broken/broken-link-250x250.png'}}"></td>
+
+											<td>{{product.title}}<br /><strong>ASIN: {{product.variants[0].sku}}</strong></td>
+
+											<!--<td><span ng-if="product.variants_count.no_of_variants <= 1">{{product.variants_count.no_of_variants}} variant</span><a data-toggle="modal" data-target="#myModal" ng-if="product.variants_count.no_of_variants > 1" ng-click="popupvariants({id:product.product_id})" style="cursor:pointer;"><u>{{product.variants_count.no_of_variants}} variants</u></a></td>-->
+
+											<td>{{product.variants[0].price}}</td>
+
+											<td>{{product.status}}</td>
+
+											<td>
+
+											<div class="btn-group">
+
+												<button class="btn btn-primary dropdown-toggle has-ripple" data-toggle="dropdown" aria-expanded="false">Action<span class="caret"></span><span class="ripple ripple-animate" style="height: 78px; width: 78px; animation-duration: 0.4s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.2; top: -21px; left: -6px;"></span></button>
+
+												<ul class="dropdown-menu">
+
+													<li>
+
+														<a href="{{product.variants[0].detail_page_url}}" target="_blank">View on Amazon</a>
+
+													</li>
+
+													<li>
+
+														<a href="https://{{profile.shopurl}}/admin/products/{{product.shopifyproductid}}"  target="_blank">View on Shopify</a>
+
+													</li>
+													<!--<li>
+													    <a href="" ng-click="viewReviews(product.variants[0].asin)" >View Reviews</a>
+													</li>
+													<li>
+														<a href="" ng-click="fetchReviews(product.variants[0].asin)">Fetch Reviews</a>
+													</li>-->
+
+													<li>
+
+														<a ng-click = "reimport(product,profile.plan)" style = "cursor:pointer;" > Reimport </a>
+
+													</li> 
+													<li>
+													    <a ng-click = "forceSync(product,profile.plan)" style = "cursor:pointer;" > Force Sync </a>
+													</li>
+													<li>
+													    <a data-toggle="modal" data-target="#changeLink" ng-click="getVariantLink({id:product.product_id})" style = "cursor:pointer;" > Change Redirection Link </a>
+													</li>
+													<li>
+
+														<a ng-show = "product.block == 0 && profile.id == 193" ng-click = "block(product.product_id)" style = "cursor:pointer;">Block Auto-Sync</a><a ng-show = "product.block == 1 && profile.id == 193" ng-click = "unblock(product.product_id)" style = "cursor:pointer;">Unblock Auto-Sync</a>
+
+													</li>
+
+													<li class="divider"></li>
+
+													<li>
+
+														<a ng-click = "destroy(product.product_id)" style = "cursor:pointer;">Delete Product</a>
+
+													</li>
+
+												</ul>
+
+											</div>
+
+										</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+        			</div>
+
+				</div>
+
+				<div ng-show="pagination.total == 0">
+
+					<h1 style="text-align:center;">No products found.</h1>
+
+				</div>
+
+				<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel3" style="overflow-y: hidden;">
+
+					<div class="modal-dialog" style="width:70%;overflow-y: scroll; max-height:85%;margin:67px auto;">
+
+						<div class="modal-content">
+
+							<div class="modal-header">
+
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+								<h4 class="modal-title" id="myModalLabel3">Variant</h4>
+
+							</div>
+
+							<div class="panel-body">
+
+								<div class="panel-body col-sm-12">
+
+									<div class="res-table">         
+
+										<table class="table table-hover table-fixed ellipsis-table table-bordered">
+
+											<thead>
+
+												<tr>
+
+													<th width="7%">{{"product.form.sno" | translate}}</th>
+
+													<th width="20%">{{"product.form.sku" | translate}}</th>
+
+													<th width="10%" ng-show="popupoption1 != ''">{{popupoption1}}</th>
+
+													<th width="10%" ng-show="popupoption2 != ''">{{popupoption2}}</th>
+
+													<th width="10%" ng-show="popupoption3 != ''">{{popupoption3}}</th>
+
+													<th width="10%">{{"product.form.price" | translate}}</th>
+
+													<th width="10%">{{"product.form.status" | translate}}</th>
+
+												</tr>
+
+											</thead>
+
+											<tbody>
+
+												<tr ng-repeat="variants in popupvariant"> 
+
+                        							<td>{{$index + 1}}</td>
+
+													<td>{{variants.sku}}<br /><strong>ASIN: {{variants.asin}}</strong></td>
+
+													<td ng-show="variants.option1val != ''">{{variants.option1val}}</td>
+
+  													<td ng-show="variants.option2val != ''">{{variants.option2val}}</td>
+
+													<td ng-show="variants.option3val != ''">{{variants.option3val}}</td>
+
+													<td>{{variants.price}}</td>
+
+													<td>{{variants.status}}</td>
+
+												</tr>
+
+											</tbody>
+
+										</table>
+
+									</div>
+
+        						</div>                    
+
+							</div>
+
+						</div>
+
+					</div>					
+
+				</div>
+				<div class="modal fade" id="changeLink" tabindex="-1" aria-labelledby="myModalLabel3" style="overflow-y: hidden;">
+				   <div class="modal-dialog" style="width:70%;overflow-y: scroll; max-height:85%;margin:67px auto;">
+					  <div class="modal-content">
+						 <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel3">Change Redirection Link</h4>
+						 </div>
+						 <div class="panel-body">
+							<div class="panel-body col-sm-12">
+							<form class="form-horizontal" ng-submit="changeLink(productobj,profile.plan)">
+							 <div class="form-group">
+							 {{ product.product_id }}
+								<label class="col-sm-3 control-label">New Redirection Link</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" ng-model="productobj.variants[0].custom_link" required>
+								</div>
+							 </div>
+							 <div class="form-group">
+								<div class="col-sm-12">	
+									<button class = "btn btn-success pull-right"><i class="fa fa-save"></i> Save</button>
+								</div>
+							</div>
+							</div>
+						 </div>
+					   </form>                   
+					  </div>
+				   </div>
+				</div>
+				<div>                      
+
+					<div class="col-sm-12" ng-hide = "(pagination.total == 0)">
+
+						<div class="col-sm-4 panel-body">
+
+							Showing {{start}} to {{end}} of {{pagination.total}} entries
+
+						</div>
+
+						<div class=" col-sm-3 panel-body">
+
+							<div class="display-flex">
+
+								Show&nbsp;<select ng-model="perPage" ng-change="pageChanged(perPage)" ng-options="opt as opt.label for opt in units" class="form-control inline col-md-2" style="margin-top:-7px;"></select>&nbsp;entries
+
+							</div>
+
+						</div>
+
+						<div class="col-sm-5"> 
+
+							<uib-pagination ng-show="pagination.total>10" total-items="pagination.total" ng-model="pagination.current_page" max-size="maxSize" class="pagination pull-right" boundary-links="true" rotate="false" ng-change="pageChanged(perPage)" items-per-page="pagination.per_page" style="margin:0px;"></uib-pagination>
+
+						</div>
+
+					</div>
+
+				</div>
+
+       		</div>
+
+		</div><!-- end panel -->
+
+	</div>
+
+  </div>
+</div>

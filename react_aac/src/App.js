@@ -24,7 +24,8 @@ import Plans from './Plans';
 import Loginform from './Loginform';
 import axios from 'axios';
 import Logout from './Logout';
-import Test from './Test';
+import Review from './Review';
+import ReviewEdit from './ReviewEdit';
 
 function App() {
   const [logo_url, setLogourl] = useState(process.env.PUBLIC_URL + '/logo1.png');
@@ -83,7 +84,8 @@ function App() {
       <Route path="/plans" element={token ? <Plans /> : <Navigate to="/" />} />
       <Route path="https://infoshoreapps.zendesk.com/hc/en-us/categories/360001364874-Amazon-Associate-Connector" />
       <Route path="/logout" element={<Logout setToken={setToken} />} />
-      <Route path="/test" element={token ? <Test /> : <Navigate to="/" />} />
+      <Route path="/review" element={token ? <Review /> : <Navigate to="/" />} />
+      <Route path="/review-edit/:id" element={token ? <ReviewEdit /> : <Navigate to="/" />} />
     </Routes>
   );
 

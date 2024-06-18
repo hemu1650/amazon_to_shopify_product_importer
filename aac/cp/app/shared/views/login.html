@@ -1,0 +1,38 @@
+<div ng-controller="Preloader" class="">
+	<div style="margin: 5% auto; position: relative; width: 400px;">		
+		<!-- error alert panel -->
+		<div class="alert alert-danger" ng-if="signinError.data.error">
+			<strong>There was an error: </strong> {{signinError.data.error}}
+			<br>Please try again
+		</div>
+		<div id="sign-form" class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-center">
+							<h2>Amazon Associate Connector by InfoShoreApps</h2>
+							<h5 class="grey">Enter URL of your shopify store like myshop.myshopify.com</h5>
+							<br>
+						</div>
+						<!--  ng-submit should be signin() -->
+						<form action = "https://shopify.infoshore.biz/aac/index.php" role="form" autocomplete="off" class="form-horizontal">			
+							<div ng-show="loader" class="text-center">
+								<img src="../assets/img/preloader/material.gif" alt="preloader">
+							</div>
+							<fieldset ng-hide="loader">								
+								<div class="spacing hidden-md"></div>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span>
+									<input type="text" class="form-control" id="shop" name="shop" placeholder="eg. myshop.myshopify.com" required>
+								</div>								
+								<div class="spacing"></div>
+								<button type="submit" class="btn btn-success btn-sm  pull-right">SUBMIT</button>
+							</fieldset>
+						</form>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>Copyright 2021 InfoShore Technology Solutions LLP. All right reserved.</p>
+	</div>
+</div>

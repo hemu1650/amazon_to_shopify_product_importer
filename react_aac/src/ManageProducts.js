@@ -24,6 +24,7 @@ import React, { useCallback, useState, useEffect, useContext } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom'; // or 'next/link' if using Next.js
 import wrap from 'word-wrap';
+import { toast } from "react-toastify";
 
 
 function ManageProducts() {
@@ -32,6 +33,7 @@ function ManageProducts() {
 	const [Products, setProducts] = useState("");
 	const [Productlist, setProductlist] = useState("");
 	const [activeDropdowns, setActiveDropdowns] = useState({});
+	const [active, setActive] = useState(false);
 	const tempcode = localStorage.getItem('tempcode');
 
 	const titleCellStyle = {
@@ -300,11 +302,7 @@ function ManageProducts() {
 	const [currentPage, setCurrentPage] = useState(1);
 	const totalPages = Math.ceil(shproducts.length / itemsPerPage);
 	const startIndex = (currentPage - 1) * itemsPerPage;
-	const endIndex = currentPage * itemsPerPage;
-	// const paginatedProducts = shproducts.slice(
-	// 	(currentPage - 1) * itemsPerPage,
-	// 	currentPage * itemsPerPage
-	// );
+	const endIndex = currentPage * itemsPerPage;	
 
 	const paginate = (items, pageNumber, pageSize) => {
 		const start = (pageNumber - 1) * pageSize;
@@ -316,6 +314,188 @@ function ManageProducts() {
 
 	const { selectedResources, allResourcesSelected, handleSelectionChange } =
 		useIndexResourceState(shproducts);
+	
+	const deleteProduct = async (id) => {
+		try {
+			const response = await axios.post(
+				`${process.env.REACT_APP_BASE_URL}/product/destroy/${id}`,
+				{}, // No body content for the POST request
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			const data = response.data;
+			// setReviewData(data);
+			console.log("Fetch product Data:", data.message);
+			toast.success(data.message);
+			// Set a timeout to refresh the page after 5 seconds
+			setTimeout(() => {
+				window.location.reload();
+			}, 5000);
+			setActive(true);
+		} catch (error) {
+			console.error("Error fetching fetch reviews:", error);
+			toast.error("Something went wrong !!");
+		}
+	};
+
+	const forceSyncProduct = async (id) => {
+		try {
+			const response = await axios.post(
+				`${process.env.REACT_APP_BASE_URL}/product/forceSync/${id}`,
+				{}, // No body content for the POST request
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			const data = response.data;
+			// setReviewData(data);
+			console.log("Fetch forceSyncProduct Data:", data.msg);
+			toast.success(data.msg);
+			// Set a timeout to refresh the page after 5 seconds
+			setTimeout(() => {
+				window.location.reload();
+			}, 5000);
+			setActive(true);
+		} catch (error) {
+			console.error("Error fetching fetch reviews:", error);
+			toast.error("Something went wrong !!");
+		}
+	};
+
+	const reimportProduct = async (id) => {
+		try {
+			const response = await axios.post(
+				`${process.env.REACT_APP_BASE_URL}/product/reimport/${id}`,
+				{}, // No body content for the POST request
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			const data = response.data;
+			// setReviewData(data);
+			console.log("Fetch reimportProduct Data:", data.msg);
+			toast.success(data.msg);
+			// Set a timeout to refresh the page after 5 seconds
+			setTimeout(() => {
+				window.location.reload();
+			}, 5000);
+			setActive(true);
+		} catch (error) {
+			console.error("Error fetching fetch reviews:", error);
+			toast.error("Something went wrong !!");
+		}
+	};
+
+	const changeLinkProduct = async (id) => {
+		try {
+			const response = await axios.post(
+				`${process.env.REACT_APP_BASE_URL}/product/changeLink/${id}`,
+				{}, // No body content for the POST request
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			const data = response.data;
+			// setReviewData(data);
+			console.log("Fetch changeLinkProduct Data:", data.msg);
+			toast.success(data.msg);
+			// Set a timeout to refresh the page after 5 seconds
+			setTimeout(() => {
+				window.location.reload();
+			}, 5000);
+			setActive(true);
+		} catch (error) {
+			console.error("Error fetching fetch reviews:", error);
+			toast.error("Something went wrong !!");
+		}
+	};
+
+	const blockProduct = async (id) => {
+		try {
+			const response = await axios.post(
+				`${process.env.REACT_APP_BASE_URL}/product/block/${id}`,
+				{}, // No body content for the POST request
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			const data = response.data;
+			// setReviewData(data);
+			console.log("Fetch blockProduct Data:", data);
+			toast.success(data);
+			// Set a timeout to refresh the page after 5 seconds
+			setTimeout(() => {
+				window.location.reload();
+			}, 5000);
+			setActive(true);
+		} catch (error) {
+			console.error("Error fetching fetch reviews:", error);
+			toast.error("Something went wrong !!");
+		}
+	};
+
+	const unblockProduct = async (id) => {
+		try {
+			const response = await axios.post(
+				`${process.env.REACT_APP_BASE_URL}/product/unblock/${id}`,
+				{}, // No body content for the POST request
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			const data = response.data;
+			// setReviewData(data);
+			console.log("Fetch unblockProduct Data:", data.msg);
+			toast.success(data.msg);
+			// Set a timeout to refresh the page after 5 seconds
+			setTimeout(() => {
+				window.location.reload();
+			}, 5000);
+			setActive(true);
+		} catch (error) {
+			console.error("Error fetching fetch reviews:", error);
+			toast.error("Something went wrong !!");
+		}
+	};
+
+	const updateProduct = async (id) => {
+		try {
+			const response = await axios.post(
+				`${process.env.REACT_APP_BASE_URL}/product/update/${id}`,
+				{}, // No body content for the POST request
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			const data = response.data;
+			// setReviewData(data);
+			console.log("Fetch updateProduct Data:", data.msg);
+			toast.success(data.msg);
+			// Set a timeout to refresh the page after 5 seconds
+			setTimeout(() => {
+				window.location.reload();
+			}, 5000);
+			setActive(true);
+		} catch (error) {
+			console.error("Error fetching fetch reviews:", error);
+			toast.error("Something went wrong !!");
+		}
+	};
 
 	const rowMarkup = Array.isArray(paginatedProducts) ? paginatedProducts.map(
 		({ product_id, title, variants }, index) => {
@@ -326,12 +506,17 @@ function ManageProducts() {
 						id={product_id}
 						selected={false} // Adjust this according to your selected resources logic
 						position={index}
+						showSelection={false}
+						selectable={false}						
 					>
-						{variants && Array.isArray(variants) && variants.map((variant, vIndex) => (
-							<React.Fragment key={vIndex}>
+					
+						{/* {variants && Array.isArray(variants) && variants.map((variant, vIndex) => (
+							<React.Fragment key={vIndex}>							
 								<IndexTable.Cell><img src={variant.main_image.imgurl} width="100" height="100" /></IndexTable.Cell>
 							</React.Fragment>
-						))}
+						))} */}
+
+						<IndexTable.Cell></IndexTable.Cell>
 
 						<IndexTable.Cell>
 							{wrappedTitle.split('\n').map((line, idx) => (
@@ -339,7 +524,7 @@ function ManageProducts() {
 							))}
 						</IndexTable.Cell>
 
-						{variants && Array.isArray(variants) && variants.map((variant, vIndex) => (
+						{/* {variants && Array.isArray(variants) && variants.map((variant, vIndex) => (
 							<React.Fragment key={vIndex}>
 								<IndexTable.Cell>{variant.asin}</IndexTable.Cell>
 								<IndexTable.Cell>{variant.sku}</IndexTable.Cell>
@@ -355,21 +540,46 @@ function ManageProducts() {
 									>
 										<ActionList
 											items={[
-												{ content: 'View on Amazon', onAction: () => console.log('View on Amazon') },
-												{ content: 'View on Shopify', onAction: () => console.log('View on Shopify') },
-												{ content: 'Reimport', onAction: () => console.log('Reimport') },
-												{ content: 'Force Sync', onAction: () => console.log('Force Sync') },
-												{ content: 'Change Redirection Link', onAction: () => console.log('Change Redirection Link') },
-												{ content: 'Block Auto-Sync', onAction: () => console.log('Block Auto-Sync') },
-												{ content: 'Unblock Auto-Sync', onAction: () => console.log('Unblock Auto-Sync') },
-												{ content: 'Edit Product Details', onAction: () => console.log('Edit Product Details') },
-												{ content: 'Delete Product', onAction: () => console.log('Delete Product') },
+												{
+													content: <a href={variant.detail_page_url} target="_blank" rel="noopener noreferrer">View on Amazon</a>,
+												},
+												{
+													content: <a href={variant.shopifyproductid} target="_blank" rel="noopener noreferrer">View on Shopify</a>,
+												},
+												{
+													content: "Reimport",
+													onAction: () => reimportProduct(variant.product_id),
+												},
+												{
+													content: "Force Sync",
+													onAction: () => forceSyncProduct(variant.product_id),
+												},
+												{
+													content: "Change Redirection Link",
+													onAction: () => changeLinkProduct(variant.product_id),
+												},
+												{
+													content: "Block Auto-Sync",
+													onAction: () => blockProduct(variant.product_id),
+												},
+												{
+													content: "Unblock Auto-Sync",
+													onAction: () => unblockProduct(variant.product_id),
+												},
+												{
+													content: "Edit Product Details",
+													onAction: () => updateProduct(variant.product_id),
+												},
+												{
+													content: "Delete Product",
+													onAction: () => deleteProduct(variant.product_id),
+												},
 											]}
 										/>
 									</Popover>
 								</IndexTable.Cell>
 							</React.Fragment>
-						))}
+						))} */}
 					</IndexTable.Row>
 				</React.Fragment>
 			);
@@ -409,11 +619,11 @@ function ManageProducts() {
 						</Link>
 					),
 				},
-				// {
-				// 	content: "Import",
-				// 	accessibilityLabel: "Import product list",
-				// 	onAction: () => alert("Import action"),
-				// },
+				{
+					content: "Import",
+					accessibilityLabel: "Import product list",
+					onAction: () => alert("Import action"),
+				},
 			]}
 		>
 			<Card padding="0">
@@ -432,7 +642,7 @@ function ManageProducts() {
 						loading: false,
 					}}
 					tabs={tabs}
-					selected={selected}
+					// selected={selected}
 					onSelect={setSelected}
 					canCreateNewView
 					onCreateNewView={onCreateNewView}
@@ -445,9 +655,9 @@ function ManageProducts() {
 				<IndexTable
 					resourceName={resourceName}
 					itemCount={shproducts.length}
-					selectedItemsCount={
-						allResourcesSelected ? "All" : selectedResources.length
-					}
+					// selectedItemsCount={
+					// 	allResourcesSelected ? "All" : selectedResources.length
+					// }
 					onSelectionChange={handleSelectionChange}
 					sortable={[false, true, true, true, true, true, true]}
 					headings={[
@@ -458,11 +668,6 @@ function ManageProducts() {
 						{ title: "Price" },
 						{ title: "Status" },
 						{ title: "Actions" },
-						// { title: "Price", alignment: "end" },
-						// { title: "Status" },
-						// { title: "Inventory" },
-						// { title: "Type" },
-						// { title: "Vendor" },
 					]}
 				>
 					{rowMarkup}

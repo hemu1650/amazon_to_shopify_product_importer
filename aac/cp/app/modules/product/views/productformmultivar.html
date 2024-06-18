@@ -1,0 +1,257 @@
+<!-- main content -->
+ 
+<div  class="text-center preloader" ng-show="loader">
+
+    <span><img src="loading.gif" width="80px" height="80px" /> Fetching data...this may take few moments</span>
+  
+  </div>
+  
+  <div id="content">
+  
+      <div id="sortable-panel" class="">
+  
+          <div id="titr-content" class="col-md-12">     
+  
+              <div class="panel panel-default">
+  
+                  <div class="panel-body"> 
+  
+                      <form class="form-horizontal">
+  
+                          <fieldset ng-disabled="isDisabled">
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <label class="col-sm-7 pull-left">
+                                          Please enter Amazon product URL Multi Variant(<a href="https://infoshoreapps.zendesk.com/hc/en-us/articles/360016229474-How-to-import-product-by-URL-to-your-Shopify-store" target="_blank">Click here for instructions</a>)
+
+                                      </label>
+                                     
+                                  </div>
+                                  
+                                  <div class="col-sm-12">
+                                      <div class="col-sm-7">
+                                          <div class=" input-group">
+                                              <input type="text" class="form-control" ng-model="pageObj.producturl">
+                                              <span class="input-group-btn">
+                                                  <button class = "btn btn-success pull-right" ng-click="addmultiple(pageObj)"><span>{{"Add Multiple Variants" | translate }}</span></button>
+                                                  
+                                              </span>
+
+                                          </div>
+                                      </div>
+                                      
+                                      
+                                     
+                                      <!--<div class="col-sm-5" ng-show="products != []">
+                                          <div class="form-inline pull-right" ng-hide="pagination.total == 0">
+  
+                                              <input type="text" class="form-control" placeholder="Search" ng-model="query" ng-keypress="($event.which === 13)?search(perPage):0">
+  
+                                              <button type="button" class="btn btn-primary" ng-click="search(perPage)">{{"product.form.search" | translate}}</button>
+  
+                                              <button type="button" class="btn btn-primary" ng-click="refresh()">{{"product.form.resetFilter" | translate}}</button>
+  
+                                          </div>
+                                      </div>-->
+                                  </div>
+                              </div>
+                          </fieldset>
+  
+                      </form>
+                      
+                    
+                      <div ng-if="products.length > 0">
+                          <div class="col-md-12 panel-body">
+  
+                                  <div class="form-inline pull-left">
+  
+                                      <button class="btn btn-primary" ui-sref="admin.asinProduct" ng-show="profile.amztoken == 1"><i class="fa fa-plus"></i> {{"product.form.addNew" | translate}}</button>
+  
+                                  </div>
+                          </div>
+  
+                          <div ng-show="pagination.total == 0">
+  
+                              <h1 style="text-align:center;">No products found.</h1>
+  
+                          </div>
+                          
+                          <table class="table table-hover" ng-show="pagination.total != 0">
+                              <thead>
+  
+                                  <tr>
+  
+                                      <th width="5%" style="text-align:center;">
+                                          <div class="checkbox checkbox-primary"></div>
+                                      </th>
+  
+                                      <th style="text-align:center;" width="10%"></th>
+  
+                                      <th width="35%">{{"product.form.title" | translate}}</th>
+  
+                                      <!--<th width="10%">{{"product.form.variants" | translate}}</th>-->
+  
+                                      <th width="15%">{{"product.form.status" | translate}}</th>
+  
+                                      <th width="10%">{{"product.form.actions" | translate}}</th> 
+  
+                                  </tr>
+  
+                              </thead>
+                              <tbody ng-repeat="(key,product) in products">
+                                  <tr> 
+                                      <td style="text-align:center;">
+                                          <div class="checkbox checkbox-primary">
+                                              <input id="{{product.product_id}}" type="checkbox" class="conchkNumber" value="{{product.title}}" ng-checked="selection.indexOf(product.product_id) > -1" ng-click="toggleSelection(product.product_id)" ng-model="product.Selected" >
+                                              <label for="{{product.product_id}}"></label>
+                                          </div>
+                                      </td>
+                                      <td style="text-align:center;" width="10%"> <img ng-if="product.status == 'Import in progress'" src="loading.gif" width="80px" height="80px" /> <img ng-if="product.cstatus == 'Error'" src="error.png" width="50px" height="50px" /> <img ng-if="product.variants[0]" ng-src="{{product.variants[0].main_image.imgurl}}" alt="avatar" class="img-circle img-responsive" fallback-src="{{'../assets/img/broken/broken-link-250x250.png'}}">
+                                      </td>
+                                      <td style="word-wrap: break-word;max-width: 400px;">{{product.title}}<br /><strong ng-if="product.variants[0]">ASIN: {{product.variants[0].sku}}</strong></td>
+                                      <!--<td><span ng-if="product.variants_count.no_of_variants <= 1">{{product.variants_count.no_of_variants}} variant</span><a data-toggle="modal" data-target="#myModal" ng-if="product.variants_count.no_of_variants > 1" ng-click="popupvariants({id:product.product_id})" style="cursor:pointer;"><u>{{product.variants_count.no_of_variants}} variants</u></a></td>-->
+                                      <td style="word-wrap: break-word;max-width: 200px;">{{product.status}}<br/>
+                                          <a href="https://{{profile.shopurl}}/admin/products/{{product.shopifyproductid}}" ng-if="product.shopifyproductid" target="_blank">View on Shopify</a>
+                                          <a data-toggle="modal" data-target="#addField" ng-if="product.status == 'Incomplete'" ng-click="addFieldId(product.product_id)">Click here to add missing data</a>
+                                      </td>
+                                      <td>
+                                          <div class="btn-group" ng-if="product.variants[0]">
+                                              <button class="btn btn-primary dropdown-toggle has-ripple" data-toggle="dropdown" aria-expanded="false">Action<span class="caret"></span><span class="ripple ripple-animate" style="height: 78px; width: 78px; animation-duration: 0.4s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.2; top: -21px; left: -6px;"></span></button>
+                                              <ul class="dropdown-menu">
+                                                  <li>
+                                                      <a href="{{product.variants[0].detail_page_url}}" target="_blank">View on Amazon</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="https://{{profile.shopurl}}/admin/products/{{product.shopifyproductid}}" ng-show="product.shopifyproductid != ''"  target="_blank">View on Shopify</a>
+                                                  </li>
+                                                  <li>
+                                                      <a ng-click = "reimport(product.product_id)" style = "cursor:pointer;" ng-show="profile.id == 193">Reimport</a>
+                                                  </li>        
+                                                  <li>
+                                                      <a ng-show = "product.block == 0 && profile.id == 193" ng-click = "block(product.product_id)" style = "cursor:pointer;">Block Auto-Sync</a><a ng-show = "product.block == 1 && profile.id == 193" ng-click = "unblock(product.product_id)" style = "cursor:pointer;">Unblock Auto-Sync</a>
+                                                  </li>
+                                                  <!--<li>
+                                                      <a ui-sref="admin.reviews({id:product.variants[0].asin})" >View Reviews</a>
+                                                  </li>-->
+                                                  <li>
+                                                      <a href="" ng-click="fetchReviews(product.variants[0].asin)">Fetch Reviews</a>
+                                                  </li>
+  
+                                                  <li class="divider"></li>
+                                                  <li>
+                                                      <a ng-click = "destroy(key,product.product_id)" style = "cursor:pointer;">Delete Product</a>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+  
+                          <div>                      
+  <div class="modal fade" id="addField" tabindex="-1" aria-labelledby="myModalLabel3" style="overflow-y: hidden;">
+                                                 <div class="modal-dialog" style="width:70%;overflow-y: scroll; max-height:85%;margin:67px auto;">
+                                                    <div class="modal-content">
+                                                       <div class="modal-header">
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                          <h4 class="modal-title" id="myModalLabel3">Add Price</h4>
+                                                       </div>
+                                                       <div class="panel-body">
+                                                          <div class="panel-body col-sm-12">
+                                                          <form class="form-horizontal" ng-submit="addField(padd)">
+                                                           <div class="form-group">
+                                                               
+                                                              <label class="col-sm-3 control-label">Price</label>
+                                                              <div class="col-sm-7">
+                                                                  <input type="number" step="any" class="form-control" ng-model="padd.price" required>
+                                                              </div>
+                                                           </div>
+                                                           <div class="form-group">
+                                                              <div class="col-sm-12">	
+                                                                  <button class = "btn btn-success pull-right"><i class="fa fa-save"></i> Save</button>
+                                                              </div>
+                                                          </div>
+                                                          </div>
+                                                       </div>
+                                                     </form>                   
+                                                    </div>
+                                                 </div>
+                                              </div>
+                              <!--<div class="col-sm-12" ng-hide = "(pagination.total == 0)">
+          
+                                  <div class="col-sm-4 panel-body">
+          
+                                      Showing {{start}} to {{end}} of {{pagination.total}} entries
+          
+                                  </div>
+          
+                                  <div class=" col-sm-3 panel-body">
+          
+                                      <div class="display-flex">
+          
+                                          Show&nbsp;<select ng-model="perPage" ng-change="pageChanged(perPage)" ng-options="opt as opt.label for opt in units" class="form-control inline col-md-2" style="margin-top:-7px;"></select>&nbsp;entries
+          
+                                      </div>
+          
+                                  </div>
+          
+                                  <div class="col-sm-5"> 
+          
+                                      <uib-pagination ng-show="pagination.total>10" total-items="pagination.total" ng-model="pagination.current_page" max-size="maxSize" class="pagination pull-right" boundary-links="true" rotate="false" ng-change="pageChanged(perPage)" items-per-page="pagination.per_page" style="margin:0px;"></uib-pagination>
+          
+                                  </div>
+          
+                              </div>-->
+          
+                          </div>
+                      </div>
+                  </div>
+  
+              </div>
+  
+          </div>
+  
+      </div>
+  
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <table class="table" style="margin-left:4%; margin-right:2%;  border: 3px solid;">
+    <tr  class="bg-info" style=" border: 3px solid">
+    
+    <th>Asin</th>
+    <th>Team_name</th>
+    <th>Size_name</th>
+    <th>Color_name</th>
+    </tr>
+    
+    <tbody id="myTable">
+      
+    </tbody>
+       
+    </table>
+<script>
+ const obj = {
+
+   "B07BCNQXYS":["Carolina Panthers","Medium","Heather Gray"],"B07BCNQXYT":["Carolina Panthers","X-Large","Heather Gray"],"B07BCLP1VT":["Jacksonville Jaguars","Large","Heather Gray"],"B07W72T93R":["Tampa Bay Buccaneers","Medium","Alternate Heather Gray"],"B07W72VT2W":["Los Angeles Rams","XX-Large","Alternate Heather Gray"],"B07BCLP1WL":["Pittsburgh Steelers","Small","Heather Gray"],"B07BCNQXZF":["Jacksonville Jaguars","Medium","Heather Gray"],"B07W99G651":["Seattle Seahawks","Small","Alternate Heather Gray"],"B07BCLZVBB":["New York Giants","Medium","Heather Gray"],"B07BCL3MBN":["San Francisco 49Ers","Small","Heather Gray"],"B07W72R5BK":["Indianapolis Colts","X-Large","Alternate Heather Gray"],"B07W72VT3J":["Arizona Cardinals","Medium","Alternate Heather Gray"],"B07W99H183":["Indianapolis Colts","XX-Large","Alternate Heather Gray"],"B07W627BCG":["Philadelphia Eagles","XX-Large","Alternate Heather Gray"],"B07BCNQXZH":["Kansas City Chiefs","X-Large","Heather Gray"],"B07W72R5C6":["New England Patriots","Large","Alternate Heather Gray"],"B07W99H17V":["Cincinnati Bengals","XX-Large","Alternate Heather Gray"],"B07W4X71GJ":["Arizona Cardinals","XX-Large","Alternate Heather Gray"],"B07WLYGVWG":["Los Angeles Chargers","Large","Alternate Heather Gray"],"B07WQ5C8S2":["New Orleans Saints","Large","Alternate Heather Gray"],"B07W8652MK":["Kansas City Chiefs","XX-Large","Alternate Heather Gray"],"B07W99H4LT":["Buffalo Bills","Large","Alternate Heather Gray"],"B07W8652MM":["Los Angeles Rams","Large","Alternate Heather Gray"],"B07W99H4M4":["New York Jets","Medium","Alternate Heather Gray"],"B07BCKYGSV":["Atlanta Falcons","Medium","Heather Gray"],"B07W99H4LX":["Tennessee Titans","Medium","Alternate Heather Gray"],"B07WLYGVW6":["New Orleans Saints","Small","Alternate Heather Gray"],"B07WLYGVW3":["Kansas City Chiefs","Small","Alternate Heather Gray"],"B07W8652NC":["Baltimore Ravens","Large","Alternate Heather Gray"],"B07WDKR7CV":["Carolina Panthers","Large","Alternate Heather Gray"],"B07W99G9ZN":["Tennessee Titans","Large","Alternate Heather Gray"],"B07WLZ3FH7":["Denver Broncos","XX-Large","Alternate Heather Gray"],"B07W99G9YB":["Pittsburgh Steelers","Large","Alternate Heather Gray"],"B07BCL9MSZ":["Philadelphia Eagles","Large","Heather Gray"],"B07WLZ5BJF":["Detroit Lions","Large","Alternate Heather Gray"],"B07WLZ3FH3":["Minnesota Vikings","XX-Large","Alternate Heather Gray"],"B07W72T95J":["Houston Texans","Small","Alternate Heather Gray"],"B07W99H4L4":["San Francisco 49Ers","XX-Large","Alternate Heather Gray"],"B07W8652NM":["Jacksonville Jaguars","X-Large","Alternate Heather Gray"],"B07W72R5DG":["San Francisco 49Ers","Small","Alternate Heather Gray"],"B07W8642R6":["Detroit Lions","X-Large","Alternate Heather Gray"],"B07WLZ3FGJ":["Los Angeles Rams","Medium","Alternate Heather Gray"],"B07W99H4KW":["Tampa Bay Buccaneers","XX-Large","Alternate Heather Gray"],"B07WLYGVXC":["Philadelphia Eagles","X-Large","Alternate Heather Gray"],"B07BCK4X3L":["Las Vegas Raiders","Small","Heather Gray"],"B07WLZ5BJR":["Atlanta Falcons","Small","Alternate Heather Gray"],"B07W864T3Y":["Denver Broncos","Large","Alternate Heather Gray"],"B07WLYGVX6":["Houston Texans","XX-Large","Alternate Heather Gray"],"B07BCNZFJ4":["Green Bay Packers","Small","Heather Gray"],"B07BCQJWGH":["Indianapolis Colts","X-Large","Heather Gray"],"B07BCQJWGC":["Green Bay Packers","X-Large","Heather Gray"],"B07W863L82":["New York Jets","Small","Alternate Heather Gray"],"B07W4X8BGZ":["San Francisco 49Ers","Large","Alternate Heather Gray"],"B07WCCQRTR":["Kansas City Chiefs","X-Large","Alternate Heather Gray"],"B07W99H4JZ":["Baltimore Ravens","XX-Large","Alternate Heather Gray"],"B07W99H3HQ":["Seattle Seahawks","Large","Alternate Heather Gray"],"B07W8642S1":["New Orleans Saints","Medium","Alternate Heather Gray"],"B07W8642S6":["Chicago Bears","Medium","Alternate Heather Gray"],"B07WCCQ1BW":["Cincinnati Bengals","X-Large","Alternate Heather Gray"],"B07W863L8C":["Cincinnati Bengals","Medium","Alternate Heather Gray"],"B07W72VT4B":["Las Vegas Raiders","Large","Alternate Heather Gray"],"B07W863L8J":["Jacksonville Jaguars","Small","Alternate Heather Gray"],"B07W863TYB":["New York Giants","X-Large","Alternate Heather Gray"],"B07BCKVJCY":["Denver Broncos","X-Large","Heather Gray"],"B07W72T94Y":["Tampa Bay Buccaneers","Small","Alternate Heather Gray"],"B07W8642SD":["New York Jets","Large","Alternate Heather Gray"],"B07W4X8BHT":["Baltimore Ravens","Small","Alternate Heather Gray"],"B07W4X8BHW":["Cleveland Browns","Medium","Alternate Heather Gray"],"B07W863L8R":["Atlanta Falcons","XX-Large","Alternate Heather Gray"],"B07W863L8Q":["Tennessee Titans","Small","Alternate Heather Gray"],"B07W72R5CT":["San Francisco 49Ers","X-Large","Alternate Heather Gray"],"B07W8642SL":["Carolina Panthers","Small","Alternate Heather Gray"],"B07WLZ5BLC":["Houston Texans","X-Large","Alternate Heather Gray"],"B07W863TYM":["Indianapolis Colts","Large","Alternate Heather Gray"],"B07W99H3H8":["Miami Dolphins","Medium","Alternate Heather Gray"],"B07W99H3GW":["Miami Dolphins","XX-Large","Alternate Heather Gray"],"B07WLZ5BLF":["Cleveland Browns","Large","Alternate Heather Gray"],"B07W99H3GV":["Seattle Seahawks","X-Large","Alternate Heather Gray"],"B07W863L8W":["Green Bay Packers","Small","Alternate Heather Gray"],"B07W8642SM":["Tampa Bay Buccaneers","X-Large","Alternate Heather Gray"],"B07W864T5S":["Atlanta Falcons","Medium","Alternate Heather Gray"],"B07W99H3GP":["New Orleans Saints","X-Large","Alternate Heather Gray"],"B07BCPHZDC":["Tennessee Titans","Medium","Heather Gray"],"B07WCCP3BW":["Kansas City Chiefs","Large","Alternate Heather Gray"],"B07W99GQVC":["Arizona Cardinals","X-Large","Alternate Heather Gray"],"B07WCCP3C5":["Seattle Seahawks","Medium","Alternate Heather Gray"],"B07BCMXRGS":["Chicago Bears","Small","Heather Gray"],"B07W864T5Y":["Detroit Lions","Small","Alternate Heather Gray"],"B07BCNWRPM":["Green Bay Packers","Large","Heather Gray"],"B07WLZ5BLX":["Baltimore Ravens","X-Large","Alternate Heather Gray"],"B07BCNWRPN":["Houston Texans","Small","Heather Gray"],"B07BCPHZD4":["Pittsburgh Steelers","Large","Heather Gray"],"B07W8654DX":["Carolina Panthers","Medium","Alternate Heather Gray"],"B07BCMXRH1":["Detroit Lions","Medium","Heather Gray"],"B07BCPHRF4":["New York Jets","Small","Heather Gray"],"B07W863TZT":["New York Jets","XX-Large","Alternate Heather Gray"],"B07BCKMJR3":["Cincinnati Bengals","Large","Heather Gray"],"B07BCNWRPT":["Indianapolis Colts","Medium","Heather Gray"],"B07W99H3FS":["Houston Texans","Large","Alternate Heather Gray"],"B07BCKVPB7":["Los Angeles Chargers","Medium","Heather Gray"],"B07WLZ5BKT":["New York Giants","XX-Large","Alternate Heather Gray"],"B07WLZ5BL7":["Denver Broncos","X-Large","Alternate Heather Gray"],"B07BCKVPB2":["Kansas City Chiefs","Large","Heather Gray"],"B07WFPQLLX":["Chicago Bears","XX-Large","Alternate Heather Gray"],"B07BCPHZBB":["Atlanta Falcons","Large","Heather Gray"],"B07BCKMJRS":["Indianapolis Colts","Large","Heather Gray"],"B07BCPHZBC":["Carolina Panthers","Small","Heather Gray"],"B07W8654FJ":["Denver Broncos","Small","Alternate Heather Gray"],"B07BCM31FL":["Pittsburgh Steelers","Medium","Heather Gray"],"B07BCLZV86":["Arizona Cardinals","Large","Heather Gray"],"B07BCPHZB9":["Baltimore Ravens","Medium","Heather Gray"],"B07W8654FK":["New York Giants","Small","Alternate Heather Gray"],"B07BCMXRJ6":["New York Giants","Small","Heather Gray"],"B07W628SCT":["Detroit Lions","XX-Large","Alternate Heather Gray"],"B07W8654G2":["Minnesota Vikings","Small","Alternate Heather Gray"],"B07BCM1X9K":["Seattle Seahawks","X-Large","Heather Gray"],"B07BCKMJQT":["Buffalo Bills","Medium","Heather Gray"],"B07BCPHRCR":["Chicago Bears","X-Large","Heather Gray"],"B07BCKKYG2":["Tennessee Titans","X-Large","Heather Gray"],"B07W864J53":["Carolina Panthers","XX-Large","Alternate Heather Gray"],"B07BCLSTX7":["Atlanta Falcons","X-Large","Heather Gray"],"B07W99D7HL":["Jacksonville Jaguars","XX-Large","Alternate Heather Gray"],"B07BCNWRNT":["Buffalo Bills","Large","Heather Gray"],"B07BCKJ8HR":["Los Angeles Rams","Medium","Heather Gray"],"B07W626XS4":["Arizona Cardinals","Large","Alternate Heather Gray"],"B07BCKRC5W":["Cleveland Browns","X-Large","Heather Gray"],"B07BCQ7GBV":["San Francisco 49Ers","X-Large","Heather Gray"],"B07W99GQT4":["Green Bay Packers","Medium","Alternate Heather Gray"],"B07BCPHZC5":["Jacksonville Jaguars","Small","Heather Gray"],"B07W8654H4":["New England Patriots","Medium","Alternate Heather Gray"],"B07BCHTSDM":["Tampa Bay Buccaneers","Medium","Heather Gray"],"B07BCHTSDN":["Tampa Bay Buccaneers","X-Large","Heather Gray"],"B07W864J5H":["Chicago Bears","Large","Alternate Heather Gray"],"B07BCKKYW6":["Miami Dolphins","Small","Heather Gray"],"B07BCMXRHW":["Miami Dolphins","Large","Heather Gray"],"B07W8654GP":["Green Bay Packers","X-Large","Alternate Heather Gray"],"B07BCKKYW7":["Miami Dolphins","Medium","Heather Gray"],"B07W864J5M":["Pittsburgh Steelers","Small","Alternate Heather Gray"],"B07W8654H5":["Green Bay Packers","Large","Alternate Heather Gray"],"B07W864XB1":["Tampa Bay Buccaneers","Large","Alternate Heather Gray"],"B07BCKJ4Q1":["Tennessee Titans","Small","Heather Gray"],"B07BCKKYVL":["Detroit Lions","X-Large","Heather Gray"],"B07W8654GY":["Cleveland Browns","Small","Alternate Heather Gray"],"B07BCKKYVM":["Detroit Lions","Large","Heather Gray"],"B07BCKR3XQ":["Chicago Bears","Medium","Heather Gray"],"B07W864J66":["New England Patriots","X-Large","Alternate Heather Gray"],"B07BCLZV9J":["Jacksonville Jaguars","X-Large","Heather Gray"],"B07BCHTSCW":["New England Patriots","X-Large","Heather Gray"],"B07W863WC9":["Minnesota Vikings","X-Large","Alternate Heather Gray"],"B07WCCHS5J":["Los Angeles Chargers","XX-Large","Alternate Heather Gray"],"B07BCK79T8":["Denver Broncos","Large","Heather Gray"],"B07BCHYWMN":["Seattle Seahawks","Medium","Heather Gray"],"B07BCLZV9B":["Green Bay Packers","Medium","Heather Gray"],"B07W628MMW":["New England Patriots","XX-Large","Alternate Heather Gray"],"B07W99D7GH":["Minnesota Vikings","Large","Alternate Heather Gray"],"B07BCK79T3":["Cleveland Browns","Small","Heather Gray"],"B07BCHTSDC":["Philadelphia Eagles","X-Large","Heather Gray"],"B07W99D7GL":["Indianapolis Colts","Medium","Alternate Heather Gray"],"B07BCKJ8J3":["New Orleans Saints","X-Large","Heather Gray"],"B07BCLZV9W":["Minnesota Vikings","Large","Heather Gray"],"B07BCL1V23":["Baltimore Ravens","Large","Heather Gray"],"B07BCK79TM":["Indianapolis Colts","Small","Heather Gray"],"B07BCHYWM8":["New York Jets","Medium","Heather Gray"],"B07BCKKYX4":["Tampa Bay Buccaneers","Large","Heather Gray"],"B07W72S33H":["Las Vegas Raiders","Medium","Alternate Heather Gray"],"B07W72VFPT":["Los Angeles Chargers","Small","Alternate Heather Gray"],"B07W72TZMW":["Jacksonville Jaguars","Medium","Alternate Heather Gray"],"B07BCHTSD5":["Las Vegas Raiders","X-Large","Heather Gray"],"B07BCHTSCT":["New Orleans Saints","Large","Heather Gray"],"B07W628MNL":["New York Giants","Medium","Alternate Heather Gray"],"B07BCKKYWN":["Philadelphia Eagles","Small","Heather Gray"],"B07BCKR3Z3":["New England Patriots","Medium","Heather Gray"],"B07BCM1X9P":["Tennessee Titans","Large","Heather Gray"],"B07W72VLK9":["Miami Dolphins","Small","Alternate Heather Gray"],"B07BCM1X9Q":["Seattle Seahawks","Small","Heather Gray"],"B07BCKS9QZ":["Cincinnati Bengals","Small","Heather Gray"],"B07W72VLJT":["Buffalo Bills","Small","Alternate Heather Gray"],"B07W72VLKK":["Detroit Lions","Medium","Alternate Heather Gray"],"B07BCLZV8Q":["Carolina Panthers","Large","Heather Gray"],"B07W99GB1R":["Chicago Bears","Small","Alternate Heather Gray"],"B07BCKNRBY":["Los Angeles Rams","Small","Heather Gray"],"B07W99GB1T":["Los Angeles Rams","Small","Alternate Heather Gray"],"B07W72VQWT":["Tennessee Titans","X-Large","Alternate Heather Gray"],"B07W99GB1K":["Pittsburgh Steelers","XX-Large","Alternate Heather Gray"],"B07W99GB1N":["Las Vegas Raiders","XX-Large","Alternate Heather Gray"],"B07W72V3LQ":["Los Angeles Rams","X-Large","Alternate Heather Gray"],"B07BCK79V4":["New Orleans Saints","Small","Heather Gray"],"B07BCKM26F":["Buffalo Bills","Small","Heather Gray"],"B07W72V3LZ":["Jacksonville Jaguars","Large","Alternate Heather Gray"],"B07W99D7FB":["Pittsburgh Steelers","X-Large","Alternate Heather Gray"],"B07BCKS9RV":["Kansas City Chiefs","Medium","Heather Gray"],"B07BCKS9S2":["Minnesota Vikings","Small","Heather Gray"],"B07BCKM264":["Arizona Cardinals","Medium","Heather Gray"],"B07W628MLK":["Miami Dolphins","Large","Alternate Heather Gray"],"B07BCPHRF8":["New York Jets","Large","Heather Gray"],"B07W72S33J":["Los Angeles Chargers","X-Large","Alternate Heather Gray"],"B07W4X791S":["Carolina Panthers","X-Large","Alternate Heather Gray"],"B07BCKR4MG":["New England Patriots","Large","Heather Gray"],"B07W72VFQ9":["Philadelphia Eagles","Medium","Alternate Heather Gray"],"B07W72S33W":["Buffalo Bills","Medium","Alternate Heather Gray"],"B07WCCP3B8":["San Francisco 49Ers","Medium","Alternate Heather Gray"],"B07BCK79VW":["Seattle Seahawks","Large","Heather Gray"],"B07W72S33R":["Green Bay Packers","XX-Large","Alternate Heather Gray"],"B07BCLDSW4":["Cleveland Browns","Medium","Heather Gray"],"B07W72VFQC":["New York Giants","Large","Alternate Heather Gray"],"B07BCLQ8JY":["Arizona Cardinals","X-Large","Heather Gray"],"B07BCKR4M3":["Los Angeles Chargers","Large","Heather Gray"],"B07BCL8JZ2":["Minnesota Vikings","X-Large","Heather Gray"],"B07W72S33Z":["Houston Texans","Medium","Alternate Heather Gray"],"B07W72VFQH":["Cincinnati Bengals","Large","Alternate Heather Gray"],"B07BCL8JYM":["Houston Texans","Medium","Heather Gray"],"B07W72V3LB":["Arizona Cardinals","Small","Alternate Heather Gray"],"B07BCLDSWC":["Denver Broncos","Small","Heather Gray"],"B07W4X791K":["Tennessee Titans","XX-Large","Alternate Heather Gray"],"B07WCCQRV3":["Denver Broncos","Medium","Alternate Heather Gray"],"B07WCCQRV1":["Las Vegas Raiders","X-Large","Alternate Heather Gray"],"B07W4X7939":["Baltimore Ravens","Medium","Alternate Heather Gray"],"B07BCKWVB4":["Houston Texans","Large","Heather Gray"],"B07BCKZ3CV":["Las Vegas Raiders","Medium","Heather Gray"],"B07BCHYNFZ":["New York Jets","X-Large","Heather Gray"],"B07BCKR4MX":["Pittsburgh Steelers","X-Large","Heather Gray"],"B07BCL8JZN":["San Francisco 49Ers","Medium","Heather Gray"],"B07BCKZ3CP":["New York Giants","Large","Heather Gray"],"B07BCKZ3CN":["New Orleans Saints","Medium","Heather Gray"],"B07W72VQXZ":["New Orleans Saints","XX-Large","Alternate Heather Gray"],"B07BCKNJ5P":["Kansas City Chiefs","Small","Heather Gray"],"B07BCKNJ5V":["Miami Dolphins","X-Large","Heather Gray"],"B07W72VQXW":["Los Angeles Chargers","Medium","Alternate Heather Gray"],"B07BCP9BJK":["Tampa Bay Buccaneers","Small","Heather Gray"],"B07BCNZFHF":["Baltimore Ravens","X-Large","Heather Gray"],"B07BCKNJ5M":["Los Angeles Chargers","Small","Heather Gray"],"B07BCKWVC1":["New York Giants","X-Large","Heather Gray"],"B07BCKQPHP":["Baltimore Ravens","Small","Heather Gray"],"B07BCKQPHK":["Atlanta Falcons","Small","Heather Gray"],"B07W4X7MKL":["Cincinnati Bengals","Small","Alternate Heather Gray"],"B07WLYFM2S":["Cleveland Browns","XX-Large","Alternate Heather Gray"],"B07WLYFM31":["Chicago Bears","X-Large","Alternate Heather Gray"],"B07BCKNJ58":["Cincinnati Bengals","X-Large","Heather Gray"],"B07W4X793K":["Indianapolis Colts","Small","Alternate Heather Gray"],"B07W4X7ML1":["Las Vegas Raiders","Small","Alternate Heather Gray"],"B07WLXBRF2":["Miami Dolphins","X-Large","Alternate Heather Gray"],"B07BCLNZHP":["Cleveland Browns","Large","Heather Gray"],"B07WCCQRWT":["Pittsburgh Steelers","Medium","Alternate Heather Gray"],"B07WLYFM4J":["Atlanta Falcons","Large","Alternate Heather Gray"],"B07WLXBRFD":["Buffalo Bills","XX-Large","Alternate Heather Gray"],"B07BCLCHY3":["Houston Texans","X-Large","Heather Gray"],"B07BCKKVGV":["Denver Broncos","Medium","Heather Gray"],"B07BCKRH6W":["New England Patriots","Small","Heather Gray"],"B07BCLFLGK":["Detroit Lions","Small","Heather Gray"],"B07W4X83WB":["New York Jets","X-Large","Alternate Heather Gray"],"B07BCKKVGP":["Cincinnati Bengals","Medium","Heather Gray"],"B07BCKKVGD":["Buffalo Bills","X-Large","Heather Gray"],"B07BCLCHYB":["Los Angeles Chargers","X-Large","Heather Gray"],"B07WCCQRXB":["New England Patriots","Small","Alternate Heather Gray"],"B07BCPLDBK":["Los Angeles Rams","X-Large","Heather Gray"],"B07WLYFM3S":["Philadelphia Eagles","Small","Alternate Heather Gray"],"B07BCKSGRD":["Chicago Bears","Large","Heather Gray"],"B07W4X7MM2":["Atlanta Falcons","X-Large","Alternate Heather Gray"],"B07W4X7MM1":["Seattle Seahawks","XX-Large","Alternate Heather Gray"],"B07WCCQRWZ":["Buffalo Bills","X-Large","Alternate Heather Gray"],"B07WLXBRGG":["Minnesota Vikings","Medium","Alternate Heather Gray"],"B07W99H191":["Kansas City Chiefs","Medium","Alternate Heather Gray"],"B07BCKQPKH":["Philadelphia Eagles","Medium","Heather Gray"],"B07BCKSGT3":["Las Vegas Raiders","Large","Heather Gray"],"B07BCKKVHL":["Los Angeles Rams","Large","Heather Gray"],"B07BCKKV8B":["Arizona Cardinals","Small","Heather Gray"],"B07W99H18F":["Cleveland Browns","X-Large","Alternate Heather Gray"],"B07BCKRH7M":["San Francisco 49Ers","Large","Heather Gray"],"B07BCKSGSC":["Minnesota Vikings","Medium","Heather Gray"],"B07W99H18Q":["Philadelphia Eagles","Large","Alternate Heather Gray"]}
+           
+    
+Object.entries(obj).forEach(entry => {
+  const [key, value] = entry;
+  
+     $("#asn1").html(key);
+        console.log(entry);
+       
+
+ $( "<tr><td class='tt1'>"+key+"</td><td class='tt1'>"+value[0]+"</td><td class='tt1'>"+value[1]+"</td><td class='tt1'>"+value[2]+"</td></tr>").insertAfter( "#myTable" );
+
+});
+
+
+</script>
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!-- main content -->
+<div id="content">
+	<div id="sortable-panel" class="">
+		<div id="titr-content" class="col-md-12">      
+			<form class="form-horizontal">
+				<fieldset ng-disabled="isDisabled">
+					<div class="col-sm-12">
+         				<div class="panel panel-default">
+							<div class="panel-body">
+                				<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.markupenabled" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.markupenabled" ng-options = 'obj.id as obj.value for obj in markupenabledList' class = "form-control"></select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.markuptype" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.markuptype" ng-options = 'obj.id as obj.value for obj in markuptypeList' class = "form-control"></select>
+									</div>
+								</div>
+                                <div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.markupval" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<input type="text" ng-model="settings.markupval" class="form-control" />										
+									</div>
+								</div>
+								<div class="form-group" ng-show="profile.id == 5718">
+									<label class="control-label col-sm-3">
+										Markup Value Fixed
+									</label>
+									<div class="col-sm-7">
+										<input type="text" ng-model="settings.markupvalfixed" class="form-control" />										
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.markupround" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.markupround" ng-options = 'obj.id as obj.value for obj in markuproundList' class = "form-control"></select>
+									</div>
+								</div>								
+								<div class="form-group">
+									<div class="col-sm-5">
+									    <button ng-click="savePricingRulesSettings(settings,'yes')" class = "btn btn-success pull-right"> Save & Apply On Existing Products </button>	
+									</div>	
+									<div class="col-sm-5">
+									    <button ng-click="savePricingRulesSettings(settings,'no')" class = "btn btn-success pull-right">{{"app.shared.common.save" | translate }}</button>
+									</div>
+								</div>									
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>					
+		</div>
+	</div>
+</div>

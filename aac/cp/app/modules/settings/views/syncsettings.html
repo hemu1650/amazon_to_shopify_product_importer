@@ -1,0 +1,54 @@
+<!-- main content -->
+<div id="content">
+	<div id="sortable-panel" class="">
+		<div id="titr-content" class="col-md-12">      
+			<form class="form-horizontal" ng-submit="saveSyncSettings(settings)">
+				<fieldset ng-disabled="isDisabled">
+					<div class="col-sm-12">
+         				<div class="panel panel-default">
+							<div class="panel-body" >                				
+								<div class="form-group" ng-show="profile.plan < 2">
+									<div class="col-sm-12"><p style="color:red;">This feature is available for Professional and Enterprise plan. <a ui-sref="admin.plans">Click here to upgrade.</a></p></div>
+								
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12"><p style="color:green;"><strong>These Settings Work In Auto Sync Which Runs Every 24 Hours.</strong></p></div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.inventory_sync" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.inventory_sync" ng-options = 'obj.id as obj.value for obj in inventory_syncList' class = "form-control" ng-disabled="profile.plan < 2"></select>
+									</div>
+								</div>
+								<div class="form-group" ng-show="settings.inventory_sync == 1">
+									<label class="control-label col-sm-3">
+										{{"settings.form.outofstock_action" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.outofstock_action" ng-options = 'obj.id as obj.value for obj in outofstock_action_syncList' class = "form-control" ng-disabled="profile.plan < 2"></select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.price_sync" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.price_sync" ng-options = 'obj.id as obj.value for obj in price_syncList' class = "form-control" ng-disabled="profile.plan < 2"></select>
+									</div>
+								</div>	
+								<div class="form-group">
+									<div class="col-sm-10">	
+										<button class = "btn btn-success pull-right">{{"app.shared.common.save" | translate }}</button>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>			
+		</div>
+	</div>
+</div>

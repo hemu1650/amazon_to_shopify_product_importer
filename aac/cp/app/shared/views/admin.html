@@ -1,0 +1,312 @@
+<div  class="text-center preloader" ng-show="transLoader">
+    <span><img src="loading.gif" width="150px" height="150px" /> Initialize language...</span>
+</div>
+<div  class="text-center preloader" ng-show="loader">
+   <span><img src="loading.gif" width="150px" height="150px" /> Loading...</span>
+</div>
+
+<div id="container" class="container-fluid skin-3">
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar navbar-default nopadding" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <button type="button" id="menu-open" class="navbar-toggle menu-toggler pull-left">
+                    <span class="sr-only">Toggle sidebar</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" id="logo-panel">    
+					Amazon Associate Connector
+                </a>
+            </div>
+            <form action="#" class="form-search-mobile pull-right">
+                <input id="search-fld" class="search-mobile" type="text" name="param" placeholder="Search ...">
+                <button id="submit-search-mobile" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <a href="#" id="cancel-search-mobile" title="Cancel Search"><i class="fa fa-times"></i></a>
+            </form>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                                   
+                    <li class="dropdown">
+
+                        <a  href="" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <!-- profile user name -->
+                            {{profile.shopurl}}
+
+                            <!--<img alt="ngLaravel Avatar Admin" ng-src="{{profile.avatar_url !=='' && '../api/public/uploads/'+profile.avatar_url || '../api/public/uploads/no_avatar.jpg'}}" height="50" width="50" class="img-circle" />-->
+                            <strong class="caret"></strong>
+                        </a>
+                        <ul class="dropdown-menu">                            
+                            <!-- sign out attribute directive 'data-signout'-->
+                            <li ng-show="isAuthenticated">
+                                <a href="https://{{profile.shopurl}}/admin">Back to Shopify<span class="fa fa-power-off pull-right"></span></a>
+                                <!--<a href="" data-target="#" data-signout translate>app.shared.admin.signout<span class="fa fa-power-off pull-right"></span></a>-->
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li id="fullscreen-li">
+                        <a  href="" data-target="#" id="fullscreen" class="dropdown-toggle" >
+                            <i class="fa fa-arrows-alt"></i>
+                        </a>
+                    </li>
+
+                    <li id="side-hide-li" class="dropdown">
+                        <a  href="" data-target="#" id="side-hide" class="dropdown-toggle" >
+                            <i class="fa fa-reorder"></i>
+                        </a>
+                    </li>
+                </ul>  				
+            </div>
+
+        </nav>
+    </header>
+    <!-- /end Header -->
+
+    <!-- sidebar menu -->
+    <div id="sidebar" class="sidebar" >
+        <div class="tabbable-panel">
+            <div class="tabbable-line">
+                <ul class="nav nav-tabs nav-justified">
+                    <li id="tab_menu_a" class="active">
+                        <a href="" data-target="#tab_menu_1" data-toggle="tab">
+                            <i class="fa fa-reorder"></i>
+                        </a>
+                    </li>                    
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_menu_1">
+                        <form class="search-menu-form" >
+                            <div class="">
+                                <input id="menu-list-search" placeholder="{{'app.shared.admin.searchmenu' | translate}}" type="text" class="form-control search-menu">
+                            </div>
+                        </form>
+
+                        <!-- sidebar Menu -->
+                        <div id="MainMenu" class="" >
+
+                            <ul id="menu-list" class="nav nav-list" translate-namespace="app.shared.admin.menu">        
+
+								  <li ui-sref-active="open active">
+                                    <a ui-sref="admin.dashboard">
+                                        <i class="menu-icon fa fa-tachometer"></i>
+                                        <span class="menu-text" translate> .dashboard </span>
+                                    </a>
+                                   
+                                </li>								
+								<li ui-sref-active="active open">
+                                    <a href="#" class="dropdown-toggle">
+                                        <i class="menu-icon fa fa-shopping-cart"></i>
+                                        <span class="menu-text" translate>Products</span>
+
+                                        <b class="arrow fa fa-angle-down"></b>
+                                    </a>
+                                    <b class="arrow"></b>
+                                    <ul class="submenu" >
+                                        <li ng-class="{active:$state.includes('admin.products')}">
+                                            <a ui-sref="admin.products">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Manage Products</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>										
+                                        <li ng-class="{active:$state.includes('admin.addproduct')}">
+                                            <a ui-sref="admin.addproduct">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Import Product By URL</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                        <!--added  harsh-->
+                                        <!-- <li ng-class="{active:$state.includes('admin.addproductnew')}">
+                                            <a ui-sref="admin.addproductnew">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate> Product URL Multiple Variants</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li> -->
+										<!-- <li ng-class="{active:$state.includes('admin.asinProduct')}">
+                                            <a ui-sref="admin.asinProduct">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Search Amazon Products And Import</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>										 -->
+										<li ng-class="{active:$state.includes('admin.asinBlkProduct')}">
+                                            <a ui-sref="admin.asinBlkProduct">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Bulk Import</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+										<li ng-class="{active:$state.includes('admin.incompleteProducts')}">
+                                            <a ui-sref="admin.incompleteProducts">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Incomplete Products</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- <li ui-sref-active="open active">
+                                    <a ui-sref="admin.reviewproducts">
+                                        <i class="menu-icon fa fa-tachometer"></i>
+                                        <span class="menu-text" translate> Reviews </span>
+                                    </a>
+                                   
+                                </li> -->
+                                
+                                
+                                
+								<li ui-sref-active="active open">
+									<a ui-sref="admin.amzconfig">
+										<i class="menu-icon fa fa-amazon"></i>
+											<span class="menu-text">Amazon Account</span>
+									</a>
+
+                                </li>								
+								<li ui-sref-active="active open">
+                                    <a href="#" class="dropdown-toggle">
+                                        <i class="menu-icon fa fa-cog"></i>
+                                        <span class="menu-text" translate>Settings</span>
+
+                                        <b class="arrow fa fa-angle-down"></b>
+                                    </a>
+                                    <b class="arrow"></b>
+                                    <ul class="submenu" >
+                                        <li ng-class="{active:$state.includes('admin.settings')}">
+                                            <a ui-sref="admin.settings">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>General Settings</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                        <li ng-class="{active:$state.includes('admin.buynowlink')}">
+                                            <a ui-sref="admin.buynowlink">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Buy Now Link</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+										<li ng-class="{active:$state.includes('admin.pricingrules')}">
+                                            <a ui-sref="admin.pricingrules">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Pricing Rules</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+										<li ng-class="{active:$state.includes('admin.syncsettings')}">
+                                            <a ui-sref="admin.syncsettings">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Auto Sync</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+										<!-- <li ng-class="{active:$state.includes('admin.reviewsettings')}">
+                                            <a ui-sref="admin.reviewsettings">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                <span class="menu-text" translate>Reviews Settings</span>
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li> -->
+                                    </ul>
+                                </li>
+								<li ui-sref-active="active open">
+									<a ui-sref="admin.plans">
+										<i class="menu-icon fa fa-usd"></i>
+											<span class="menu-text">Plan & Pricing</span>
+									</a>
+
+                                </li>
+								<li ui-sref-active="active open">
+									<a href="https://infoshoreapps.zendesk.com/hc/en-us/categories/360001364874-Amazon-Associate-Connector" target="_blank">
+										<i class="menu-icon fa fa-question"></i>
+											<span class="menu-text">User Guides</span>
+									</a>
+
+                                </li>
+								<li ui-sref-active="active open">
+									<a href="mailto:epihelp@infoshore.biz" target="_blank">
+										<i class="menu-icon fa fa-user"></i>
+											<span class="menu-text">Send us email at epihelp@infoshore.biz in case of any issue.</span>
+									</a><br /><br />
+                                </li>                               
+                            </ul>
+                            <a class="sidebar-collapse" id="sidebar-collapse" data-toggle="collapse" data-target="#test">
+								<i id="icon-sw-s-b" class="fa fa-angle-double-left"></i>
+                            </a>
+                        </div>
+                    </div>                 
+                </div><!-- end tab-content-->
+            </div><!-- end tabbable-line -->
+        </div><!-- end tabbable-panel -->
+    </div>
+    <!-- /end #sidebar -->
+    <!-- main content  -->
+    <div id="main" class="main">
+        <div class="row" >
+            <!-- breadcrumb section with ncyBreadcrumb -->
+            <div class="ribbon">
+                <div ncy-breadcrumb></div>
+            </div>			
+			<div class="col-md-12" ng-if="$state.current.name != 'admin.amzconfig'">	
+				<div class="alert alert-block alert-warning fade in" ng-show="(profile.membershiptype == 'free')">					
+					<!-- <h4 class="alert-heading"><i class="fa fa-exclamation-triangle"></i> ALERT!</h4> -->
+					<p>You are under FREE plan, FREE plan allows you to import 10 amazon products only. You can choose any paid plan to import unlimited items.</p>
+					<p>
+						<a ui-sref="admin.plans" class="btn btn-green">Check Plan & Pricing</a>
+					</p>
+				</div>	
+				<div class="alert alert-block alert-warning fade in">
+                    <p><strong>If you are looking to import products from your own Amazon Seller Central account. <a href="https://apps.shopify.com/xpert-importer" target="_blank">Click here to check out our other app.</a></strong></p>
+                </div>
+			<!-- <div class="alert alert-block alert-warning fade in" ng-if="profile.redirectdisabled !=='' && profile.redirectdisabled == 1">
+                                <p>You have not yet enabled redirection to redirect your store’s visitors to Amazon page. <a href="https://infoshoreapps.zendesk.com/hc/en-us/articles/360017711113-How-to-configure-Buy-Now-Link-Settings"  target="_blank">Click here to know how to do that.</a></p>
+                 </div> -->
+                
+                 <div class="alert alert-block alert-warning fade in" ng-if="profile.amztag !=='' && profile.amztag == 0">
+                                <p> You have not yet added your Amazon Associate tag to earn amazon affiliate commision. <a href="https://infoshoreapps.zendesk.com/hc/en-us/articles/360017543714-How-to-get-AWS-keys-of-your-Amazon-Associate-Account"  target="_blank">Click here to know how to do that.</a></p>
+                 </div>
+                 <!--<div class="alert alert-block alert-warning fade in" ng-if="profile.redirectCopied !=='' && profile.redirectCopied == 0">
+                                <p>  You have not yet installed the app’s code in your Shopify’s theme.<a href="https://infoshoreapps.zendesk.com/hc/en-us/articles/360016351993"  target="_blank">Click here for the instructions </a> or contact us at epihelp@infoshore.biz for FREE code installation.</p>
+                 </div>-->
+
+            	<div ng-if="($state.current.name != 'admin.addproduct') && profile.skuconsumed == 0" class="alert alert-block alert-success fade in"  ng-show="(profile.skuconsumed == 0 && profile.amztoken == 0)">
+					<button data-dismiss="alert" class="close" type="button">
+						&times;
+					</button>
+					<h4 class="alert-heading"><i class="fa fa-sign-in"></i> <a ui-sref="admin.addproduct">Click here to import your first amazon product.</a></h4>					
+				</div>	
+			</div>
+            <!-- POSTMAN Tutorial - You can remove it in your production-->
+            <div id="content" ng-if="$state.current.name === 'admin'">
+            	
+                	<div ng-include="'app/shared/views/dashboard.html'"></div>
+               
+            </div>
+            <!-- POSTMAN Tutorial - You can remove it in your production-->
+
+            <!-- main app content ui-view include -->
+            <div ui-view data-anim-sync="true" class="anim-in-out anim-slide-below-fade" data-anim-speed="500" ></div>
+        </div><!-- end .row -->
+    </div>
+    <!-- ./end #main  -->
+    <!-- footer -->
+    <div class="page-footer">
+        <div class="col-xs-12 col-sm-12 text-center">
+            <strong class="">Copyright 2022 InfoShore Technology Solutions LLP. All right reserved.</strong>            
+        </div>
+    </div>
+    <!-- /footer -->
+</div>
+<!-- You can use *.min.js in production -->
+<script type="text/javascript" src="../assets/js/yep-script.js"></script>

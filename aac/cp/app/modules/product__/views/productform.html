@@ -1,0 +1,149 @@
+<!-- main content -->
+
+<div  class="text-center preloader" ng-show="loader">
+
+  <span><img src="loading.gif" width="50px" height="50px" /> Loading...</span>
+
+</div>
+
+<div id="content">
+
+  <div id="sortable-panel" class="">
+
+	 <div id="titr-content" class="col-md-12">     
+
+    <div class="panel panel-default">
+
+      <div class="panel-body"> 
+
+        <form class="form-horizontal">
+			<div class="form-group" ng-show="profile.aws_access_id == '' || profile.amzkey == 0 ">
+				<div class="col-sm-12"><p style="color:red;"><strong>Search on Amazon require to add your Amazon Associate Account's Webservice (AWS) Credentials. <a ui-sref="admin.amzconfig">Click here</a> to add AWS Credentials now.</strong></p></div>
+			</div>
+          <fieldset ng-disabled="profile.aws_access_id == '' || profile.amzkey == 0">
+
+            <div class="col-sm-12">
+
+              <div class="form-group">
+
+                <label class="col-sm-3 control-label">  {{"product.form.category" | translate }}*</label>
+
+                  <div class="col-sm-7">
+
+					  <select class="form-control" ng-model="category" ng-init="category='All'" required>
+
+                      <option ng-repeat="category in categories">{{category.search_index}}</option>
+
+                    </select>
+
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+
+                  <label class="col-sm-3 control-label">
+
+                    {{"product.form.enterAsin" | translate }}*
+
+                  </label>
+
+                  <div class="col-sm-7">
+
+                    <input type="text" class="form-control" ng-model="keyword" ng-keypress="($event.which === 13)?search(perPage):0" required>
+
+                  </div>
+
+								</div>
+
+								<div class="form-group">
+
+                  <div class="col-sm-10">	
+
+                    <button class = "btn btn-success pull-right" ng-click="asin_search(perPage)">{{"product.form.search" | translate }}</button>					
+
+								  </div>	
+
+                </div>
+
+              </div>
+
+						</fieldset>
+
+          </form>
+
+          <div ng-show="products.length >= 1"> 
+
+            <div class="panel-body col-sm-12">
+
+              <div class="res-table">         
+
+				        <table class="table table-hover table-fixed ellipsis-table table-bordered">
+
+                  <thead>
+
+						        <tr>
+
+                      <th style="text-align:center;" width="10%"></th>
+
+                      <th width="10%">ASIN</th>
+
+                      <th>Title</th>
+
+                      <th style="text-align:center;" width="25%"></th>
+
+                    </tr>
+
+                  </thead>
+
+                  <tbody ng-repeat="product in products">
+
+                    <tr> 
+
+                      <td style="text-align:center;" width="10%"> <img ng-src="{{product.image}}" alt="avatar" class="img-circle img-responsive" fallback-src="{{'../assets/img/broken/broken-link-250x250.png'}}"></td>
+
+                      <td width="10%">{{product.asin}}</td>
+
+                      <td>{{product.title}}</td>
+
+                      <td style="text-align:center;" width="25%"><a ng-click="createsingle(product.asin)"><button class = "btn btn-success" style="margin-bottom:5px;">{{"product.form.import" | translate }}</button></a><br /><a ng-click="createmany(product.parentasin)" ng-show="product.parentasin"><button class = "btn btn-success">{{"product.form.importWithVariant" | translate }}</button></a></td>        
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+            </div> 
+
+            <div class="col-sm-12">
+
+              <div class="col-sm-4 panel-body">
+
+                Showing {{start}} to {{end}} of {{pagination.total}} entries
+
+              </div>
+
+              <div class=" col-sm-3 panel-body"></div>
+
+              <div class="col-sm-5"> 
+
+                <uib-pagination ng-show="pagination.total>10" total-items="pagination.total" ng-model="pagination.current_page" max-size="maxSize" class="pagination pull-right" boundary-links="true" rotate="false" ng-change="amzpageChanged(perPage)" items-per-page="pagination.per_page" style="margin:0px;"></uib-pagination>
+
+              </div>
+
+            </div>
+
+          </div>   
+
+        </div>
+
+			</div>
+
+    </div>
+
+	</div>
+
+</div>

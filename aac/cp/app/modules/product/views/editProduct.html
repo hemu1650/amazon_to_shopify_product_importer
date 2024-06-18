@@ -1,0 +1,52 @@
+<!-- main content -->
+<div  class="text-center preloader" ng-show="loader">
+
+	<span><img src="loading.gif" width="150px" height="150px" />  Loading...</span>
+
+</div>
+<div id="content">
+	<div id="sortable-panel" class="">
+	<form name="product" novalidate>
+		<fieldset ng-disabled="isDisabled">
+		<div class="col-md-12">
+			<div  class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-md-12 row">
+							<div class="form-group">
+								<label class="control-label">
+									Title
+								</label>
+								<input type="text" class="form-control" ng-model="product.title" placeholder="" required />
+							</div>
+                        </div>
+                        <div class="col-md-12 row">
+							<div class="form-group">
+								<label class="control-label">
+									SKU
+								</label>
+								<input type="text" class="form-control" ng-model="product.variants[0].sku" placeholder="" required />
+							</div>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="form-group">
+                                <label class="control-label">
+                                  Description
+                               	</label>
+								<div con="example">
+									<summernote  ng-model="product.description" height="100"></summernote>
+								</div>
+							</div>
+                        </div>
+                       </br></br>
+                        <div class="form-group">
+                        <div class="col-sm-12">	
+							<button class = "btn btn-success pull-right" ng-click="update(product)">Update</button>					
+						</div>	
+						</div>
+                	</div>
+    			</div><!-- end panel -->
+		    </div>
+		</fieldset>
+	</form> 
+	</div> 	
+</div>

@@ -1,0 +1,214 @@
+<div  class="text-center preloader" ng-show="loader">
+    <span><img src="loading.gif" width="150px" height="150px" /> Loading...Please wait for a moment</span>
+</div>
+<div  class="text-center preloader" ng-show="transLoader">
+    <span><img src="loading.gif" width="150px" height="150px" /> Initialize language...</span>
+</div>
+<div id="container" class="container-fluid skin-3">
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar navbar-default nopadding" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <button type="button" id="menu-open" class="navbar-toggle menu-toggler pull-left">
+                    <span class="sr-only">Toggle sidebar</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" id="logo-panel">                    
+                    <i class="fa fa-slack"></i> Amazon Associate Connector by InfoShoreApps
+                </a>
+            </div>
+            <form action="#" class="form-search-mobile pull-right">
+                <input id="search-fld" class="search-mobile" type="text" name="param" placeholder="Search ...">
+                <button id="submit-search-mobile" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <a href="#" id="cancel-search-mobile" title="Cancel Search"><i class="fa fa-times"></i></a>
+            </form>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                                   
+                    <li class="dropdown">
+
+                        <a  href="" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <!-- profile user name -->
+                            {{profile.shopurl}}
+
+                            <!--<img alt="ngLaravel Avatar Admin" ng-src="{{profile.avatar_url !=='' && '../api/public/uploads/'+profile.avatar_url || '../api/public/uploads/no_avatar.jpg'}}" height="50" width="50" class="img-circle" />-->
+                            <strong class="caret"></strong>
+                        </a>
+                        <ul class="dropdown-menu">                            
+                            <!-- sign out attribute directive 'data-signout'-->
+                            <li ng-show="isAuthenticated">
+                                <a href="" data-target="#" data-signout translate>app.shared.admin.signout<span class="fa fa-power-off pull-right"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li id="fullscreen-li">
+                        <a  href="" data-target="#" id="fullscreen" class="dropdown-toggle" >
+                            <i class="fa fa-arrows-alt"></i>
+                        </a>
+                    </li>
+
+                    <li id="side-hide-li" class="dropdown">
+                        <a  href="" data-target="#" id="side-hide" class="dropdown-toggle" >
+                            <i class="fa fa-reorder"></i>
+                        </a>
+                    </li>
+                </ul>  				
+            </div>
+
+        </nav>
+    </header>
+    <!-- /end Header -->
+
+    <!-- sidebar menu -->
+    <div id="sidebar" class="sidebar" >
+        <div class="tabbable-panel">
+            <div class="tabbable-line">
+                <ul class="nav nav-tabs nav-justified">
+                    <li id="tab_menu_a" class="active">
+                        <a href="" data-target="#tab_menu_1" data-toggle="tab">
+                            <i class="fa fa-reorder"></i>
+                        </a>
+                    </li>                    
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_menu_1">
+                        <form class="search-menu-form" >
+                            <div class="">
+                                <input id="menu-list-search" placeholder="{{'app.shared.admin.searchmenu' | translate}}" type="text" class="form-control search-menu">
+                            </div>
+                        </form>
+
+                        <!-- sidebar Menu -->
+                        <div id="MainMenu" class="" >
+
+                            <ul id="menu-list" class="nav nav-list" translate-namespace="app.shared.admin.menu">        
+
+								  <li ui-sref-active="open active">
+                                    <a ui-sref="admin.dashboard">
+                                        <i class="menu-icon fa fa-tachometer"></i>
+                                        <span class="menu-text" translate> .dashboard </span>
+                                    </a>
+                                   
+                                </li>
+								<li ui-sref-active="active open">
+									<a ui-sref="admin.products">
+										<i class="menu-icon fa fa-shopping-cart"></i>
+											<span class="menu-text">Products</span>
+									</a>
+
+                                </li>
+								<li ui-sref-active="active open">
+									<a ui-sref="admin.amzconfig">
+										<i class="menu-icon fa fa-amazon"></i>
+											<span class="menu-text">Amazon Account</span>
+									</a>
+
+                                </li>
+								<li ui-sref-active="active open">
+									<a ui-sref="admin.settings">
+										<i class="menu-icon fa fa-cog"></i>
+											<span class="menu-text">Settings</span>
+									</a>
+
+                                </li>
+								<li ui-sref-active="active open">
+									<a ui-sref="admin.plans">
+										<i class="menu-icon fa fa-usd"></i>
+											<span class="menu-text">Plan & Pricing</span>
+									</a>
+
+                                </li>
+								<li ui-sref-active="active open">
+									<a ui-sref="admin.faq">
+										<i class="menu-icon fa fa-question"></i>
+											<span class="menu-text">Faqs</span>
+									</a>
+
+                                </li>
+								<li ui-sref-active="active open">
+									<a href="mailto:shopifyapps@infoshore.biz" target="_blank">
+										<i class="menu-icon fa fa-user"></i>
+											<span class="menu-text">Send us email at shopifyapps@infoshore.biz in case of any issue.</span>
+									</a><br /><br />
+                                </li>                               
+                            </ul>
+                            <a class="sidebar-collapse" id="sidebar-collapse" data-toggle="collapse" data-target="#test">
+								<i id="icon-sw-s-b" class="fa fa-angle-double-left"></i>
+                            </a>
+                        </div>
+                    </div>                 
+                </div><!-- end tab-content-->
+            </div><!-- end tabbable-line -->
+        </div><!-- end tabbable-panel -->
+    </div>
+    <!-- /end #sidebar -->
+    <!-- main content  -->
+    <div id="main" class="main">
+        <div class="row" >
+            <!-- breadcrumb section with ncyBreadcrumb -->
+            <div class="ribbon">
+                <div ncy-breadcrumb></div>
+            </div>			
+			<div class="col-md-12" ng-if="$state.current.name != 'admin.amzconfig'">	
+				<div class="alert alert-block alert-warning fade in" ng-show="(profile.membershiptype == 'free' && profile.expired == 0)">					
+					<h4 class="alert-heading"><i class="fa fa-exclamation-triangle"></i> ALERT!</h4>
+					<p>You've declined the app charge, the app will stop working after your 7 days free trial. You will have to approve the charge for the app to continue working.</p>
+					<p>
+						<a ui-sref="admin.plans" class="btn btn-green">Check Plan & Pricing</a>
+					</p>
+				</div>
+				<div class="alert alert-block alert-warning fade in" ng-show="(profile.membershiptype == 'free' && profile.expired == 1)">					
+					<h4 class="alert-heading"><i class="fa fa-exclamation-triangle"></i> ALERT!</h4>
+					<p>Your 7 days trial period has been expired. You will have to approve the charge for the app to continue working.</p>
+					<p>
+						<a ui-sref="admin.plans" class="btn btn-green">Activate Now</a>
+					</p>
+				</div>
+				<div ng-if="$state.current.name != 'admin.addproduct'" class="alert alert-block alert-success fade in"  ng-show="(profile.skuconsumed == 0 && profile.amztoken == 0)">
+					<button data-dismiss="alert" class="close" type="button">
+						&times;
+					</button>
+					<h4 class="alert-heading"><i class="fa fa-sign-in"></i> <a ui-sref="admin.addproduct">Click here to import your first amazon product.</a></h4>					
+				</div>
+				<div class="alert alert-block alert-warning fade in" ng-show="(profile.amztoken == 0)">
+					<button data-dismiss="alert" class="close" type="button">
+						&times;
+					</button>
+					<h4 class="alert-heading"><i class="fa fa-sign-in"></i> Link your Amazon Associate Account to use advance features of the application.</h4>	
+					<p><a ui-sref="admin.amzconfig" class="btn btn-blue">Click here to proceed</a>
+				</div>
+			</div>
+            <!-- POSTMAN Tutorial - You can remove it in your production-->
+            <div id="content" ng-if="$state.current.name === 'admin'">
+            	
+                	<div ng-include="'app/shared/views/dashboard.html'"></div>
+               
+            </div>
+            <!-- POSTMAN Tutorial - You can remove it in your production-->
+
+            <!-- main app content ui-view include -->
+            <div ui-view data-anim-sync="true" class="anim-in-out anim-slide-below-fade" data-anim-speed="500" ></div>
+        </div><!-- end .row -->
+    </div>
+    <!-- ./end #main  -->
+    <!-- footer -->
+    <div class="page-footer">
+        <div class="col-xs-12 col-sm-12 text-center">
+            <strong class="">Copyright 2018 InfoShore Technology Solutions LLP. All right reserved.</strong>            
+        </div>
+    </div>
+    <!-- /footer -->
+</div>
+<!-- You can use *.min.js in production -->
+<script type="text/javascript" src="../assets/js/yep-script.js"></script>

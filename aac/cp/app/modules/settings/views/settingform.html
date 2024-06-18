@@ -1,0 +1,90 @@
+<!-- main content -->
+<div id="content">
+	<div id="sortable-panel" class="">
+		<div id="titr-content" class="col-md-12">      
+			<form class="form-horizontal" ng-submit="update(settings)">
+				<fieldset ng-disabled="isDisabled">
+					<div class="col-sm-12">
+         				<div class="panel panel-default">
+							<div class="panel-body">
+                				<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.published" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.published" ng-options = 'obj.id as obj.value for obj in publishedList' class = "form-control"></select>
+									</div>
+								</div>    
+                                <div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.tags" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<input type="text" ng-model="settings.tags" class="form-control" placeholder="tshirts, mens" />										
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.vendor" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<input type="text" ng-model="settings.vendor" class="form-control" placeholder="Leave blank to fill from amazon" />										
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.product_type" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<input type="text" ng-model="settings.product_type" class="form-control" placeholder="Leave blank to fill from amazon" />										
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.inventory_policy" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.inventory_policy" ng-options = 'obj.id as obj.value for obj in inventory_policyList' class = "form-control"></select>
+									</div>
+								</div>
+								<div class="form-group" ng-show="settings.inventory_policy != ''">
+									<label class="control-label col-sm-3">
+										{{"settings.form.defquantity" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<input type="text" ng-model="settings.defquantity" class="form-control" min="1"/>										
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										Default Shop Currency
+									</label>
+									<div class="col-sm-7">
+										<!--<input type="text" ng-model="settings.shopcurrency" class="form-control" />	-->
+										<select ng-model="settings.shopcurrency" class="form-control">
+										    <option value="{{value.currency_code}}" ng-repeat="(key,value) in settings.courrencies">{{value.currency}}</option>
+										</select>
+									</div>
+								</div>
+                                <div class="form-group">
+									<label class="control-label col-sm-3">
+										Auto Currency Conversion
+									</label>
+									<div class="col-sm-7">
+										<!--<input type="text" ng-model="settings.shopcurrency" class="form-control" />	-->
+										<select ng-model="settings.autoCurrencyConversion" ng-options = 'obj.id as obj.value for obj in autoCurrencyConversionList' class = "form-control"></select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-10">	
+										<button class = "btn btn-success pull-right">{{"app.shared.common.save" | translate }}</button>
+									</div>	
+								</div>									
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>					
+		</div>
+	</div>
+</div>

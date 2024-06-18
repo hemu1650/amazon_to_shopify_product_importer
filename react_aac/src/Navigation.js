@@ -59,6 +59,11 @@ function AppNavigation() {
             selected: location.includes(base_url + '/amzconfig'),
           },
           {
+            label: 'Review',
+            url: base_url + '/review',
+            selected: location === base_url + '/review',
+          },
+          {
             label: 'Settings',
             url: '#', // Dummy URL to prevent navigation
             onClick: handleSettingsClick, // Use onClick to toggle

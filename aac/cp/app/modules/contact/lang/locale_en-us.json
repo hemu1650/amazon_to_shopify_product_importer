@@ -1,0 +1,10 @@
+{
+  "contact":{
+    "form":{      
+      "service_type": "Job Type",
+      "description": "Job Description",
+      "request_free_qoute": "Request A FREE Quote",
+      "sendRequestSuccess": "Request has been submitted successfully. We will get back to you in few hours."
+    }
+  }
+}

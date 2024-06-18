@@ -32,6 +32,7 @@ function Dashboard() {
 	return (
 		<AppProvider>
 			<Page>
+				
 				{/* <Card sectioned>
 					<p>Please add ebay account first.</p>
 					<br />
@@ -107,8 +108,7 @@ function Dashboard() {
 								textAlign: 'center',
 								margin: '13px',
 								}}>
-									Manage Products Import Product By URL Bulk
-									Import Incomplete Products
+									<span>Manage Products</span> | <span>Import Product By URL</span> | <span>Bulk Import</span> | <span>Incomplete Products</span>
 								</p>
 								</div>
 							</LegacyCard>
@@ -258,6 +258,7 @@ function Dashboard() {
 						right reserved.
 					</FooterHelp>
 				</Card> */}
+
 			</Page>
 		</AppProvider>
 	);

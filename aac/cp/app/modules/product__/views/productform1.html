@@ -1,0 +1,182 @@
+<!-- main content -->
+
+<div  class="text-center preloader" ng-show="loader">
+
+  <span><img src="loading.gif" width="80px" height="80px" /> Fetching data...this may take few moments</span>
+
+</div>
+
+<div id="content">
+
+	<div id="sortable-panel" class="">
+
+		<div id="titr-content" class="col-md-12">     
+
+			<div class="panel panel-default">
+
+				<div class="panel-body"> 
+
+					<form class="form-horizontal">
+
+						<fieldset ng-disabled="isDisabled">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<label class="col-sm-7 pull-left">
+										Please enter Amazon product URL (<a href="https://infoshoreapps.zendesk.com/hc/en-us/articles/360016229474-How-to-import-product-by-URL-to-your-Shopify-store" target="_blank">Click here for instructions</a>)
+									</label>
+								</div>
+								<div class="col-sm-12">
+									<div class="col-sm-7">
+										<div class=" input-group">
+											<input type="text" class="form-control" ng-model="pageObj.producturl" required>
+											<span class="input-group-btn">
+												<button class = "btn btn-success pull-right" ng-click="addProduct(pageObj)"><span>{{"product.form.add" | translate }}</span></button>
+											</span>
+										</div>
+									</div>
+									<!--<div class="col-sm-5" ng-show="products != []">
+										<div class="form-inline pull-right" ng-hide="pagination.total == 0">
+
+											<input type="text" class="form-control" placeholder="Search" ng-model="query" ng-keypress="($event.which === 13)?search(perPage):0">
+
+											<button type="button" class="btn btn-primary" ng-click="search(perPage)">{{"product.form.search" | translate}}</button>
+
+											<button type="button" class="btn btn-primary" ng-click="refresh()">{{"product.form.resetFilter" | translate}}</button>
+
+										</div>
+									</div>-->
+								</div>
+							</div>
+						</fieldset>
+
+					</form>
+
+					<div ng-if="products.length > 0">
+						<div class="col-md-12 panel-body">
+
+								<div class="form-inline pull-left">
+
+									<button class="btn btn-primary" ui-sref="admin.asinProduct" ng-show="profile.amztoken == 1"><i class="fa fa-plus"></i> {{"product.form.addNew" | translate}}</button>
+
+								</div>
+						</div>
+
+						<div ng-show="pagination.total == 0">
+
+							<h1 style="text-align:center;">No products found.</h1>
+
+						</div>
+						
+						<table class="table table-hover" ng-show="pagination.total != 0">
+							<thead>
+
+								<tr>
+
+									<th width="5%" style="text-align:center;">
+									    <div class="checkbox checkbox-primary"></div>
+									</th>
+
+									<th style="text-align:center;" width="10%"></th>
+
+									<th width="35%">{{"product.form.title" | translate}}</th>
+
+									<!--<th width="10%">{{"product.form.variants" | translate}}</th>-->
+
+									<th width="10%">{{"product.form.price" | translate}}</th>
+
+									<th width="15%">{{"product.form.status" | translate}}</th>
+
+									<th width="10%">{{"product.form.actions" | translate}}</th> 
+
+								</tr>
+
+							</thead>
+							<tbody ng-repeat="(key,product) in products">
+								<tr> 
+									<td style="text-align:center;">
+										<div class="checkbox checkbox-primary">
+											<input id="{{product.product_id}}" type="checkbox" class="conchkNumber" value="{{product.title}}" ng-checked="selection.indexOf(product.product_id) > -1" ng-click="toggleSelection(product.product_id)" ng-model="product.Selected" >
+											<label for="{{product.product_id}}"></label>
+										</div>
+									</td>
+									<td style="text-align:center;" width="10%"> <img ng-src="{{product.variants[0].main_image.imgurl}}" alt="avatar" class="img-circle img-responsive" fallback-src="{{'../assets/img/broken/broken-link-250x250.png'}}">
+									</td>
+									<td>{{product.title}}<br /><strong>ASIN: {{product.variants[0].sku}}</strong></td>
+									<!--<td><span ng-if="product.variants_count.no_of_variants <= 1">{{product.variants_count.no_of_variants}} variant</span><a data-toggle="modal" data-target="#myModal" ng-if="product.variants_count.no_of_variants > 1" ng-click="popupvariants({id:product.product_id})" style="cursor:pointer;"><u>{{product.variants_count.no_of_variants}} variants</u></a></td>-->
+									<td>{{product.variants[0].price}}</td>
+									<td>{{product.status}}<br/>
+									    <a href="https://{{profile.shopurl}}/admin/products/{{product.shopifyproductid}}" ng-show="product.shopifyproductid != ''" target="_blank">View on Shopify</a>
+									</td>
+									<td>
+										<div class="btn-group">
+											<button class="btn btn-primary dropdown-toggle has-ripple" data-toggle="dropdown" aria-expanded="false">Action<span class="caret"></span><span class="ripple ripple-animate" style="height: 78px; width: 78px; animation-duration: 0.4s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.2; top: -21px; left: -6px;"></span></button>
+											<ul class="dropdown-menu">
+												<li>
+													<a href="{{product.variants[0].detail_page_url}}" target="_blank">View on Amazon</a>
+												</li>
+												<li>
+													<a href="https://{{profile.shopurl}}/admin/products/{{product.shopifyproductid}}" ng-show="product.shopifyproductid != ''"  target="_blank">View on Shopify</a>
+												</li>
+												<li>
+													<a ng-click = "reimport(product.product_id)" style = "cursor:pointer;" ng-show="profile.id == 193">Reimport</a>
+												</li>        
+												<li>
+													<a ng-show = "product.block == 0 && profile.id == 193" ng-click = "block(product.product_id)" style = "cursor:pointer;">Block Auto-Sync</a><a ng-show = "product.block == 1 && profile.id == 193" ng-click = "unblock(product.product_id)" style = "cursor:pointer;">Unblock Auto-Sync</a>
+												</li>
+												<!--<li>
+													<a ui-sref="admin.reviews({id:product.variants[0].asin})" >View Reviews</a>
+												</li>-->
+												<li>
+													<a href="" ng-click="fetchReviews(product.variants[0].asin)">Fetch Reviews</a>
+												</li>
+
+												<li class="divider"></li>
+												<li>
+													<a ng-click = "destroy(key,product.product_id)" style = "cursor:pointer;">Delete Product</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div>                      
+
+        					<!--<div class="col-sm-12" ng-hide = "(pagination.total == 0)">
+        
+        						<div class="col-sm-4 panel-body">
+        
+        							Showing {{start}} to {{end}} of {{pagination.total}} entries
+        
+        						</div>
+        
+        						<div class=" col-sm-3 panel-body">
+        
+        							<div class="display-flex">
+        
+        								Show&nbsp;<select ng-model="perPage" ng-change="pageChanged(perPage)" ng-options="opt as opt.label for opt in units" class="form-control inline col-md-2" style="margin-top:-7px;"></select>&nbsp;entries
+        
+        							</div>
+        
+        						</div>
+        
+        						<div class="col-sm-5"> 
+        
+        							<uib-pagination ng-show="pagination.total>10" total-items="pagination.total" ng-model="pagination.current_page" max-size="maxSize" class="pagination pull-right" boundary-links="true" rotate="false" ng-change="pageChanged(perPage)" items-per-page="pagination.per_page" style="margin:0px;"></uib-pagination>
+        
+        						</div>
+        
+        					</div>-->
+        
+        				</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

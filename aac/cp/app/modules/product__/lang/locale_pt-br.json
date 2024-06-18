@@ -1,0 +1,22 @@
+{
+  "task":{
+    "form":{
+      "title":"Título",
+      "taskTitle":"Título Task",
+      "description":"Descrição",
+      "attachment":"Anexo",
+      "startAndEndDate":"Início e de término",
+      "status":"estado",
+      "category":"Categoria",
+      "user":"Do utilizador",
+      "userEmail":"o email:",
+      "keyword":"palavra chave",
+      "comments":"Comentários",
+      "sendComment":"Enviar",
+      "startDate":"Começar",
+      "endDate":"Fim",
+      "taskAddSuccess":"Tarefa adicionada com sucesso",
+      "taskUpdatedSuccess":"Tarefa atualizada com sucesso"
+    }
+  }
+}

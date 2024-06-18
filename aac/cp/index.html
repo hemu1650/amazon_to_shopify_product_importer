@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html ng-app="ng-laravel" >
+<head>
+	<!--<title>ngLaravel - {{$state.current.ncyBreadcrumb.label | translate }}</title>-->
+	<title>User Control Panel | Amazon Associate Connector</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/vendors/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/yep-rtl.min.css" ng-if="currentDirection==='rtl'">
+	<link rel="stylesheet" href="../assets/vendors/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="app/vendors/angular-ui-router-anim-in-out/css/anim-in-out.min.css">
+
+	<!-- Related css to this page -->
+	<link rel="stylesheet" href="app/vendors/angular-hotkeys/css/hotkeys.min.css">
+	<link rel="stylesheet" href="app/vendors/angular-ui-notification/css/angular-ui-notification.min.css">
+
+
+	<!-- Yeptemplate css --><!-- Please use *.min.css in production -->
+	<link id="yep-style" rel="stylesheet" href="../assets/css/yep-style.css">
+	<link rel="stylesheet" href="../assets/css/yep-vendors.css">
+	<link rel="stylesheet" href="../assets/css/yep-custom.css">
+
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico?v=2" type="image/x-icon">
+	<link rel="icon" href="../assets/img/favicon/favicon.ico?v=2" type="image/x-icon">
+	<style type="text/css">
+
+		.preloader{
+			top: 0;
+			min-height: 70px;
+			background-color: rgba(255,255,255,0.4); 
+		}
+		.preloader div{
+			position: absolute;
+			min-height: 70px;
+			background-color: #ffffff;
+			font-size: 30px;
+			color: black;
+			top: 20%;
+		}
+	
+		/* @group Blink */
+		.blink {
+			-webkit-animation: blink 1.0s linear infinite;
+			-moz-animation: blink 1.0s linear infinite;
+			-ms-animation: blink 1.0s linear infinite;
+			-o-animation: blink 1.0s linear infinite;
+			animation: blink 1.0s linear infinite;
+		}
+		@-webkit-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-moz-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-ms-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-o-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		/* @end */
+	
+	</style>
+	<!-- Start of infoshoreapps Zendesk Widget script -->
+   <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=76ee62d4-68f9-4902-ae5a-b7580b654265"> </script> 
+    <!-- End of infoshoreapps Zendesk Widget script -->
+</head>
+<body id="mainbody" ng-class="{'login-page':$state.includes('login') || $state.includes('reset-password'), 'rtl':currentDirection==='rtl'}"  lang="{{currentLanguage}}"><!-- ng-class if url==login add class .login-page -->
+<div ui-view data-anim-sync="true" class="anim-in-out anim-slide-below-fade" data-anim-speed="500" ></div>
+<!-- end #container -->
+
+<!-- General JS script library-->
+<script type="text/javascript" src="../assets/vendors/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/vendors/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/vendors/jquery-searchable/js/jquery.searchable.min.js"></script>
+<script type="text/javascript" src="../assets/vendors/jquery-fullscreen/js/jquery.fullscreen.min.js"></script>
+
+<!-- Yeptemplate JS Script -->
+<!--for some reason we move some jquery scripts to app/view/admin.html -->
+
+
+<!-- Related JavaScript Library to This Page -->
+<script src="../assets/vendors/angularjs/js/angular.min.js"></script>
+<script src="../assets/vendors/angularjs/js/angular-animate.min.js"></script>
+<script src="../assets/vendors/angularjs/js/angular-sanitize.min.js"></script>
+<script src="../assets/vendors/angularjs/js/angular-route.min.js"></script>
+<script src="../assets/vendors/angularjs/js/angular-resource.js"></script>
+<script src="../assets/vendors/angularjs/js/angular-cookies.min.js"></script>
+<script src="../assets/vendors/underscore/js/underscore.min.js"></script>
+<script src="app/vendors/restangular/restangular.min.js"></script><!-- it's dependent to underscore.js -->
+<script src="app/vendors/ui-router/angular-ui-router.min.js"></script>
+<script src="app/vendors/angular-ui-router-anim-in-out/js/anim-in-out.min.js"></script>
+<script src="../assets/vendors/oclazyload/js/ocLazyLoad.min.js"></script>
+<script src="app/vendors/angular-jwt/angular-jwt.min.js"></script>
+<script src="app/vendors/ng-storage/ngStorage.min.js"></script>
+<script src="app/vendors/ng-aa/ng-aa.js"></script>
+<script src="app/vendors/angular-cache/angular-cache.min.js"></script>
+<script src="app/vendors/angular-translate/angular-translate.min.js"></script>
+<script src="app/vendors/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+<script src="app/vendors/angular-translate-storage-local/angular-translate-storage-cookie.min.js"></script><!-- use for keep current language-->
+<!--<script src="app/vendors/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>&lt;!&ndash; use for keep current language&ndash;&gt;-->
+<!--<script src="app/vendors/angular-translate-handler-log/angular-translate-handler-log.min.js"></script>-->
+<script src="app/vendors/angular-dynamic-locale/tmhDynamicLocale.min.js"></script>
+<script src="app/vendors/angular-ui-notification/js/angular-ui-notification.min.js"></script>
+<script src="app/vendors/angular-img-fallback/angular.dcb-img-fallback.min.js"></script>
+
+
+<script src="app/app.js"></script>
+<script src="app/config.constant.js"></script>
+<script src="app/config.router.js"></script>
+<script src="app/vendors/angular-ui-jq/ui-jq.min.js"></script>
+<script src="app/vendors/angular-ui-load/ui-load.min.js"></script>
+<script src="app/vendors/angular-breadcrumb/angular-breadcrumb.min.js"></script>
+<script src="app/vendors/angular-hotkeys/js/hotkeys.min.js"></script>
+<script src="app/shared/controllers/Preloader.js"></script>
+<script src="app/shared/services/TranslationsFactory.js"></script>
+<script src="https://shopify.infoshore.biz/chat.js"></script>
+
+
+
+<!-- Plugins Script -->
+<script type="text/javascript">
+    $( document ).ready(function() {
+        
+        if(window.isct == 1){
+            var imported = document.createElement('script');
+            imported.id = 'ze-snippet';
+            imported.src = 'https://static.zdassets.com/ekr/snippet.js?key=76ee62d4-68f9-4902-ae5a-b7580b654265';
+            document.head.appendChild(imported);
+            
+        }
+});
+    
+</script>
+
+<!-- Google Analytics Script -->
+<script>
+
+</script>
+
+</body>
+</html>

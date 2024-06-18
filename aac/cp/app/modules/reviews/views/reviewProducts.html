@@ -1,0 +1,314 @@
+
+<div  class="text-center preloader" ng-show="loader">
+
+	<span><img src="loading.gif" width="150px" height="150px" />  Loading...</span>
+
+</div>
+
+<div id="content">
+
+	<div id="sortable-panel" class="">
+
+		<!-- <div class="col-md-12 ">
+		    <div class="panel panel-default" ng-if="profile.plan  ">
+		        <div class="panel-body">
+			        <p style="color:red;">This feature is available for Professional and Enterprise plan. <a ui-sref="admin.plans">Click here to upgrade.</a></p>
+			    </div>
+			</div>
+
+			<div class="panel panel-default" ng-if="profile.plan > 1">
+
+				<div class="panel-body">   
+                      
+                      <div class="form-group"  ng-if="profile.plan == 2">
+									<div class="col-sm-12"><p style="color:green;"><strong>You can fetch reviews for 100 products per month . Also We do fetch 500 reviews for a product. If you need all reviews for specific product please email us on epihelp@infoshore.biz</strong></p></div>
+					  </div>
+					  
+					  <div class="form-group"  ng-if="profile.plan == 3">
+									<div class="col-sm-12"><p style="color:green;"><strong>You can fetch reviews for 500 products per month. Also We do fetch 500 reviews for a product. If you need all reviews for specific product please email us on epihelp@infoshore.biz</strong></p></div>
+					  </div>
+					  
+					   <div class="form-group"  ng-if="profile.plan == 4">
+									<div class="col-sm-12"><p style="color:green;"><strong>You can fetch reviews for 1000 products per month. Also We do fetch 500 reviews for a product. If you need all reviews for specific product please email us on epihelp@infoshore.biz</strong></p></div>
+					  </div>
+					   -->
+
+                      
+                      
+                      
+					<div ng-show="products != []">  
+
+						<div class="col-md-12 panel-body">
+
+							<div class="form-inline pull-left">
+
+								<!--<button class="btn btn-primary" ui-sref="admin.addproduct" ng-show="profile.amztoken == 0"><i class="fa fa-plus"></i> {{"product.form.addNew" | translate}}</button>-->
+
+								<!--<button class="btn btn-primary" ui-sref="admin.asinProduct" ng-show="profile.amztoken == 1"><i class="fa fa-plus"></i> {{"product.form.addNew" | translate}}</button>-->
+                                <button class="btn btn-primary" ng-click="downloadAllSelected()" ng-show = "checkedStatus" ><i class="fa fa-plus"></i> Download Reviews </button>
+                                <button class="btn btn-primary" ng-click="fetchAllSelected()" ng-show = "checkedStatus" ><i class="fa fa-plus"></i> Fetch Reviews </button>
+
+							</div>
+
+							<div class="form-inline pull-right" ng-hide="pagination.total == 0">
+
+								<input type="text" class="form-control" placeholder="Search" ng-model="query" ng-keypress="($event.which === 13)?search(perPage):0">
+
+								<button type="button" class="btn btn-primary" ng-click="search(perPage)">{{"product.form.search" | translate}}</button>
+
+								<button type="button" class="btn btn-primary" ng-click="refresh()">{{"product.form.resetFilter" | translate}}</button>
+
+							</div>
+
+						</div>
+
+						<div class="panel-body col-sm-12" ng-hide="pagination.total == 0">
+
+							<div class="res-table">         
+
+								<table class="table table-bordered">
+
+									<thead>
+
+										<tr>
+
+											<th width="5%" style="text-align:center;"><div class="checkbox checkbox-primary">
+
+												<input type="checkbox" ng-model="selectedAll" ng-click="checkAll()" class="conchkNumber"> <label></label></div>
+
+											</th>
+
+											<th style="text-align:center;" width="10%"></th>
+
+											<th width="35%">{{"product.form.title" | translate}}</th>
+
+											<!--<th width="10%">{{"product.form.variants" | translate}}</th>-->
+
+											<th width="10%">{{"product.form.price" | translate}}</th>
+
+											<th width="10%">{{"product.form.status" | translate}}</th>
+
+											<th width="15%">{{"product.form.actions" | translate}}</th> 
+
+										</tr>
+
+									</thead>
+
+									<tbody ng-repeat="product in products">
+
+										<tr> 
+
+											<td style="text-align:center;">
+
+												<div class="checkbox checkbox-primary">
+
+													<input id="{{product.product_id}}" type="checkbox" class="conchkNumber" value="{{product.title}}" ng-checked="selection.indexOf(product.product_id) > -1" ng-click="toggleSelection(product.product_id)" ng-model="product.Selected" >
+
+													<label for="{{product.product_id}}"></label>
+
+												</div>
+
+											</td>
+
+											<td style="text-align:center;" width="10%"> <img ng-src="{{product.variants[0].main_image.imgurl}}" alt="avatar" class="img-circle img-responsive" fallback-src="{{'../assets/img/broken/broken-link-250x250.png'}}"></td>
+
+											<td>{{product.title}}<br /><strong>ASIN: {{product.variants[0].sku}}</strong></td>
+
+											<!--<td><span ng-if="product.variants_count.no_of_variants <= 1">{{product.variants_count.no_of_variants}} variant</span><a data-toggle="modal" data-target="#myModal" ng-if="product.variants_count.no_of_variants > 1" ng-click="popupvariants({id:product.product_id})" style="cursor:pointer;"><u>{{product.variants_count.no_of_variants}} variants</u></a></td>-->
+
+											<td>{{product.variants[0].price}}</td>
+
+											<td>
+											    <span ng-if="product.variants[0].reviews.length == 0">No reviews Fetched</span>
+											    <span ng-if="product.variants[0].reviews.length > 0"> {{product.variants[0].reviews.length}} reviews</span>
+											    
+											</td>
+
+											<td>
+
+											<div class="btn-group">
+
+												<button class="btn btn-primary dropdown-toggle has-ripple" data-toggle="dropdown" aria-expanded="false">Action<span class="caret"></span><span class="ripple ripple-animate" style="height: 78px; width: 78px; animation-duration: 0.4s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.2; top: -21px; left: -6px;"></span></button>
+
+												<ul class="dropdown-menu">
+                                                    <!--
+													<li>
+
+														<a href="https://{{profile.amzurl}}/gp/product/{{product.variants[0].sku}}" target="_blank">View on Amazon</a>
+
+													</li>
+
+													<li>
+
+														<a href="https://{{profile.shopurl}}/admin/products/{{product.shopifyproductid}}"  target="_blank">View on Shopify</a>
+
+													</li>-->
+													<li>
+													    <a href="" ng-click="viewReviews(product.variants[0].asin)" >View Reviews</a>
+													</li>
+													<li>
+														<a href="" ng-click="fetchReviews(product.variants[0].asin)">Fetch Reviews</a>
+													</li>
+                                                    <!--
+													<li>
+
+														<a ng-click = "reimport(product.product_id)" style = "cursor:pointer;" ng-show="profile.id == 193">Reimport</a>
+
+													</li>        
+
+													<li>
+
+														<a ng-show = "product.block == 0 && profile.id == 193" ng-click = "block(product.product_id)" style = "cursor:pointer;">Block Auto-Sync</a><a ng-show = "product.block == 1 && profile.id == 193" ng-click = "unblock(product.product_id)" style = "cursor:pointer;">Unblock Auto-Sync</a>
+
+													</li>
+
+													<li class="divider"></li>
+
+													<li>
+
+														<a ng-click = "destroy(product.product_id)" style = "cursor:pointer;">Delete Product</a>
+
+													</li>-->
+
+												</ul>
+
+											</div>
+
+										</td>
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+        			</div>
+
+				</div>
+
+				<div ng-show="pagination.total == 0">
+
+					<h1 style="text-align:center;">No products found.</h1>
+
+				</div>
+
+				<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel3" style="overflow-y: hidden;">
+
+					<div class="modal-dialog" style="width:70%;overflow-y: scroll; max-height:85%;margin:67px auto;">
+
+						<div class="modal-content">
+
+							<div class="modal-header">
+
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+								<h4 class="modal-title" id="myModalLabel3">Variant</h4>
+
+							</div>
+
+							<div class="panel-body">
+
+								<div class="panel-body col-sm-12">
+
+									<div class="res-table">         
+
+										<table class="table table-hover table-fixed ellipsis-table table-bordered">
+
+											<thead>
+
+												<tr>
+
+													<th width="7%">{{"product.form.sno" | translate}}</th>
+
+													<th width="20%">{{"product.form.sku" | translate}}</th>
+
+													<th width="10%" ng-show="popupoption1 != ''">{{popupoption1}}</th>
+
+													<th width="10%" ng-show="popupoption2 != ''">{{popupoption2}}</th>
+
+													<th width="10%" ng-show="popupoption3 != ''">{{popupoption3}}</th>
+
+													<th width="10%">{{"product.form.price" | translate}}</th>
+
+													<th width="10%">{{"product.form.status" | translate}}</th>
+
+												</tr>
+
+											</thead>
+
+											<tbody>
+
+												<tr ng-repeat="variants in popupvariant"> 
+
+                        							<td>{{$index + 1}}</td>
+
+													<td>{{variants.sku}}<br /><strong>ASIN: {{variants.asin}}</strong></td>
+
+													<td ng-show="variants.option1val != ''">{{variants.option1val}}</td>
+
+  													<td ng-show="variants.option2val != ''">{{variants.option2val}}</td>
+
+													<td ng-show="variants.option3val != ''">{{variants.option3val}}</td>
+
+													<td>{{variants.price}}</td>
+
+													<td>{{variants.status}}</td>
+
+												</tr>
+
+											</tbody>
+
+										</table>
+
+									</div>
+
+        						</div>                    
+
+							</div>
+
+						</div>
+
+					</div>					
+
+				</div>
+
+				<div>                      
+
+					<div class="col-sm-12" ng-hide = "(pagination.total == 0)">
+
+						<div class="col-sm-4 panel-body">
+
+							Showing {{start}} to {{end}} of {{pagination.total}} entries
+
+						</div>
+
+						<div class=" col-sm-3 panel-body">
+
+							<div class="display-flex">
+
+								Show&nbsp;<select ng-model="perPage" ng-change="pageChanged(perPage)" ng-options="opt as opt.label for opt in units" class="form-control inline col-md-2" style="margin-top:-7px;"></select>&nbsp;entries
+
+							</div>
+
+						</div>
+
+						<div class="col-sm-5"> 
+
+							<uib-pagination ng-show="pagination.total>10" total-items="pagination.total" ng-model="pagination.current_page" max-size="maxSize" class="pagination pull-right" boundary-links="true" rotate="false" ng-change="pageChanged(perPage)" items-per-page="pagination.per_page" style="margin:0px;"></uib-pagination>
+
+						</div>
+
+					</div>
+
+				</div>
+
+       		</div>
+
+		    </div><!-- end panel -->
+
+	    </div>
+
+    </div>
+</div>

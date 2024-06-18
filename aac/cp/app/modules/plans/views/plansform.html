@@ -1,0 +1,89 @@
+<!-- main content -->
+<div id="content">
+	<div id="sortable-panel" class="">
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<p style="color:red;" ng-show="(profile.membershiptype == 'free')">You have subscribed to the FREE plan. We support importing upto 10 Amazon products under FREE plan. Choose any plan below to import unlimited items.</p>
+					<div id="titr-content" class="col-md-12">			
+						<div class="col-md-3">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="panel-title" style="text-align:center;"><strong>Bronze</strong><br /></div>
+								</div>
+								<div class="panel-body" style="text-align:center;">
+									<h4><strong>&#10003; USD $4.95 /Month</strong></h4>
+									<p><strong>&#10003; Unlimited product import</strong></p>
+									<p>&#10006; Manual Sync And Reimport</p>
+									<p>&#10006;	Import Amazon Reviews</p>
+									<p>&#10006;	Auto Sync Service With AWS API</p>
+									<p>&#10006;	Auto Sync Service Without AWS API</p>
+									<p>&#10006;	Bulk Import</p>
+									<p>&#10006;	Products CSV Export</p>
+									<p>&#10006;	Priority Customer Support</p>
+									<p><a href="javascript:void(0);" class="btn btn-success has-ripple" ng-show="profile.plan == 1">Activated</a><a href="javascript:void(0);" class="btn btn-warning has-ripple" ng-click="upgrade(1)" ng-hide="profile.plan == 1">Activate Now!</a></p>
+								</div>
+							</div>
+         				</div>
+						<div class="col-md-3">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="panel-title" style="text-align:center;"><strong>Starter</strong><br /></div>
+								</div>
+								<div class="panel-body" style="text-align:center;">
+									<h4><strong>&#10003; USD $14.95 /Month</strong></h4>
+									<p><strong>&#10003; Unlimited product import</strong></p>
+									<p><strong>&#10003; Manual Sync And Reimport </strong> </p>
+									<p>&#10006;	Import Amazon Reviews</strong></p>
+									<p>&#10006;	Auto Sync Service With AWS API</p>
+									<p>&#10006;	Auto Sync Service Without AWS API</p>
+									<p>&#10006;	Bulk Import</p>
+									<p>&#10006;	Products CSV Export</p>
+									<p>&#10006;	Priority Customer Support</p>
+									<p><a href="javascript:void(0);" class="btn btn-success has-ripple" ng-show="profile.plan == 2">Activated</a><a href="javascript:void(0);" class="btn btn-warning has-ripple" ng-click="upgrade(2)" ng-hide="profile.plan == 2">Activate Now!</a></p>
+								</div>
+							</div>
+         				</div>
+						<div class="col-md-3">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="panel-title" style="text-align:center;"><strong>Professional (Popular)</strong><br /></div>
+								</div>
+								<div class="panel-body" style="text-align:center;">
+									<h4><strong>USD $29.95 /Month</strong></h4>
+									<p><strong>&#10003; Unlimited product import</strong></p>
+									<p><strong>&#10003; Manual Sync And Reimport</strong></p>
+									<p><strong>&#10003; Import Amazon Reviews(Upto 1000 products)</strong></p>
+									<p><strong>&#10003; Auto Sync Service (Upto 1000 products)</strong></p>
+									<p><strong>&#10003; Bulk Import(Upto 1000 products)</strong></p>
+									<p><strong>&#10003; Products CSV Export</strong></p>
+									<p><strong>&#10003; Priority Customer Support</strong></p>
+									<p><a href="javascript:void(0);" class="btn btn-success has-ripple" ng-show="profile.plan == 3">Activated</a><a href="javascript:void(0);" class="btn btn-warning has-ripple" ng-click="upgrade(3)" ng-hide="profile.plan == 3">Activate Now!</a></p>
+								</div>
+							</div>
+         				</div>
+						<div class="col-md-3">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="panel-title" style="text-align:center;"><strong>Enterprise</strong><br /></div>
+								</div>
+								<div class="panel-body" style="text-align:center;">
+									<h4><strong>USD $49.95 /Month</strong></h4>
+									<p><strong>&#10003; Unlimited product import</strong></p>
+									<p><strong>&#10003; Manual Sync And Reimport</strong></p>
+									<p><strong>&#10003; Import Amazon Reviews(2500 products)</strong></p>
+									<p><strong>&#10003; Auto Sync Service With AWS API (2500 products)</strong></p>
+									<p><strong>&#10003; Auto Sync Service Without AWS API(2500 products)</strong></p>
+									<p><strong>&#10003; Bulk Import(2500 products)</strong></p>
+									<p><strong>&#10003; Products	CSV Export</strong></p>
+									<p><strong>&#10003; Priority Customer Support</strong></p>
+									<p><a href="javascript:void(0);" class="btn btn-success has-ripple" ng-show="profile.plan == 4">Activated</a><a href="javascript:void(0);" class="btn btn-warning has-ripple" ng-click="upgrade(4)" ng-hide="profile.plan == 4">Activate Now!</a></p>
+								</div>
+							</div>
+         				</div>
+					</div>									
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>

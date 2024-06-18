@@ -1,0 +1,24 @@
+{
+  "settings":{
+    "form":{
+      "settingsUpdateSuccess":"Settings have been updated successfully.",
+	    "published": "Products should be published?",
+	    "tags": "Default Tags",
+	    "inventory_sync": "Inventory Synchronization",
+	    "price_sync": "Price Synchronization",
+	    "outofstock_action": "Out-Of-Stock Action",
+	    "buynow": "Add Amazon Buy Now Link",
+	    "buynowtext":"Buy Now Text",
+	    "vendor": "Default Vendor",
+	    "product_type": "Default Product Type",
+	    "inventory_policy": "Inventory Policy",
+	    "defquantity": "Default Quantity",
+	    "markupenabled": "Enable Price Markup",
+	    "markuptype": "Markup Type",
+	    "markupval": "Markup Value",
+	    "markupround": "Markup Round Off",
+	    "reviewenabled": "Reviews On Product Page",
+	    "reviewwidth": "Width Of Review Box"	    
+    }
+  }
+}

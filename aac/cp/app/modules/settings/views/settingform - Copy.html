@@ -1,0 +1,98 @@
+<!-- main content -->
+<div id="content">
+	<div id="sortable-panel" class="">
+		<div id="titr-content" class="col-md-12">      
+			<form class="form-horizontal" ng-submit="update(settings)">
+				<fieldset ng-disabled="isDisabled">
+					<div class="col-sm-12">
+         				<div class="panel panel-default">
+							<div class="panel-body">
+                				<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.published" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.published" ng-options = 'obj.id as obj.value for obj in publishedList' class = "form-control"></select>
+									</div>
+								</div>    
+                                <div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.tags" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<input type="text" ng-model="settings.tags" class="form-control" placeholder="tshirts, mens" />										
+									</div>
+								</div>      
+								<div class="form-group" ng-show="{profile.plan != 2}">
+									<div class="col-sm-12"><p style="color:red;"><strong>Below auto-sync features are available in Silver plan only.</strong></p></div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.inventory_sync" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.inventory_sync" ng-options = 'obj.id as obj.value for obj in inventory_syncList' class = "form-control" ng-disabled="profile.plan != 2"></select>
+									</div>
+								</div>
+								<div class="form-group" ng-show="settings.inventory_sync == 1">
+									<label class="control-label col-sm-3">
+										{{"settings.form.outofstock_action" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.outofstock_action" ng-options = 'obj.id as obj.value for obj in outofstock_action_syncList' class = "form-control" ng-disabled="profile.plan != 2"></select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.price_sync" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.price_sync" ng-options = 'obj.id as obj.value for obj in price_syncList' class = "form-control" ng-disabled="profile.plan != 2"></select>
+									</div>
+								</div>
+								<div class="form-group" ng-show="profile.id > 192">
+									<label class="control-label col-sm-3">
+										{{"settings.form.buynow" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.buynow" ng-options = 'obj.id as obj.value for obj in buynow_List' class = "form-control"></select><div style="color:red;"  ng-show="settings.buynow == 1"><br /><strong>Please follow the below installation instructions.</strong></div>
+									</div>
+								</div>    
+                                <div class="form-group" ng-show="profile.id > 192">
+									<label class="control-label col-sm-3">
+										{{"settings.form.buynowtext" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<input type="text" ng-model="settings.buynowtext" class="form-control" placeholder="View On Amazon" ng-disabled="settings.buynow == 0" />
+									</div>
+								</div> 
+								<div class="form-group">
+									<div class="col-sm-10">	
+										<button class = "btn btn-success pull-right">{{"app.shared.common.save" | translate }}</button>
+									</div>	
+								</div>									
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>		
+			<div class="col-sm-12" ng-show="settings.buynow == 1">
+         		<div class="panel panel-default">
+					<div class="panel-heading"><strong>Installation Instructions</strong></div>
+					<div class="panel-body">
+						<p>1. Login to <strong>Shopify Admin</strong> and click on <strong>Themes</strong> under <strong>Online Store.</strong></p>
+						<p><img src="../assets/usrguide/userguide1.png" /><br /><br /></p>
+						<p>2. Click on <strong>Edit Code</strong> under <strong>Action</strong> menu.</p>
+						<p><img src="../assets/usrguide/userguide2.png" /><br /><br /></p>
+						<p>3. Under Layout find the file theme.liquid</p>
+						<p><img src="../assets/usrguide/userguide3.png" /><br /><br /></p>
+						<p>4. Copy the below code just before closing of </head> as shown in the below screenshot.</p>
+						<p><code>{% include 'is_aac' %}</code></p>
+						<p><img src="../assets/usrguide/userguide4.png" /><br /><br /></p>
+						<p><strong>Please contact at <a href="mailto:shopifyapps@infoshore.biz">shopifyapps@infoshore.biz</a> if you need any assistance.</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

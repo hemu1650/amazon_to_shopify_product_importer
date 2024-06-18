@@ -1,0 +1,189 @@
+<!-- main content -->
+
+<div  class="text-center preloader" ng-show="loader">
+
+	<span><img src="loading.gif" width="150px" height="150px" />  Loading...</span>
+
+</div>
+
+<div id="content">
+
+	<div id="sortable-panel" class="">
+
+		<div class="col-md-12 ">
+
+			<div class="panel panel-default">
+
+				<div class="panel-body">   
+
+					<div ng-show="incompleteProducts != []">  
+
+						<div class="col-md-12 panel-body">
+						    <div class="col-sm-12" ng-if="alert">
+            			        <p style="color:red;">This feature is available for Professional and Enterprise plan. <a ui-sref="admin.plans">Click here to upgrade.</a></p>
+            			    </div>
+            			  
+            			    </div>
+                            
+                           <div class="form-inline pull-right">
+                               <input type="text" class="form-control" placeholder="Search" ng-model="incompletequery" ng-keypress="($event.which === 13)?incompletesearch(incompleteperPage):0">
+
+								<button type="button" class="btn btn-primary" ng-click="incompletesearch(incompleteperPage)">{{"product.form.search" | translate}}</button>
+
+								<button type="button" class="btn btn-primary" ng-click="incompleterefresh()">{{"product.form.resetFilter" | translate}}</button>
+
+							</div>
+
+						</div>
+
+						<div class="panel-body col-sm-12" ng-hide="incompletepagination.total == 0">
+
+							<div class="res-table">         
+
+								<table class="table table-bordered">
+
+									<thead>
+
+										<tr>
+
+											<th width="5%" style="text-align:center;"><div class="checkbox checkbox-primary">
+
+												<input type="checkbox" ng-model="selectedAll" ng-click="checkAll()" class="conchkNumber"> <label></label></div>
+
+											</th>
+
+											<th style="text-align:center;" width="10%"></th>
+
+											<th width="35%">{{"product.form.title" | translate}}</th>
+
+											<!--<th width="10%">{{"product.form.variants" | translate}}</th>-->
+
+											<th width="10%">{{"product.form.price" | translate}}</th>
+
+											<th width="10%">{{"product.form.status" | translate}}</th>
+
+											<th width="15%">{{"product.form.actions" | translate}}</th> 
+
+										</tr>
+
+									</thead>
+
+									<tbody ng-repeat="product in incompleteProducts">
+
+										<tr> 
+
+											<td style="text-align:center;">
+
+												<div class="checkbox checkbox-primary">
+
+													<input id="{{product.product_id}}" type="checkbox" class="conchkNumber" value="{{product.title}}" ng-checked="selection.indexOf(product.product_id) > -1" ng-click="toggleSelection(product.product_id)" ng-model="product.Selected" >
+
+													<label for="{{product.product_id}}"></label>
+
+												</div>
+
+											</td>
+
+											<td style="text-align:center;" width="10%"> <img ng-src="{{product.variants[0].main_image.imgurl}}" alt="avatar" class="img-circle img-responsive" fallback-src="{{'../assets/img/broken/broken-link-250x250.png'}}"></td>
+
+											<td>{{product.title}}<br /><strong>ASIN: {{product.variants[0].sku}}</strong></td>
+
+											<!--<td><span ng-if="product.variants_count.no_of_variants <= 1">{{product.variants_count.no_of_variants}} variant</span><a data-toggle="modal" data-target="#myModal" ng-if="product.variants_count.no_of_variants > 1" ng-click="popupvariants({id:product.product_id})" style="cursor:pointer;"><u>{{product.variants_count.no_of_variants}} variants</u></a></td>-->
+
+											<td>{{product.variants[0].price}}</td>
+
+											<td>{{product.status}}</td>
+											
+											<td>
+
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addField" ng-click="addFieldId(product.product_id)" >Add Missing Field</button>
+                                           </td>
+                                            
+
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+        			</div>
+
+				</div>
+
+				<div ng-show="incompletepagination.total == 0">
+
+					<h1 style="text-align:center;">No products found.</h1>
+
+				</div>
+			
+            <div class="modal fade" id="addField" tabindex="-1" aria-labelledby="myModalLabel3" style="overflow-y: hidden;">
+                                               <div class="modal-dialog" style="width:70%;overflow-y: scroll; max-height:85%;margin:67px auto;">
+                                                  <div class="modal-content">
+                                                     <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel3">Add Price</h4>
+                                                     </div>
+                                                     <div class="panel-body">
+                                                        <div class="panel-body col-sm-12">
+                                                        <form class="form-horizontal" ng-submit="addField(padd)">
+                                                         <div class="form-group">
+                                                         	
+                                                            <label class="col-sm-3 control-label">Price</label>
+                                                            <div class="col-sm-7">
+                                                                <input type="number" step="any" class="form-control" ng-model="padd.price" required>
+                                                            </div>
+                                                         </div>
+                                                         <div class="form-group">
+                                                            <div class="col-sm-12">	
+                                                                <button class = "btn btn-success pull-right"><i class="fa fa-save"></i> Save</button>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                     </div>
+                                                   </form>                   
+                                                  </div>
+                                               </div>
+                                            </div>
+                                            
+				<div>                      
+
+					<div class="col-sm-12" ng-hide = "(incompletepagination.total == 0)">
+
+						<div class="col-sm-4 panel-body">
+
+							Showing {{incompletestart}} to {{incompleteend}} of {{incompletepagination.total}} entries
+
+						</div>
+
+						<div class=" col-sm-3 panel-body">
+
+							<div class="display-flex">
+								Show&nbsp;<select ng-model="perPage" ng-change="incompletepageChanged(incompleteperPage)" ng-options="opt as opt.label for opt in units" class="form-control inline col-md-2" style="margin-top:-7px;"></select>&nbsp;entries
+
+							</div>
+
+						</div>
+
+						<div class="col-sm-5"> 
+
+							<uib-pagination ng-show="incompletepagination.total>10" total-items="incompletepagination.total" ng-model="incompletepagination.current_page" max-size="maxSize" class="pagination pull-right" boundary-links="true" rotate="false" ng-change="incompletepageChanged(incompleteperPage)" items-per-page="incompletepagination.per_page" style="margin:0px;"></uib-pagination>
+
+						</div>
+
+					</div>
+
+				</div>
+
+       		</div>
+
+		</div><!-- end panel -->
+
+	</div>
+
+  </div>
+</div>
+<script>
+
+</script>

@@ -348,3 +348,34 @@ td.title-cell {
 /* .bulkproductlist span.Polaris-Checkbox {
     display: none;
 } */
+
+textarea.review-description {
+    font-size: var(--p-font-size-400);
+    font-weight: var(--p-font-weight-regular);
+    line-height: var(--p-font-line-height-600);
+    letter-spacing: initial;
+    position: relative;
+    z-index: var(--pc-text-field-contents);
+    display: flex;
+    flex: 1 1;
+    width: 100%;
+    min-width: 0;
+    min-height: var(--pg-control-height);
+    padding: var(--p-space-150) var(--p-space-300);
+    background: none;
+    font-family: var(--p-font-family-sans);
+    appearance: none;
+    caret-color: var(--p-color-text);
+    color: var(--p-color-text);
+    align-items: center;
+    border-radius: 8px;
+}
+
+.Polaris-TextField__Input:disabled {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.Polaris-Label__Text {
+    color: #000 !important;
+}

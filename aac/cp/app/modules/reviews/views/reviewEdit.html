@@ -1,0 +1,55 @@
+<div  class="text-center preloader" ng-show="loader">
+
+	<span><img src="loading.gif" width="150px" height="150px" />  Saving...</span>
+
+</div>
+<div class="content">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="col-md-12" style="padding:15px;">
+				<div class="form-inline pull-right">
+				    <button type="button" ng-click="cancle(review)" class="btn btn-warning btn-sm">Cancle</button>
+					<button type="button" ng-click="update(review)" class="btn btn-success btn-sm">Save</button>
+				</div>
+			</div>
+			<div class="panel-body">
+				<form>
+					<fieldset>
+						<div class="col-sm-4">
+							<label>Verified</label>
+							<select class="form-control" ng-model='review.verifiedFlag'>
+								<option value="Verified">Verified</option>
+								<option value="Un-Verified">Un-Verified</option>
+							</select><br/>
+						</div>
+						<div class="col-sm-4">
+							<label>Rating</label>
+							<input type="text" min="0" max="5" class="form-control" ng-model="review.rating" /><br/>
+						</div>
+						<div class="col-sm-4">
+							<label>Author Name</label>
+							<input type="text" class="form-control" ng-model="review.authorName"><br/>
+						</div>
+						<div class="col-sm-4">
+							<label>Review Date</label>
+						    <input type='text' class="form-control" ng-model="review.reviewDate" /><br/>
+						</div>
+						<div class="col-sm-4">
+							<label>Review Title</label>
+							<input type="text" class="form-control" ng-model="review.reviewTitle"><br/>
+						</div>
+						<div class="col-sm-4">
+							
+						</div>
+						<div class="col-sm-12">
+							<label>Review Details</label>
+							<textarea rows="5" class="form-control" ng-model="review.reviewDetails"><br/>
+								
+							</textarea>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

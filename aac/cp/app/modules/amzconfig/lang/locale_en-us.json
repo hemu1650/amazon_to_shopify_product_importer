@@ -1,0 +1,11 @@
+{
+	"amzconfig":{
+    	"form":{
+      		"amzconfigAddSuccess":"Configuration has been updated successfully.",
+	  		"associateTag": "Your Amazon Associate Tag",
+      		"awsAccessId": "AWS Access ID",
+	  		"awsSecretKey": "AWS Secret Key",
+	  		"marketplace": "Marketplace"
+   		}
+  	}
+}

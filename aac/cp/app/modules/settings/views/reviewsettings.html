@@ -1,0 +1,65 @@
+<!-- main content -->
+<div id="content">
+	<div id="sortable-panel" class="">
+		<div id="titr-content" class="col-md-12">      
+			<form class="form-horizontal" ng-submit="saveReviewsSettings(settings)">
+				<fieldset ng-disabled="isDisabled">
+					<div class="col-sm-12">
+         				<div class="panel panel-default">
+							<div class="panel-body">	
+								<div class="form-group" ng-show="profile.plan < 2">
+									<div class="col-sm-12"><p style="color:red;">This feature is available for Professional and Enterprise plan. <a ui-sref="admin.plans">Click here to upgrade.</a></p></div>								
+								</div>
+                				<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"settings.form.reviewenabled" | translate }}
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.reviewenabled" ng-options = 'obj.id as obj.value for obj in reviewenabledList' class = "form-control" ng-disabled="profile.plan < 2"></select>
+									</div>
+								</div>    
+								<div class="form-group">
+									<label for="star-icon-color"class="control-label col-sm-3">
+										Stars color
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.starcolorreviews" ng-options = 'obj.id as obj.value for obj in colorList' class = "form-control" ng-disabled="profile.plan < 2"></select>
+									</div>									
+								</div>														
+								<div class="form-group">
+									<label for="border-color" class="control-label col-sm-3">
+										Border Color
+									</label>
+									<div class="col-sm-7">
+										<select ng-model="settings.bordercolorreviews" ng-options = 'obj.id as obj.value for obj in colorList' class = "form-control" ng-disabled="profile.plan < 2"></select>
+									</div>									
+								</div>      
+								<div class="form-group">
+									<label for="review-paginate" class="control-label col-sm-3">
+										# reviews on a page
+									</label>
+									<div class="col-sm-7">
+										<input ng-model="settings.paginatereviews" id="review-paginate" type="text" class="col-sm-3 control-label" placeholder="Enter a number from 2 to 100" ng-disabled="profile.plan < 2" style="width:100%" />	
+									</div>								
+								</div>
+								<div class="form-group">
+									<label for="padding" class="control-label col-sm-3">
+										Padding
+									</label>
+									<div class="col-sm-7">
+										<input ng-model="settings.paddingreviews" id="padding" type="text" class="col-sm-3 control-label" ng-disabled="profile.plan < 2" style="width:100%" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-10">	
+										<button class = "btn btn-success pull-right">{{"app.shared.common.save" | translate }}</button>
+									</div>	
+								</div>									
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>			
+		</div>
+	</div>
+</div>

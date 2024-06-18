@@ -1,0 +1,123 @@
+<!-- main content -->
+
+<div  class="text-center preloader" ng-show="loader">
+
+  <span><img src="loading.gif" width="80px" height="80px" /> Fetching data...this may take few moments</span>
+
+</div>
+
+<div id="content">
+
+	<div id="sortable-panel" class="">
+
+		<div id="titr-content" class="col-md-12">     
+
+			<div class="panel panel-default">
+                     
+				<div class="panel-body"> 
+                        <div class="col-sm-12" ng-if="profile.plan != 3 && profile.plan != 4">
+							        <p style="color:red;">This feature is available for Professional and Enterprise plan. <a ui-sref="admin.plans">Click here to upgrade.</a></p>
+					  </div>
+
+
+
+					<form class="form-horizontal" ng-show ="profile.plan == 3 || profile.plan == 4">
+
+						<fieldset ng-disabled="isDisabled">
+							
+							    
+							<div class="form-group" >
+							    <div class="col-sm-12" >
+									<label class="col-sm-8 pull-left">
+										Please Enter Amazon's Base url ( <i style="color: #bb7b7b;">like https://www.amazon.com</i> )
+									</label>
+								</div>
+								<div class="col-sm-12">
+									<div class="col-sm-7">
+										<select ng-model="amazon_url" class="form-control" required>
+										    <option ng-repeat="url in supportedUrls" value="{{url.id}}">{{url.value}}</option>
+										</select>
+									</div>
+								</div>
+								<br/>
+								<div class="col-sm-12" >
+								    <br/>
+									<label class="col-sm-8 pull-left">
+										Please Choose ASIN CSV  (<i> Please upload ASIN in line separated format <a href="https://shopify.infoshore.biz/aac/cp/sample.csv" target="_self">sample</a></i> )
+									</label>
+								</div>
+								<div class="col-sm-12" >
+									<div class="col-sm-7">
+										<div class=" input-group">
+											<input type="file" accept=".CSV,.csv" class="form-control" fileread="uploadfile" required>
+											<span class="input-group-btn">
+												<button class = "btn btn-success pull-right" ng-click="addProduct(profile.plan)"><span>{{"product.form.add" | translate }}</span></button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+
+					</form>
+				</div>
+
+			</div>
+			<div class="panel panel-default" ng-if="profile.plan == 3 || profile.plan == 4">
+			    <div class="panel-body">
+			        <table class="table table-bordered table-striped table-hover" ng-if="imports.length > 0">
+			            <thead>
+			                <tr>
+			                    <th width="40%">S.No.</th>
+			                    <th width="20%">Status</th>
+			                    <th width="20%">Result(failed/total)</th>
+			                    <th width="20%">Created At</th>
+			                </tr>
+			            </thead>
+			            <tbody>
+			                <tr ng-repeat="(key,import) in imports">
+			                    <td>{{key+1}}</td>
+			                    <td><span ng-if="import.status == 1">Imported</span><span ng-if="import.status == 0" >Import in Progress</span></td>
+			                    <td><span ng-if="import.status == 1">{{import.failed}}/{{import.total}} </span><a ng-click="updateASIN(import.failed_asin)" data-toggle="modal" data-target="#myModal" ng-if="import.failed > 0">view failed ASIN</a></td>
+			                    <td><span ng-if="import.status == 1">{{import.created_at}}</span></td>
+			                </tr>
+			            </tbody>
+			        </table>
+			    </div>
+			</div>
+			
+			<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel3" style="overflow-y: hidden;">
+
+					<div class="modal-dialog" style="width:70%;overflow-y: scroll; max-height:85%;margin:67px auto;">
+
+						<div class="modal-content">
+
+							<div class="modal-header">
+
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+								<h4 class="modal-title" id="myModalLabel3">Failed ASIN</h4>
+
+							</div>
+
+							<div class="panel-body">
+
+								<div class="panel-body col-sm-12">
+
+						            {{ASIN}}
+
+        						</div>                    
+
+							</div>
+
+						</div>
+
+					</div>					
+
+				</div>
+
+		</div>
+
+	</div>
+
+</div>

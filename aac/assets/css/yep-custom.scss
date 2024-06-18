@@ -1,0 +1,141 @@
+/*
+ * Custom css for ng-laravel
+ */
+.capitalize{
+  text-transform: capitalize;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  vertical-align: middle;
+}
+#container{
+  background-image: none;
+}
+.btn.btn-link{
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 6px 7px;
+  &:hover{
+    outline: none;
+  }
+}
+.hiddenperpage{
+  display: none ;
+}
+.hiddensearch{
+  display: none;
+}
+div.material-table .hiddensearch {
+  padding: 0 14px 0 24px;
+  border-bottom: solid 1px #DDDDDD;
+  display: none;
+}
+div.material-table .hiddensearch input {
+  margin: 0;
+  border: transparent 0 !important;
+  height: 48px;
+  color: rgba(0, 0, 0, .84);
+}
+.yep-card {
+  min-height: 600px;
+  .card-head {
+    border-bottom: none;
+    .head-title {
+      font-size: 18px;
+    }
+  }
+  .search-tr{
+    display: table-row;
+    td{
+      padding: 0;
+    }
+  }
+}
+
+.chat li.left .chat-body{
+  margin-right: 0;
+}
+.panel-flat > .panel-flat-comment{
+  border-top:0;
+  padding:0;
+}
+.margin-right-33{
+  margin-right:33.333%;
+}
+.display-flex{
+  display: inline-flex;
+}
+.padding-top-15{
+  padding-top: 15px;
+}
+.padding-top-20{
+  padding-top: 20px;
+}
+.margin-top-20{
+  margin-top: -20px;
+}
+.bg-white-height-700{
+  min-height: 700px;
+  background-color: #FFFFFF;
+}
+.vertical-top{
+  vertical-align: top;
+}
+fieldset{
+  min-width: 100%;
+  margin: auto;
+}
+
+
+.gallery-fancy {
+  img {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+    margin-bottom: 20px;
+  }
+
+  img:hover {
+    filter: none; /* IE6-9 */
+    -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+
+  }
+}
+
+
+.main {
+ /* min-height: 1100px;*/
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.translate-cloak{
+  display: none !important;
+}
+
+/*
+ * Preloader
+ */
+.preloader{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+  height: 100%;
+  span {
+    position: fixed;
+    font-weight: bold;
+    left: 46%;
+    top: 24%;
+    font-size: 34px;
+    border: 1px solid #f0c36d;
+    background-color: #ffe8e5;
+    padding: 70px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+

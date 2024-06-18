@@ -1,0 +1,11 @@
+{
+  "plans":{
+    "form":{
+      "amzconfigAddSuccess":"Amzon Add Successfully",
+	  "merchantID": "Merchant ID",
+      "accessKeyID": "Access Key ID",
+	  "secretAccessKey": "Secret Access Key",
+	  "marketPlace": "Market Place"
+    }
+  }
+}

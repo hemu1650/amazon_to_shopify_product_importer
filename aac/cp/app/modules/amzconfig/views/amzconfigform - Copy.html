@@ -1,0 +1,37 @@
+<!-- main content -->
+<div id="content">
+	<div id="sortable-panel" class="">
+		<div id="titr-content" class="col-md-12">      							
+			<div class="col-sm-12">
+         		<div class="panel panel-default">
+					<div class="panel-body">
+						<form class="form-horizontal" ng-submit="create(amzconfig)">
+							<fieldset ng-disabled="isDisabled">
+                				<div class="form-group">
+									<label class="col-sm-3 control-label">
+										{{"amzconfig.form.associateTag" | translate }}*
+									</label>
+									<div class="col-sm-7">
+										<input type = "text" required placeholder = "" class = "form-control" ng-model = "amzconfig.associate_id" />
+									</div>
+								</div>
+								
+								
+								<div class="form-group">
+									<label class="control-label col-sm-3">
+										{{"amzconfig.form.marketplace" | translate }}
+									</label>
+							                       
+								
+							</fieldset>
+						</form>
+
+						<div class="col-md-12" ng-hide="amzconfig.id">	
+							<p style="padding:10px 0px 10px 10px;color:red;"><strong>NOTE: If you are not sure how to get Amazon AWS keys, <a href="javascript:void(1)" onclick="window.open('https://shopify.infoshore.biz/aac/how-to-generate-aws-keys.html', 'How To Generate AWS Keys', 'width=450,height=700');">click here</a> to know step by step user guide.</strong></p>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>

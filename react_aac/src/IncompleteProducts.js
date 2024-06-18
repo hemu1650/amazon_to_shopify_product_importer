@@ -29,6 +29,8 @@ import {
 } from "@shopify/polaris";
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import wrap from "word-wrap";
 
 
@@ -40,14 +42,50 @@ export default function IncompleteProducts() {
 	const [Products, setProducts] = useState("");
 	const [Productlist, setProductlist] = useState("");
 	const [activeDropdowns, setActiveDropdowns] = useState({});
+	const [productprice, setProductprice] = useState('');
 	const [active, setActive] = useState(false);
-const tempcode = localStorage.getItem('tempcode');
-	const handleChange = useCallback(() => setActive(!active), [active]);
+	const [priceError, setPriceError] = useState('');
+	const [selectedProductId, setSelectedProductId] = useState(null);
 
-  	const activator = <Button onClick={handleChange}>Add Missing Field</Button>;
+	const tempcode = localStorage.getItem('tempcode');
+
+	const handleChange = useCallback((productId) => {
+		setSelectedProductId(productId);
+		setActive((prevActive) => !prevActive);
+	}, []);
+	
+	const handlepriceChange = useCallback((value) => {
+		setProductprice(value);
+		// Resetting the error when user changes the price
+		setPriceError('');
+	  }, []);
+
+  	// const activator = <Button onClick={handleChange}>Add Missing Field</Button>;
 	
 	  const handleSubmit = async () => {
-		alert(1);
+		try {
+			const response = await axios.post(
+				`${process.env.REACT_APP_BASE_URL}/product/updateList?lang=en-us`,
+				{id:selectedProductId, price:productprice}, // No body content for the POST request
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			const data = response.data;
+			// setReviewData(data);
+			console.log("Fetch updateProduct Data:", data.msg);
+			toast.success('Price update successful');
+			// Set a timeout to refresh the page after 5 seconds
+			setTimeout(() => {
+				window.location.reload();
+			}, 5000);
+			setActive(true);
+		} catch (error) {
+			console.error("Error fetching fetch reviews:", error);
+			toast.error("Something went wrong !!");
+		}
 	  }
 
 	const initialValues = {
@@ -327,6 +365,8 @@ const tempcode = localStorage.getItem('tempcode');
 					id={product_id}
 					selected={false} // Adjust this according to your selected resources logic
 					position={index}
+					showSelection={false}
+					selectable={false}
 					>					
 
 					{variants && Array.isArray(variants) && variants.map((variant, vIndex) => (
@@ -348,7 +388,8 @@ const tempcode = localStorage.getItem('tempcode');
 						<IndexTable.Cell>{variant.price}</IndexTable.Cell>
 						<IndexTable.Cell>{variant.status}</IndexTable.Cell>
 						<IndexTable.Cell>      
-							{activator}
+								{/* {activator} */}
+								<Button submit loading={isLoading} onClick={() => handleChange(product_id)}>Add Missing Field</Button>
 						</IndexTable.Cell>
 						</React.Fragment>
 					))}
@@ -377,6 +418,7 @@ const tempcode = localStorage.getItem('tempcode');
 			title={"Incomplete Products List"}
 			
 		>
+			<ToastContainer />
 			<Card padding="0">
 				<IndexFilters
 					sortOptions={sortOptions}
@@ -406,9 +448,11 @@ const tempcode = localStorage.getItem('tempcode');
 				<IndexTable
 					resourceName={resourceName}
 					itemCount={shproducts.length}
-					selectedItemsCount={
-						allResourcesSelected ? "All" : selectedResources.length
-					}
+					showSelection={false}
+					selectable={false}
+					// selectedItemsCount={
+					// 	allResourcesSelected ? "All" : selectedResources.length
+					// }
 					onSelectionChange={handleSelectionChange}
 					sortable={[false, true, true, true, true, true, true]}
 					headings={[
@@ -419,11 +463,6 @@ const tempcode = localStorage.getItem('tempcode');
 						{ title: "Price" },
 						{ title: "Status" },
 						{ title: "Actions" },
-						// { title: "Price", alignment: "end" },
-						// { title: "Status" },
-						// { title: "Inventory" },
-						// { title: "Type" },
-						// { title: "Vendor" },
 					]}
 				>
 					{rowMarkup}
@@ -439,10 +478,10 @@ const tempcode = localStorage.getItem('tempcode');
                     <div>Showing {startIndex} to {endIndex} of {shproducts.length} entries</div>
                 </div>
 				
-				{/* <div style={{height: '500px'}}>
+				<div style={{height: '500px'}}>
 				<Frame>
 					<Modal
-					activator={activator}
+					// activator={activator}
 					open={active}
 					onClose={handleChange}
 					title="Add Price"					
@@ -451,11 +490,12 @@ const tempcode = localStorage.getItem('tempcode');
 						<TextContainer>
 						<Form noValidate onSubmit={handleSubmit}>
 							<FormLayout>
-								<TextField
-								
+								<TextField								
 								label="Price"
 								type="url"
 								autoComplete="off"
+								value={productprice}
+                        		onChange={handlepriceChange}
 								/>   
 								{isLoading ? (
 									<Spinner accessibilityLabel="Spinner example" size="large" />
@@ -468,7 +508,7 @@ const tempcode = localStorage.getItem('tempcode');
 					</Modal.Section>
 					</Modal>
 				</Frame>
-				</div> */}
+				</div>
 			</Card>
 		</Page>
 	);
