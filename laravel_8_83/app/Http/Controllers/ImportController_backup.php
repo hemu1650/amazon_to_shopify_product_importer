@@ -7,16 +7,16 @@ use ApaiIO\Configuration\GenericConfiguration;
 use ApaiIO\Operations\Search;
 use ApaiIO\Operations\Lookup;
 use ApaiIO\ApaiIO;
-use App\AmzKey;
-use App\Product;
-use App\ProductVariant;
-use App\ProductImage;
-use App\Setting;
-use App\Proxy;
+use App\Models\AmzKey;
+use App\Models\Product;
+use App\Models\ProductVariant;
+use App\Models\ProductImage;
+use App\Models\Setting;
+use App\Models\Proxy;
 use Illuminate\Database\Eloquent\Collection;
-use App\Reviews;
-use App\importToShopify;
-use App\fetchReviews;
+use App\Models\Reviews;
+use App\Models\importToShopify;
+use App\Models\fetchReviews;
 
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Translation\Tests\Dumper\IniFileDumperTest;
 use Validator;
 use File;
-use App\bulkImport;
+use App\Models\bulkImport;
 use Illuminate\Support\Facades\Log;
 
 class ImportController extends Controller

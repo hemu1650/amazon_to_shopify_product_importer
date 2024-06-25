@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Mail;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
 
-use App\Http\Requests;
+use App\Models\Http\Requests;
 use Validator;
-use App\Http\Controllers\Controller;
+use App\Models\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 

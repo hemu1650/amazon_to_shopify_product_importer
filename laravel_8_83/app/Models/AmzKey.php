@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,7 @@ class AmzKey extends Model {
 	protected $primaryKey = 'id';
 	   
 	public function user() {
-		return $this->belongsTo('App\User', 'user_id', 'id');
+		return $this->belongsTo('App\Models\User', 'user_id', 'id');
 	}
 	
 	protected $fillable = [

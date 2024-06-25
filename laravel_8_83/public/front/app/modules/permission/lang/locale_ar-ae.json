@@ -1,0 +1,10 @@
+{
+  "permission":{
+    "form":{
+      "permissionName":"اسم إذن",
+      "displayName":"display_name",
+      "description":"وصف",
+      "permissionAddSuccess":"وأضاف إذن بنجاح"
+    }
+  }
+}

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Setting;
-use App\User;
+use App\Models\Setting;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
 use App\Http\Requests;
@@ -12,9 +12,12 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
-use App\ConversionRates;
-use App\Currencies;
-require '../Helpers/shopify.php';
+use App\Models\ConversionRates;
+use App\Models\Currencies;
+
+require_once app_path('Helpers/shopify.php');
+
+// require '../Helpers/shopify.php';
 
 class SettingsController extends Controller
 {
@@ -306,57 +309,51 @@ class SettingsController extends Controller
 	
 	public function savePricingRulesSettings(Request $request)
     {
-		Log::info($request);
-        if($request->apply == 'no'){        
-	        $settings = $request->settings;
-			$currUser = Auth::User();
-			$settings = json_decode($settings);
-			$markupenabled = 0;
-			$markuptype = "FIXED";		
-			$markupval = 0;
-			$markupvalfixed = 0;
-			$markupround = 0;		
-			$markupenabled = $settings->markupenabled;
-    		$markuptype = $settings->markuptype;
-    		$markupval = $settings->markupval;
-			if(isset($settings->markupvalfixed)){
-				$markupvalfixed = $settings->markupvalfixed;
-			}
-    		$markupround = $settings->markupround;
-    		$settingObj = $currUser->settings()->first();
-    		$settingObj->markupenabled = $markupenabled;
-    		$settingObj->markuptype = $markuptype;
-    		$settingObj->markupval = $markupval;
-			$settingObj->markupvalfixed = $markupvalfixed;
-    		$settingObj->markupround = $markupround;    		
-    		$currUser->settings()->save($settingObj);
-    		return response()->json(['success' => $settingObj], 200);	
-        }else{
-            $settings = $request->settings;
-    		$currUser = Auth::User();
-    		$settings = json_decode($settings);
-    		$markupenabled = 0;
-    		$markuptype = "FIXED";		
-    		$markupval = 0;
-			$markupvalfixed = 0;
-    		$markupround = 0;		
-    		$markupenabled = $settings->markupenabled;    			
-   			$markuptype = $settings->markuptype;
-    		$markupval = $settings->markupval;
-			if(isset($settings->markupvalfixed)){
-				$markupvalfixed = $settings->markupvalfixed;
-			}			
-    		$markupround = $settings->markupround;
+        // Log the entire request for debugging purposes
+        Log::debug('savePricingRulesSettings request:', $request->all());
 
-    		$settingObj = $currUser->settings()->first();
-    		$settingObj->markupenabled = $markupenabled;
-    		$settingObj->markuptype = $markuptype;
-    		$settingObj->markupval = $markupval;
-			$settingObj->markupvalfixed = $markupvalfixed;
-    		$settingObj->markupround = $markupround;
-    		$settingObj->change_status = 0;
-    		
-    		$currUser->settings()->save($settingObj);
+        if ($request->apply == 'no') {
+            $settings = json_decode($request->settings);
+
+            // Log extracted settings for easier tracking
+            Log::info('Extracted pricing rules settings:', (array) $settings);
+
+            $currUser = Auth::User();
+            $settingObj = $currUser->settings()->first();
+
+            // Set default values for optional settings
+            $settingObj->markupenabled = $settings->markupenabled ?? 0;
+            $settingObj->markuptype = $settings->markuptype ?? "FIXED";
+            $settingObj->markupval = $settings->markupval ?? 0;
+            $settingObj->markupvalfixed = isset($settings->markupvalfixed) ? $settings->markupvalfixed : 0;
+            $settingObj->markupround = $settings->markupround ?? 0;
+
+            // Log updated settings before saving
+            Log::info('Updated pricing rules settings:', (array) $settingObj);
+
+            $currUser->settings()->save($settingObj);
+
+            return response()->json(['success' => $settingObj], 200);
+        } else {
+            // Log that settings were not applied (optional)
+            Log::info('Pricing rules settings not applied (apply="no")');
+
+            $settings = json_decode($request->settings);
+            $currUser = Auth::User();
+            $settingObj = $currUser->settings()->first();
+
+            $settingObj->markupenabled = 0;
+            $settingObj->markuptype = "FIXED";
+            $settingObj->markupval = 0;
+            $settingObj->markupvalfixed = 0;
+            $settingObj->markupround = 0;
+
+            // No need to log these defaults again since they're already logged above
+
+            $settingObj->change_status = 0;
+
+            $currUser->settings()->save($settingObj);
+
             return response()->json(['success' => $settingObj], 200);
         }
     }

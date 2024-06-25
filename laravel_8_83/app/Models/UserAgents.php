@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 use Nicolaslopezj\Searchable\SearchableTrait;
 use Illuminate\Database\Eloquent\Model;
 

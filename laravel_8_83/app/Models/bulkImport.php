@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
-use Nicolaslopezj\Searchable\SearchableTrait;
+namespace App\Models;
+// use Nicolaslopezj\Searchable\SearchableTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class bulkImport extends Model
 {
-    use SearchableTrait;
+    // use SearchableTrait;
 
     protected $searchable = [
     		"columns" => [

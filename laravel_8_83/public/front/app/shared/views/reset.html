@@ -1,0 +1,53 @@
+<div class="">
+    <div style="margin: 5% auto; position: relative; width: 400px;">
+        <br>
+        <br>
+        <br>
+
+        <div id="forget-form" class="panel panel-default animated ">
+            <div class="panel-body">
+                <button class="btn btn-link has-ripple" ui-sref="login"><i class="fa fa-arrow-left"></i></button>
+                <div class="text-center">
+                    <h2>ngLaravel Reset Password</h2>
+                    <h5 class="grey">Reset password your account</h5>
+                    <br>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset ng-disabled="isDisabled">
+                                <form>
+                                    <div class="spacing hidden-md"></div>
+                                    <div  class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                        <input ng-model="user.email" type="email" class="form-control" required  placeholder="Your Email">
+                                    </div>
+                                    <div class="spacing"></div>
+                                    <div  class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                        <input ng-model="user.password" type="password" class="form-control" required  placeholder="New password">
+                                    </div>
+                                    <div class="spacing"></div>
+                                    <div  class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                        <input ng-model="user.password_confirmation" type="password" class="form-control" required  placeholder="Password confirmation">
+                                    </div>
+                                    <div class="spacing"><br></div>
+                                    <button ng-click="reset(user)" class="btn btn-info btn-sm pull-right">{{send_text}}</button>
+                                </form>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <p class="text-center">Copyright 2016 YEP Corporation. All right reserved.</p>
+    </div>
+
+</div>
+
+

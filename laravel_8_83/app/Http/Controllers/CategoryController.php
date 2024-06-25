@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\AmzKey;
-use App\Category;
+use App\Models\AmzKey;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Models\Http\Requests;
 use Validator;
-use App\Http\Controllers\Controller;
+use App\Models\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller

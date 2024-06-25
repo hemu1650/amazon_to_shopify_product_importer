@@ -1,0 +1,119 @@
+<!-- main content -->
+<div id="content">
+    <div class="col-md-12">
+        <div class="panel panel-default yep-card">
+            <div class="panel-heading card-head">
+                <div class="panel-title">
+                    <a ui-sref="admin.tasks" class="btn btn-link has-ripple" >
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <span class="bold head-title"> {{$state.current.ncyBreadcrumb.label | translate}}</span>
+                </div>
+            </div>
+            <div class="panel-body ">
+                <hr>
+                <form >
+                    <fieldset ng-disabled="isDisabled">
+                        <div class="col-md-8 form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">
+                                    {{'task.form.title' | translate }}
+                                </label>
+                                <div class="col-sm-10">
+                                    <input ng-model="task.title" type="text" placeholder="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" >
+                                    {{"task.form.description" | translate}}
+                                </label>
+                                <div class="col-sm-10">
+                                    <div con="example">
+                                        <summernote  ng-model="task.description" height="300"></summernote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" >
+                                    {{"task.form.attachment" | translate}}
+                                </label>
+                                <div class="col-sm-10">
+                                    <!-- ng-if for dropzone directive is necessary -->
+                                    <div ng-if="task.gallery!==undefined" ng-model="task.gallery" dropzone="dropzoneConfig" mode="multi" class="dropzone dz-clickable"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="border-left: 1px solid #eee;">
+                            <div class="form-group">
+                                <label>
+                                    {{"task.form.startAndEndDate" | translate}}
+                                </label>
+                                <input date-range-picker class="form-control date-picker reportrange" type="text" ng-model="date" />
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    {{"task.form.status" | translate }}
+                                </label>
+                                <select ng-model="task.task_status" ng-options='status.id as status.name for status in statusList' class="form-control">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    {{"task.form.category" | translate}}
+                                </label>
+                                <ui-select ng-model="task.category_id" theme="select2" style="min-width: 100%;">
+                                    <ui-select-match>{{$select.selected.name || $select.selected}}</ui-select-match>
+                                    <ui-select-choices repeat="category.id as category in categories | propertyFilter: {name: $select.search}">
+                                        <div ng-bind-html="category.name | highlight: $select.search"></div>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                            <div class="form-group">
+                                <label >
+                                    {{"task.form.user" | translate}}
+                                </label>
+                                <ui-select ng-model="task.user_id" theme="select2" style="width: 100%;">
+                                    <ui-select-match placeholder="Select a person">
+                                        <img ng-src="{{$select.selected.avatar_url !=='' && '../laravel-backend/public/uploads/'+$select.selected.avatar_url || '../laravel-backend/public/uploads/no_avatar.jpg' }}" width="20" />
+                                        {{$select.selected.name}}
+                                    </ui-select-match>
+                                    <ui-select-choices repeat="user.id as user in users | propertyFilter: {name: $select.search, email: $select.search}">
+                                        <div ng-bind-html="user.name | highlight: $select.search"></div>
+                                        <img ng-src="{{user.avatar_url !=='' && '../laravel-backend/public/uploads/'+user.avatar_url || '../laravel-backend/public/uploads/no_avatar.jpg'}}" width="20"/>
+                                        <small>
+                                            {{"task.form.userEmail" | translate}} {{user.email}}
+                                        </small>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    {{"task.form.keyword" | translate}}
+                                </label>
+                                <ui-select multiple tagging="tagTransform" tagging-label="new tag" ng-model="task.tags" theme="bootstrap" style="width: 100%">
+                                    <ui-select-match placeholder="Select tags...">{{$item.tag}}</ui-select-match>
+                                    <ui-select-choices repeat="tag in tags | propertyFilter: {tag: $select.search}">
+                                        <div ng-bind-html="tag.tag | highlight: $select.search"></div>
+                                        <div ng-if="tag.isTag" ng-bind-html="tag.tag +' <small>[Add new tag]</small>'| highlight: $select.search"></div>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <br>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" >
+                                </label>
+                                <div class="col-sm-10">
+                                    <button class="btn btn-success" ng-click="create(task)" ng-if="!task.id" ng-class="{'working':isDisabled===true}"><i class="fa fa-save"></i>  {{"app.shared.common.save" | translate }}</button>
+                                    <button class="btn btn-info" ng-click="update(task)" ng-if="task.id" ng-class="{'working':isDisabled===true}"> {{"app.shared.common.update" | translate }}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main content -->

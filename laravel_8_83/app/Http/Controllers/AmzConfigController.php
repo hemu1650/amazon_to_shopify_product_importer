@@ -1,12 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use App\AmzKey;
-use App\User;
+use App\Models\AmzKey;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
-
 use ApaiIO\Configuration\GenericConfiguration;
 use ApaiIO\Operations\Search;
 use ApaiIO\Operations\Lookup;
@@ -18,6 +15,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 require 'awsApi.php';
+
 
 class AmzConfigController extends Controller
 {
@@ -43,6 +41,7 @@ class AmzConfigController extends Controller
 
     public function store(AmzConfigRequest $request)
     {
+		// dd(1);
 		$countryMapping = array("US" => "com", "CA" => "ca", "UK" => "co.uk", "IN" => "in", "BR" => "com.br", "MX" => "com.mx", "DE" => "de", "ES" => "es", "FR" => "fr", "IT" => "it", "JP" => "co.jp", "CN" => "cn");
 		$currUser = Auth::User();
 		$amzKey = $currUser->amzKey()->first();

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Translation\Tests\Dumper\IniFileDumperTest;
 use Validator;
 use File;
-use App\bulkImport;
+use App\Models\bulkImport;
 use Illuminate\Support\Facades\Log;
 
 class ImportController extends Controller {
@@ -37,6 +37,7 @@ class ImportController extends Controller {
     }
 
     public function store(Request $request) {
+        
 		$currUser = Auth::User();
         $base_url = $request->url;
         $data = $request->file;

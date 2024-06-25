@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,7 +10,7 @@ class ProductImage extends Model {
 	protected $primaryKey = 'id';
 	
 	public function productVariant() {
-		return $this->belongsTo('App\ProductVariant', 'variant_id', 'id');
+		return $this->belongsTo('App\Models\ProductVariant', 'variant_id', 'id');
 	}
 
 	protected $fillable = [

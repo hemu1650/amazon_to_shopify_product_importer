@@ -3,39 +3,46 @@
 // details url in case the associate id is added
 namespace App\Http\Controllers;
 
-use App\AmzKey;
-use App\Product;
-use App\ProductVariant;
-use App\ProductImage;
-use App\Failed_productimports;
-use App\Setting;
+use App\Models\AmzKey;
+use App\Models\Product;
+use App\Models\ProductVariant;
+use App\Models\ProductImage;
+use App\Models\Failed_productimports;
+use App\Models\Setting;
 use Carbon\Carbon;
-use App\Proxy;
+use App\Models\Proxy;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
-use App\Reviews;
-use App\importToShopify;
-use App\fetchReviews;
-use App\Currencies;
-use App\UserAgents;
+use App\Models\Reviews;
+use App\Models\importToShopify;
+use App\Models\fetchReviews;
+use App\Models\Currencies;
+use App\Models\UserAgents;
 use Illuminate\Support\Facades\DB;
+
 
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
-use App\Http\Requests;
+use App\Models\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Translation\Tests\Dumper\IniFileDumperTest;
 use Validator;
 use File;
-use App\bulkImport;
+use App\Models\bulkImport;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-require '../Helpers/getJson.php';
-require '../Helpers/shopify.php';
+use Illuminate\Support\Facades\Http;
+
+require_once app_path('Helpers/getJson.php');
+require_once app_path('Helpers/shopify.php');
+// require '/app/Helpers/getJson.php';
+// require '/app/Helpers/shopify.php';
+// require '../Helpers/getJson.php';
+// require '../Helpers/shopify.php';
 require 'awsApi.php';
 
 class ProductController extends Controller
@@ -60,7 +67,32 @@ class ProductController extends Controller
 	{
 		$per_page = \Request::get('per_page') ?: 20;
 		$currUser = Auth::User();
-		return $currUser->products()->where('status', 'Imported')->Orwhere('status', 'Import in progress')->Orwhere('status', 'Ready to Import')->with('variants')->with('variantsCount')->with('variants.reviews')->with('variants.mainImage')->orderBy('product_id', 'DESC')->paginate($per_page);
+		// Retrieve all products without pagination
+		$products = $currUser->products()
+		->where('status', 'Imported')
+		->orWhere('status', 'Import in progress')
+		->orWhere('status', 'Ready to Import')
+		->with('variants')
+		->with('variantsCount')
+		->with('variants.reviews')
+		->with('variants.mainImage')
+		->orderBy('product_id', 'DESC')
+		// ->paginate($per_page);
+		->get();
+
+		// Option 1: Get total count directly from the query (if available)
+		if (method_exists($products, 'total')) {
+			$totalProducts = $products->total();
+		} else {
+			// Option 2: Count elements in the collection manually
+			$totalProducts = count($products);
+		}
+
+		// Pass data to the view
+		return [
+			'products' => $products,
+			'totalProducts' => $totalProducts,
+		];
 	}
 
 	public function productlist2()
@@ -726,260 +758,6 @@ class ProductController extends Controller
 		}
 	}
 
-	// public function addProductByCrawl(Request $request)
-	// {
-
-	// 	$currUser = Auth::User();
-	// 	$user_id = $currUser->id;
-	// 	$producturl = '';
-	// 	if ($request->has('producturl')) {
-	// 		$producturl = trim($request->input('producturl'));
-	// 	}
-	// 	Log::info("crawling start111");
-	// 	if ($currUser->skuconsumed >= $currUser->skulimit) {
-	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Import limit exceeded', "type" => 'Account'));
-	// 		$failed_productimports->save();
-	// 		return response()->json(['error' => ["msg" => ["Import limit exceeded. Please upgrade your plan."]], ['purl' => $producturl]], 406);
-	// 	}
-	// 	$validator = Validator::make($request->all(), [
-	// 		'producturl' => 'required'
-	// 	]);
-	// 	if ($validator->fails()) {
-	// 		Log::info("validator Error");
-	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Not a valid product URL.', "type" => 'Validation'));
-	// 		$failed_productimports->save();
-	// 		return response()->json(['error' => ["msg" => ["Please enter a valid product URL."]], ['purl' => $producturl]], 406);
-	// 	}
-
-	// 	if (strlen($producturl) == 0) {
-	// 		Log::info("Null Url");
-	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Not a valid product URL.', "type" => 'Validation'));
-	// 		$failed_productimports->save();
-	// 		return response()->json(['error' => ["msg" => ["Please enter a valid product URL."]], ['purl' => $producturl]], 406);
-	// 	}
-
-	// 	/// Checking for existing product ///
-
-	// 	$tmpurl = strtok($producturl, '?');
-	// 	Log::info($tmpurl);
-	// 	$res = preg_match_all("/dp\/(.*)\/ref/U", $tmpurl . "/ref", $matches);
-	// 	if ($res) {
-	// 		Log::info("278");
-	// 		Log::info($matches[1][0]);
-	// 		$permission = ProductVariant::where("user_id", $currUser->id)->where("asin", strtok($matches[1][0], '/'))->get();
-	// 		if (sizeof($permission) > 0) {
-	// 			$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Product Already Exists', "type" => 'Validation'));
-	// 			$failed_productimports->save();
-	// 			return response()->json(['error' => ["msg" => ["Product Already Exists"]], ['purl' => $producturl]], 406);
-	// 		}
-	// 		$res = preg_match_all("/\/*([A-Z0-9]*)\/*ref/s", $tmpurl . "/ref", $matches);
-	// 		Log::info("289");
-	// 		if ($res) {
-	// 			Log::info("292");
-	// 			Log::info($matches);
-	// 			foreach ($matches[1] as $key => $value) {
-	// 				if (strlen($value) > 7) {
-	// 					$permission = ProductVariant::where("user_id", $currUser->id)->where("asin", $matches[1][0])->get();
-	// 					if (sizeof($permission) > 0) {
-	// 						$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Product Already Exists', "type" => 'Validation'));
-	// 						$failed_productimports->save();
-	// 						return response()->json(['error' => ["msg" => ["Product Already Exists"]], ['purl' => $producturl]], 406);
-	// 					} else {
-	// 						Log::info($permission);
-	// 					}
-	// 				}
-	// 				//Log::info($value);
-	// 			}
-	// 			//Log::info($matches);
-	// 		}
-	// 	} else {
-	// 		$res = preg_match_all("/\/([A-Z0-9]*)\/ref/sU", $tmpurl . "/ref", $matches);
-	// 		if ($res) {
-	// 			$permission = ProductVariant::where("user_id", $currUser->id)->where("asin", $matches[1][0])->get();
-	// 			if (sizeof($permission) > 0) {
-	// 				$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Product Already Exists', "type" => 'Validation'));
-	// 				$failed_productimports->save();
-	// 				return response()->json(['error' => ["msg" => ["Product Already Exists"]], ['purl' => $producturl]], 406);
-	// 			} else {
-	// 				Log::info($permission);
-	// 			}
-	// 		}
-	// 		Log::info("ASIN Not Found in database downloading product ...");
-	// 	}
-	// 	$domainVerification = verifyAmazonDomain($producturl);
-	// 	if (!$domainVerification) {
-	// 		Log::info("Domain Variation error");
-	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Not a valid product URL.', "type" => 'Validation'));
-	// 		$failed_productimports->save();
-	// 		return response()->json(['error' => ["msg" => ["Please enter a valid product URL."]], ['purl' => $producturl]], 406);
-	// 	}
-	// 	Log::info("starting surrent user");
-	// 	$domain = parse_url($producturl, PHP_URL_HOST);
-
-	// 	//if($domain == "amazon.com" || $domain == "www.amazon.com"){
-	// 	$time_start = $this->microtime_float();
-	// 	Log::info($producturl);
-	// 	$data = null;
-	// 	/*if($data == null){
-	// 		$data = get_html_scraper_api_content($producturl,$user_id);
-	// 	    //$data = $this->get_html_luminato_crawl_content($producturl);
-	// 	    if($data == null){
-	// 	        Log::info("Luminato Not Worked");
-	// 	    }
-	// 	}*/
-	// 	if ($data == null && $user_id != 17012 && $user_id != 20892) {
-	// 		Log::info($producturl);
-	// 		$data = proxycrawlapi($producturl);
-	// 	}
-
-	// 	if ($data == null) {
-	// 		$data = get_html_scraper_api_content($producturl, $user_id);
-	// 		//$data = $this->get_html_luminato_crawl_content($producturl);
-	// 		if ($data == null) {
-	// 			Log::info("Luminato Not Worked");
-	// 		}
-	// 	}
-	// 	/*if($data == null){
-	// 		$data = get_html_luminato2_crawl_content($producturl,$user_id);
-	// 	}*/
-
-	// 	if ($data == null) {
-	// 		@mail("pankajnarang81@gmail.com", "ProductController: all proxy blocked and luminiti.i failed too critical state", "failed" . $producturl);
-	// 	}
-
-	// 	if ($data != null) {
-	// 		$res1 = $data['message'];
-	// 		$resObj = json_decode($data['message'], true);
-	// 		$time_end = $this->microtime_float();
-	// 		$time = $time_end - $time_start;
-	// 		Log::info("Did crawling in $time seconds\n");
-	// 		Log::info($resObj);
-	// 		if (isset($resObj['Title'])) {
-	// 			$results = $resObj;
-	// 			$title = "";
-	// 			$description = "";
-	// 			$brand = "";
-	// 			$product_type = "";
-	// 			$asin = "";
-	// 			$url = "";
-	// 			$price = 0;
-	// 			$list_price = 0;
-	// 			$images = "";
-	// 			$currency = "";
-	// 			$feature1 = "";
-	// 			$feature2 = "";
-	// 			$feature3 = "";
-	// 			$feature4 = "";
-	// 			$feature5 = "";
-	// 			$quantity = 0;
-	// 			if (isset($results['Title'])) {
-	// 				$title = $results['Title'];
-	// 			}
-
-	// 			if (isset($results['description'])) {
-	// 				$description = $results['description'];
-	// 			}
-	// 			if (isset($results['brand'])) {
-	// 				$brand = $results['brand'];
-	// 			}
-	// 			if (isset($results['category'])) {
-	// 				$product_type = $results['category'];
-	// 			}
-	// 			if (isset($results['asin'])) {
-	// 				$asin = $results['asin'];
-	// 			}
-	// 			if (isset($results['url'])) {
-	// 				$url = $results['url'];
-	// 			}
-	// 			if (isset($results['price'])) {
-	// 				$price = $results['price'];
-	// 				$price = getAmount($price);
-	// 			}
-
-	// 			if (isset($results['list_price'])) {
-	// 				$list_price = $results['list_price'];
-	// 				$list_price = getAmount($list_price);
-	// 			} else {
-	// 				$list_price = $price;
-	// 			}
-	// 			if (isset($results['currency'])) {
-	// 				$currency = $results['currency'];
-	// 			}
-	// 			if ($currency == "") {
-	// 				$currency = verifyCurrency($producturl);
-	// 			}
-	// 			if (isset($results['in_stock___out_of_stock']) && $results['in_stock___out_of_stock'] == 'In stock.') {
-	// 				$quantity = 1;
-	// 			}
-	// 			if (isset($results['high_resolution_image_urls'])) {
-	// 				$high_resolution_image_urls = $results['high_resolution_image_urls'];
-	// 				$images = explode("|", $high_resolution_image_urls);
-	// 				$images = array_map("trim", $images);
-	// 			}
-
-	// 			if (isset($results['bullet_points'])) {
-	// 				$bullet_points = $results['bullet_points'];
-	// 				//$tempArr = explode("|", $bullet_points);
-	// 				//$tempArr = array_map("trim", $tempArr);
-	// 				$tempArr = $bullet_points;
-	// 				$feature1 = isset($tempArr[0]) ? $tempArr[0] : "";
-	// 				$feature2 = isset($tempArr[1]) ? $tempArr[1] : "";
-	// 				$feature3 = isset($tempArr[2]) ? $tempArr[2] : "";
-	// 				$feature4 = isset($tempArr[3]) ? $tempArr[3] : "";
-	// 				$feature5 = isset($tempArr[4]) ? $tempArr[4] : "";
-	// 			}
-
-	// 			if (isset($results['bullet_points']) && isset($results['bullet_points'][0])) {
-	// 				$description = $description . implode(" ", $results['bullet_points']);
-	// 			}
-
-	// 			Log::info("saving product");
-	// 			if ($price < 1) {
-	// 				$productObject = new Product(array("title" => $title, "description" => $description, "feature1" => $feature1, "feature2" => $feature2, "feature3" => $feature3, "feature4" => $feature4, "feature5" => $feature5, "brand" => $brand, "product_type" => $product_type, "raw_data" => $res1, "status" => 'Incomplete'));
-	// 			} else {
-	// 				$productObject = new Product(array("title" => $title, "description" => $description, "feature1" => $feature1, "feature2" => $feature2, "feature3" => $feature3, "feature4" => $feature4, "feature5" => $feature5, "brand" => $brand, "product_type" => $product_type, "raw_data" => $res1, "status" => 'Imported'));
-	// 			}
-	// 			$currUser->products()->save($productObject);
-	// 			Log::info("saving product variant");
-	// 			$variantObject = new ProductVariant(array("sku" => $asin, "asin" => $asin, "barcode" => "", "price" => $list_price, "saleprice" => $price, "currency" => $currency, "detail_page_url" => $producturl, "user_id" => $currUser->id));
-	// 			$productObject->variants()->save($variantObject);
-	// 			Log::info("saving product images");
-	// 			foreach ($images as $imageUrl) {
-	// 				Log::info($imageUrl);
-	// 				if ($imageUrl == "") {
-	// 					continue;
-	// 				}
-	// 				$productImageObject = new ProductImage(array("asin" => $asin, "imgurl" => $imageUrl, "user_id" => $currUser->id));
-	// 				Log::info($currUser->id);
-	// 				$variantObject->images()->save($productImageObject);
-	// 			}
-
-	// 			$currUser->skuconsumed = $currUser->skuconsumed + 1;
-	// 			$currUser->save();
-	// 			Log::info("Importing to shopyfy ");
-	// 			Log::info("return 200");
-	// 			if ($price > 0) {
-	// 				$this->insertToShopify($productObject); // TODO: Are we adding products to shopify using this method or public/inserttoShopify.
-	// 			}
-	// 			$time_end1 = $this->microtime_float();
-	// 			$time1 = $time_end1 - $time_start;
-	// 			Log::info("Did crawling in $time1 seconds\n");
-	// 			$res_data = Product::where('product_id', $productObject->product_id)->where('user_id', $currUser->id)->with('variantsCount')->with('variants.mainImage')->orderBy('product_id', 'DESC')->get();
-	// 			Log::info("response Data");
-	// 			Log::info($res_data);
-	// 			return response()->json(['success', $res_data], 200);
-	// 		} else {
-	// 			$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'There was some error fetching the product, please verify the product URL again. Contact support if the issue still persist.', "type" => 'Database'));
-	// 			$failed_productimports->save();
-	// 			return response()->json(['error' => ["msg" => ["There was some error fetching the product, please verify the product URL again. Contact support if the issue still persist."]], ['purl' => $producturl]], 406);
-	// 		}
-	// 	} else {
-	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'There was some error fetching the product, please verify the product URL again. Contact support if the issue still persist.', "type" => 'Database'));
-	// 		$failed_productimports->save();
-	// 		return response()->json(['error' => ["msg" => ["There was some error fetching the product, please verify the product URL again. Contact support if the issue still persist."]], ['purl' => $producturl]], 406);
-	// 	}
-	// }
-
 	public function addProductByCrawl(Request $request)
 	{
 
@@ -1082,16 +860,15 @@ class ProductController extends Controller
 		    }
 		}*/
 		if ($data == null && $user_id != 17012 && $user_id != 20892) {
+			Log::info($producturl);
 			$data = proxycrawlapi($producturl);
-
-			log::info(json_encode($data ,true));
 		}
 
 		if ($data == null) {
 			$data = get_html_scraper_api_content($producturl, $user_id);
 			//$data = $this->get_html_luminato_crawl_content($producturl);
 			if ($data == null) {
-				Log::info("Luminato Not Worked");
+				Log::info("Luminato Not Worked 2");
 			}
 		}
 		/*if($data == null){
@@ -1108,10 +885,9 @@ class ProductController extends Controller
 			$time_end = $this->microtime_float();
 			$time = $time_end - $time_start;
 			Log::info("Did crawling in $time seconds\n");
-			
+			Log::info($resObj);
 			if (isset($resObj['Title'])) {
 				$results = $resObj;
-              
 				$title = "";
 				$description = "";
 				$brand = "";
@@ -1127,8 +903,6 @@ class ProductController extends Controller
 				$feature3 = "";
 				$feature4 = "";
 				$feature5 = "";
-				$option1name = "";
-				$option2name = "";
 				$quantity = 0;
 				if (isset($results['Title'])) {
 					$title = $results['Title'];
@@ -1146,13 +920,6 @@ class ProductController extends Controller
 				if (isset($results['asin'])) {
 					$asin = $results['asin'];
 				}
-               
-                if (isset($results['asinVariationValues'])) {
-					$asinVariationValues = $results['asinVariationValues'];
-				}
-				log::info("fffffffffffffffffffffffffdfjsdfjsjfsjfsfsjfjnfjsfjsjnfsfsj");
-				log::info(json_encode($asinVariationValues, true));
-				
 				if (isset($results['url'])) {
 					$url = $results['url'];
 				}
@@ -1200,53 +967,13 @@ class ProductController extends Controller
 
 				Log::info("saving product");
 				if ($price < 1) {
-					$productObject = new Product(array("title" => $title, "description" => $description, "feature1" => $feature1, "feature2" => $feature2, "feature3" => $feature3, "feature4" => $feature4, "feature5" => $feature5,"option1name" => $option1name,"option2name" => $option2name,"brand" => $brand, "product_type" => $product_type, "raw_data" => $res1, "status" => 'Incomplete'));
+					$productObject = new Product(array("title" => $title, "description" => $description, "feature1" => $feature1, "feature2" => $feature2, "feature3" => $feature3, "feature4" => $feature4, "feature5" => $feature5, "brand" => $brand, "product_type" => $product_type, "raw_data" => $res1, "status" => 'Incomplete'));
 				} else {
-
-
-
-
-
-					$productObject = new Product(array("title" => $title, "description" => $description, "feature1" => $feature1, "feature2" => $feature2, "feature3" => $feature3, "feature4" => $feature4, "feature5" => $feature5,"option1name" => $option1name,"option2name" => $option2name, "brand" => $brand, "product_type" => $product_type, "raw_data" => $res1, "status" => 'Imported'));
+					$productObject = new Product(array("title" => $title, "description" => $description, "feature1" => $feature1, "feature2" => $feature2, "feature3" => $feature3, "feature4" => $feature4, "feature5" => $feature5, "brand" => $brand, "product_type" => $product_type, "raw_data" => $res1, "status" => 'Imported'));
 				}
 				$currUser->products()->save($productObject);
 				Log::info("saving product variant");
-
-
-				$option3val =" ";
-				$sku = " ";
-				$option1Val = [];
-				$option2Val = [];
-				$allarray = [];
-
-				log::info(json_encode($resObj['asinVariationValues']  ,true));
-
-				foreach ($resObj['asinVariationValues'] as $variation) {
-            
-					if ($variation['variationName'] === $option1name) {
-						
-						$option1Val[] = $variation['variationValue'];
-		 
-		
-					 
-					} elseif ($variation['variationName'] === $option2name) {
-
-						$option2Val[] = $variation['variationValue'];
-					
-					}
-				}
-		
-			
-			  
-		
-				foreach ($option1Val as $option1Valset) {
-
-
-					foreach ($option2Val as $option2Valset) {
-
-
-
-                $variantObject = new ProductVariant(array("sku" => $asin, "asin" => $asin, "barcode" => "", "price" => $list_price, "saleprice" => $price, "option1val" => $option1val, "option2val" => $option2val, "currency" => $currency, "detail_page_url" => $producturl, "user_id" => $currUser->id));
+				$variantObject = new ProductVariant(array("sku" => $asin, "asin" => $asin, "barcode" => "", "price" => $list_price, "saleprice" => $price, "currency" => $currency, "detail_page_url" => $producturl, "user_id" => $currUser->id));
 				$productObject->variants()->save($variantObject);
 				Log::info("saving product images");
 				foreach ($images as $imageUrl) {
@@ -1263,8 +990,6 @@ class ProductController extends Controller
 				$currUser->save();
 				Log::info("Importing to shopyfy ");
 				Log::info("return 200");
-
-			}}
 				if ($price > 0) {
 					$this->insertToShopify($productObject); // TODO: Are we adding products to shopify using this method or public/inserttoShopify.
 				}
@@ -1287,16 +1012,312 @@ class ProductController extends Controller
 		}
 	}
 
+	// public function addProductByCrawl(Request $request)
+	// {
+
+	// 	$currUser = Auth::User();
+	// 	$user_id = $currUser->id;
+	// 	$producturl = '';
+	// 	if ($request->has('producturl')) {
+	// 		$producturl = trim($request->input('producturl'));
+	// 	}
+	// 	Log::info("crawling start111");
+	// 	if ($currUser->skuconsumed >= $currUser->skulimit) {
+	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Import limit exceeded', "type" => 'Account'));
+	// 		$failed_productimports->save();
+	// 		return response()->json(['error' => ["msg" => ["Import limit exceeded. Please upgrade your plan."]], ['purl' => $producturl]], 406);
+	// 	}
+	// 	$validator = Validator::make($request->all(), [
+	// 		'producturl' => 'required'
+	// 	]);
+	// 	if ($validator->fails()) {
+	// 		Log::info("validator Error");
+	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Not a valid product URL.', "type" => 'Validation'));
+	// 		$failed_productimports->save();
+	// 		return response()->json(['error' => ["msg" => ["Please enter a valid product URL."]], ['purl' => $producturl]], 406);
+	// 	}
+
+	// 	if (strlen($producturl) == 0) {
+	// 		Log::info("Null Url");
+	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Not a valid product URL.', "type" => 'Validation'));
+	// 		$failed_productimports->save();
+	// 		return response()->json(['error' => ["msg" => ["Please enter a valid product URL."]], ['purl' => $producturl]], 406);
+	// 	}
+
+	// 	/// Checking for existing product ///
+
+	// 	$tmpurl = strtok($producturl, '?');
+	// 	Log::info($tmpurl);
+	// 	$res = preg_match_all("/dp\/(.*)\/ref/U", $tmpurl . "/ref", $matches);
+	// 	if ($res) {
+	// 		Log::info("278");
+	// 		Log::info($matches[1][0]);
+	// 		$permission = ProductVariant::where("user_id", $currUser->id)->where("asin", strtok($matches[1][0], '/'))->get();
+	// 		if (sizeof($permission) > 0) {
+	// 			$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Product Already Exists', "type" => 'Validation'));
+	// 			$failed_productimports->save();
+	// 			return response()->json(['error' => ["msg" => ["Product Already Exists"]], ['purl' => $producturl]], 406);
+	// 		}
+	// 		$res = preg_match_all("/\/*([A-Z0-9]*)\/*ref/s", $tmpurl . "/ref", $matches);
+	// 		Log::info("289");
+	// 		if ($res) {
+	// 			Log::info("292");
+	// 			Log::info($matches);
+	// 			foreach ($matches[1] as $key => $value) {
+	// 				if (strlen($value) > 7) {
+	// 					$permission = ProductVariant::where("user_id", $currUser->id)->where("asin", $matches[1][0])->get();
+	// 					if (sizeof($permission) > 0) {
+	// 						$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Product Already Exists', "type" => 'Validation'));
+	// 						$failed_productimports->save();
+	// 						return response()->json(['error' => ["msg" => ["Product Already Exists"]], ['purl' => $producturl]], 406);
+	// 					} else {
+	// 						Log::info($permission);
+	// 					}
+	// 				}
+	// 				//Log::info($value);
+	// 			}
+	// 			//Log::info($matches);
+	// 		}
+	// 	} else {
+	// 		$res = preg_match_all("/\/([A-Z0-9]*)\/ref/sU", $tmpurl . "/ref", $matches);
+	// 		if ($res) {
+	// 			$permission = ProductVariant::where("user_id", $currUser->id)->where("asin", $matches[1][0])->get();
+	// 			if (sizeof($permission) > 0) {
+	// 				$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Product Already Exists', "type" => 'Validation'));
+	// 				$failed_productimports->save();
+	// 				return response()->json(['error' => ["msg" => ["Product Already Exists"]], ['purl' => $producturl]], 406);
+	// 			} else {
+	// 				Log::info($permission);
+	// 			}
+	// 		}
+	// 		Log::info("ASIN Not Found in database downloading product ...");
+	// 	}
+	// 	$domainVerification = verifyAmazonDomain($producturl);
+	// 	if (!$domainVerification) {
+	// 		Log::info("Domain Variation error");
+	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'Not a valid product URL.', "type" => 'Validation'));
+	// 		$failed_productimports->save();
+	// 		return response()->json(['error' => ["msg" => ["Please enter a valid product URL."]], ['purl' => $producturl]], 406);
+	// 	}
+	// 	Log::info("starting surrent user");
+	// 	$domain = parse_url($producturl, PHP_URL_HOST);
+
+	// 	//if($domain == "amazon.com" || $domain == "www.amazon.com"){
+	// 	$time_start = $this->microtime_float();
+	// 	Log::info($producturl);
+	// 	$data = null;
+	// 	/*if($data == null){
+	// 		$data = get_html_scraper_api_content($producturl,$user_id);
+	// 	    //$data = $this->get_html_luminato_crawl_content($producturl);
+	// 	    if($data == null){
+	// 	        Log::info("Luminato Not Worked");
+	// 	    }
+	// 	}*/
+	// 	if ($data == null && $user_id != 17012 && $user_id != 20892) {
+	// 		$data = proxycrawlapi($producturl);
+
+	// 		log::info(json_encode($data ,true));
+	// 	}
+
+	// 	if ($data == null) {
+	// 		$data = get_html_scraper_api_content($producturl, $user_id);
+	// 		//$data = $this->get_html_luminato_crawl_content($producturl);
+	// 		if ($data == null) {
+	// 			Log::info("Luminato Not Worked");
+	// 		}
+	// 	}
+	// 	/*if($data == null){
+	// 		$data = get_html_luminato2_crawl_content($producturl,$user_id);
+	// 	}*/
+
+	// 	if ($data == null) {
+	// 		@mail("pankajnarang81@gmail.com", "ProductController: all proxy blocked and luminiti.i failed too critical state", "failed" . $producturl);
+	// 	}
+
+	// 	if ($data != null) {
+	// 		$res1 = $data['message'];
+	// 		$resObj = json_decode($data['message'], true);
+	// 		$time_end = $this->microtime_float();
+	// 		$time = $time_end - $time_start;
+	// 		Log::info("Did crawling in $time seconds\n");
+			
+	// 		if (isset($resObj['Title'])) {
+	// 			$results = $resObj;
+              
+	// 			$title = "";
+	// 			$description = "";
+	// 			$brand = "";
+	// 			$product_type = "";
+	// 			$asin = "";
+	// 			$url = "";
+	// 			$price = 0;
+	// 			$list_price = 0;
+	// 			$images = "";
+	// 			$currency = "";
+	// 			$feature1 = "";
+	// 			$feature2 = "";
+	// 			$feature3 = "";
+	// 			$feature4 = "";
+	// 			$feature5 = "";
+	// 			$option1name = "";
+	// 			$option2name = "";
+	// 			$quantity = 0;
+	// 			if (isset($results['Title'])) {
+	// 				$title = $results['Title'];
+	// 			}
+
+	// 			if (isset($results['description'])) {
+	// 				$description = $results['description'];
+	// 			}
+	// 			if (isset($results['brand'])) {
+	// 				$brand = $results['brand'];
+	// 			}
+	// 			if (isset($results['category'])) {
+	// 				$product_type = $results['category'];
+	// 			}
+	// 			if (isset($results['asin'])) {
+	// 				$asin = $results['asin'];
+	// 			}
+               
+    //             if (isset($results['asinVariationValues'])) {
+	// 				$asinVariationValues = $results['asinVariationValues'];
+	// 			}
+	// 			log::info("fffffffffffffffffffffffffdfjsdfjsjfsjfsfsjfjnfjsfjsjnfsfsj");
+	// 			log::info(json_encode($asinVariationValues, true));
+				
+	// 			if (isset($results['url'])) {
+	// 				$url = $results['url'];
+	// 			}
+	// 			if (isset($results['price'])) {
+	// 				$price = $results['price'];
+	// 				$price = getAmount($price);
+	// 			}
+
+	// 			if (isset($results['list_price'])) {
+	// 				$list_price = $results['list_price'];
+	// 				$list_price = getAmount($list_price);
+	// 			} else {
+	// 				$list_price = $price;
+	// 			}
+	// 			if (isset($results['currency'])) {
+	// 				$currency = $results['currency'];
+	// 			}
+	// 			if ($currency == "") {
+	// 				$currency = verifyCurrency($producturl);
+	// 			}
+	// 			if (isset($results['in_stock___out_of_stock']) && $results['in_stock___out_of_stock'] == 'In stock.') {
+	// 				$quantity = 1;
+	// 			}
+	// 			if (isset($results['high_resolution_image_urls'])) {
+	// 				$high_resolution_image_urls = $results['high_resolution_image_urls'];
+	// 				$images = explode("|", $high_resolution_image_urls);
+	// 				$images = array_map("trim", $images);
+	// 			}
+
+	// 			if (isset($results['bullet_points'])) {
+	// 				$bullet_points = $results['bullet_points'];
+	// 				//$tempArr = explode("|", $bullet_points);
+	// 				//$tempArr = array_map("trim", $tempArr);
+	// 				$tempArr = $bullet_points;
+	// 				$feature1 = isset($tempArr[0]) ? $tempArr[0] : "";
+	// 				$feature2 = isset($tempArr[1]) ? $tempArr[1] : "";
+	// 				$feature3 = isset($tempArr[2]) ? $tempArr[2] : "";
+	// 				$feature4 = isset($tempArr[3]) ? $tempArr[3] : "";
+	// 				$feature5 = isset($tempArr[4]) ? $tempArr[4] : "";
+	// 			}
+
+	// 			if (isset($results['bullet_points']) && isset($results['bullet_points'][0])) {
+	// 				$description = $description . implode(" ", $results['bullet_points']);
+	// 			}
+
+	// 			Log::info("saving product");
+	// 			if ($price < 1) {
+	// 				$productObject = new Product(array("title" => $title, "description" => $description, "feature1" => $feature1, "feature2" => $feature2, "feature3" => $feature3, "feature4" => $feature4, "feature5" => $feature5,"option1name" => $option1name,"option2name" => $option2name,"brand" => $brand, "product_type" => $product_type, "raw_data" => $res1, "status" => 'Incomplete'));
+	// 			} else {
 
 
-	
-	
-	
-	
 
 
 
+	// 				$productObject = new Product(array("title" => $title, "description" => $description, "feature1" => $feature1, "feature2" => $feature2, "feature3" => $feature3, "feature4" => $feature4, "feature5" => $feature5,"option1name" => $option1name,"option2name" => $option2name, "brand" => $brand, "product_type" => $product_type, "raw_data" => $res1, "status" => 'Imported'));
+	// 			}
+	// 			$currUser->products()->save($productObject);
+	// 			Log::info("saving product variant");
 
+
+	// 			$option3val =" ";
+	// 			$sku = " ";
+	// 			$option1Val = [];
+	// 			$option2Val = [];
+	// 			$allarray = [];
+
+	// 			log::info(json_encode($resObj['asinVariationValues']  ,true));
+
+	// 			foreach ($resObj['asinVariationValues'] as $variation) {
+            
+	// 				if ($variation['variationName'] === $option1name) {
+						
+	// 					$option1Val[] = $variation['variationValue'];
+		 
+		
+					 
+	// 				} elseif ($variation['variationName'] === $option2name) {
+
+	// 					$option2Val[] = $variation['variationValue'];
+					
+	// 				}
+	// 			}
+		
+			
+			  
+		
+	// 			foreach ($option1Val as $option1Valset) {
+
+
+	// 				foreach ($option2Val as $option2Valset) {
+
+
+
+    //             $variantObject = new ProductVariant(array("sku" => $asin, "asin" => $asin, "barcode" => "", "price" => $list_price, "saleprice" => $price, "option1val" => $option1val, "option2val" => $option2val, "currency" => $currency, "detail_page_url" => $producturl, "user_id" => $currUser->id));
+	// 			$productObject->variants()->save($variantObject);
+	// 			Log::info("saving product images");
+	// 			foreach ($images as $imageUrl) {
+	// 				Log::info($imageUrl);
+	// 				if ($imageUrl == "") {
+	// 					continue;
+	// 				}
+	// 				$productImageObject = new ProductImage(array("asin" => $asin, "imgurl" => $imageUrl, "user_id" => $currUser->id));
+	// 				Log::info($currUser->id);
+	// 				$variantObject->images()->save($productImageObject);
+	// 			}
+
+	// 			$currUser->skuconsumed = $currUser->skuconsumed + 1;
+	// 			$currUser->save();
+	// 			Log::info("Importing to shopyfy ");
+	// 			Log::info("return 200");
+
+	// 		}}
+	// 			if ($price > 0) {
+	// 				$this->insertToShopify($productObject); // TODO: Are we adding products to shopify using this method or public/inserttoShopify.
+	// 			}
+	// 			$time_end1 = $this->microtime_float();
+	// 			$time1 = $time_end1 - $time_start;
+	// 			Log::info("Did crawling in $time1 seconds\n");
+	// 			$res_data = Product::where('product_id', $productObject->product_id)->where('user_id', $currUser->id)->with('variantsCount')->with('variants.mainImage')->orderBy('product_id', 'DESC')->get();
+	// 			Log::info("response Data");
+	// 			Log::info($res_data);
+	// 			return response()->json(['success', $res_data], 200);
+	// 		} else {
+	// 			$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'There was some error fetching the product, please verify the product URL again. Contact support if the issue still persist.', "type" => 'Database'));
+	// 			$failed_productimports->save();
+	// 			return response()->json(['error' => ["msg" => ["There was some error fetching the product, please verify the product URL again. Contact support if the issue still persist."]], ['purl' => $producturl]], 406);
+	// 		}
+	// 	} else {
+	// 		$failed_productimports = new Failed_productimports(array("user_id" => Auth::user()->id, "url" => $request->input('producturl'), "reason" => 'There was some error fetching the product, please verify the product URL again. Contact support if the issue still persist.', "type" => 'Database'));
+	// 		$failed_productimports->save();
+	// 		return response()->json(['error' => ["msg" => ["There was some error fetching the product, please verify the product URL again. Contact support if the issue still persist."]], ['purl' => $producturl]], 406);
+	// 	}
+	// }
 
 	public function addProductByCrawl1(Request $request)
 	{
@@ -1409,7 +1430,7 @@ class ProductController extends Controller
 			$data = get_html_scraper_api_content($producturl, $user_id);
 			//$data = $this->get_html_luminato_crawl_content($producturl);
 			if ($data == null) {
-				Log::info("Luminato Not Worked");
+				Log::info("Luminato Not Worked 2");
 			}
 		}
 		/*if($data == null){
@@ -2774,4 +2795,111 @@ class ProductController extends Controller
 		}*/
 		return response()->json(['success'], 200);
 	}
+
+	// public function submitForm(Request $request)
+	// {
+	// 	// Log form submission with data
+	// 	\Log::info('Form submitted with text_value: ' . $request->input('text_value'));
+
+	// 	// Process the submitted data
+	// 	$textValue = $request->input('text_value');
+
+	// 	// Log URL generation
+	// 	\Log::info('Product URL generated: ' . $productUrl = 'https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=' . urlencode($textValue));
+
+	// 	$curl = curl_init();
+
+	// 	curl_setopt_array($curl, array(
+	// 		CURLOPT_URL => $productUrl,
+	// 		CURLOPT_RETURNTRANSFER => true,
+	// 		CURLOPT_ENCODING => '',
+	// 		CURLOPT_MAXREDIRS => 10,
+	// 		CURLOPT_TIMEOUT => 0,
+	// 		CURLOPT_FOLLOWLOCATION => true,
+	// 		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	// 		CURLOPT_CUSTOMREQUEST => 'GET',
+	// 	));
+
+	// 	$response = curl_exec($curl);
+
+	// 	curl_close($curl);
+
+	// 	print_r($response);
+
+	// 	// \Log::info('anshu1:');
+
+	// 	// try {
+	// 	// 	Log::info('enter in try method');
+	// 	// 	$responseArray = json_decode($response, true);
+	// 	// 	Log::info('responseArray', $responseArray);
+	// 	// 	dd(1);
+
+	// 	// } catch (Exception $e) {
+	// 	// 	\Log::error('Error decoding JSON response: ' . $e->getMessage());
+	// 	// 	// Handle JSON decoding error (e.g., return an error message)
+	// 	// 	return response()->json(['error' => 'Failed to decode response'], 500);
+	// 	// }
+
+	// 	// \Log::info('anshu2');
+
+	// 	// // Uncomment for debugging (shows entire decoded JSON)
+	// 	// // print_r($responseArray);
+
+	// 	// \Log::info('anshu4');
+
+	// 	// \Log::info('anshu4_1', $responseArray);
+
+	// 	// // print_r($responseArray);
+	// 	// // dd(1);
+
+	// 	// // Access data from the top-level "body" key
+	// 	// // $bodyData = $responseArray;  // Assuming you want the entire body data
+	// 	// $bodyData = $responseArray['body'];
+
+	// 	// \Log::info('anshu5');
+
+	// 	// print_r($bodyData);
+
+	// 	// Return the response data as JSON
+		
+	// 	return response()->json(['response' => $response]);
+	// }
+
+
+	public function fetchAmazonProduct(Request $request)
+    {
+        // Log form submission with data
+        Log::info('Form submitted with text_value: ' . $request->input('text_value'));
+
+        // Process the submitted data
+        $textValue = $request->input('text_value');
+
+        // Generate the product URL
+        $productUrl = 'https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=' . urlencode($textValue);
+        Log::info('Product URL generated: ' . $productUrl);
+
+        try {
+            // Make the HTTP request using Laravel's Http facade with SSL verification disabled
+            $response = Http::withHeaders([
+                'Accept' => '*/*',
+                // 'User-Agent' => 'Thunder Client (https://www.thunderclient.com)',
+            ])->withoutVerifying()->get($productUrl);
+
+            if ($response->successful()) {
+                // Log and return the successful response
+                Log::info('Response received successfully: ' . $response->body());
+                return response()->json($response->json(), 200);
+            } else {
+                // Log and return the failed response
+                Log::error('Failed to fetch data: ' . $response->body());
+                return response()->json(['error' => 'Failed to fetch data'], $response->status());
+            }
+        } catch (\Exception $e) {
+            // Log and return the exception
+            Log::error('cURL Error: ' . $e->getMessage());
+            return response()->json(['error' => 'cURL Error: ' . $e->getMessage()], 500);
+        }
+    }
+
+
 };

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 
 use Nicolaslopezj\Searchable\SearchableTrait;
@@ -16,7 +16,7 @@ class Permission extends EntrustPermission
     ];
     public function permission_role()
     {
-        return $this->belongsToMany('App\permission_role');
+        return $this->belongsToMany('App\Models\permission_role');
     }
 
     protected $fillable = ['name','display_name', 'description'];

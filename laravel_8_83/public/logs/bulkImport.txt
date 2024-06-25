@@ -1,0 +1,333 @@
+2024-06-24 12:01:07 [INFO]: bulkImport Initiated
+2024-06-24 12:01:07 [INFO]: Database connected
+2024-06-24 12:01:07 [INFO]: bulk import in progress for count0 rows
+2024-06-24 12:01:56 [INFO]: bulkImport Initiated
+2024-06-24 12:01:56 [INFO]: Database connected
+2024-06-24 12:01:56 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:01:56 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:01:56 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:01:56 [INFO]: asins being performed now"B006T9B6R2\r\nB0B7NTY2S6"
+2024-06-24 12:01:56 [INFO]: pending asins count are now100
+2024-06-24 12:01:56 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:01:56 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B006T9B6R2' and user_id = 1
+2024-06-24 12:01:56 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0B7NTY2S6' and user_id = 1
+2024-06-24 12:01:56 [INFO]: successful asin implemeted are 0
+2024-06-24 12:01:56 [INFO]: failed asin implemeted are2
+2024-06-24 12:01:56 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B006T9B6R2","B0B7NTY2S6"]',`updated_at`= NOW() WHERE `id`=56
+2024-06-24 12:01:56 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 56
+2024-06-24 12:03:34 [INFO]: bulkImport Initiated
+2024-06-24 12:03:34 [INFO]: Database connected
+2024-06-24 12:03:34 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:03:34 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:03:34 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:03:34 [INFO]: asins being performed now"B0CSF47VXR\r\nB073F1TBMR"
+2024-06-24 12:03:34 [INFO]: pending asins count are now100
+2024-06-24 12:03:34 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:03:34 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0CSF47VXR' and user_id = 1
+2024-06-24 12:03:34 [US]: proxycrawlapi 1
+2024-06-24 12:03:34 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CSF47VXR%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:03:34 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CSF47VXR%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:03:37 [US]: proxycrawlapi 1
+2024-06-24 12:03:37 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CSF47VXR%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:03:37 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CSF47VXR%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:03:44 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:03:44 [INFO]: product_type is not set
+2024-06-24 12:03:45 [ERROR]: 0
+2024-06-24 12:03:45 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B073F1TBMR' and user_id = 1
+2024-06-24 12:03:45 [US]: proxycrawlapi 1
+2024-06-24 12:03:45 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB073F1TBMR%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:03:45 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB073F1TBMR%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:03:45 [US]: proxycrawlapi 1
+2024-06-24 12:03:45 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB073F1TBMR%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:03:45 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB073F1TBMR%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:03:53 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:03:53 [INFO]: product_type is not set
+2024-06-24 12:03:53 [ERROR]: 0
+2024-06-24 12:03:53 [INFO]: successful asin implemeted are 0
+2024-06-24 12:03:53 [INFO]: failed asin implemeted are2
+2024-06-24 12:03:53 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B0CSF47VXR","B073F1TBMR"]',`updated_at`= NOW() WHERE `id`=57
+2024-06-24 12:03:53 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 57
+2024-06-24 12:10:49 [INFO]: bulkImport Initiated
+2024-06-24 12:10:49 [INFO]: Database connected
+2024-06-24 12:10:49 [INFO]: bulk import in progress for count0 rows
+2024-06-24 12:11:03 [INFO]: bulkImport Initiated
+2024-06-24 12:11:03 [INFO]: Database connected
+2024-06-24 12:11:03 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:11:03 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:11:03 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:11:03 [INFO]: asins being performed now"B0CSF47VXR\r\nB073F1TBMR"
+2024-06-24 12:11:03 [INFO]: pending asins count are now100
+2024-06-24 12:11:03 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:11:03 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0CSF47VXR' and user_id = 1
+2024-06-24 12:11:03 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B073F1TBMR' and user_id = 1
+2024-06-24 12:11:03 [INFO]: successful asin implemeted are 0
+2024-06-24 12:11:03 [INFO]: failed asin implemeted are2
+2024-06-24 12:11:03 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B0CSF47VXR","B073F1TBMR"]',`updated_at`= NOW() WHERE `id`=57
+2024-06-24 12:11:03 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 57
+2024-06-24 12:16:25 [INFO]: bulkImport Initiated
+2024-06-24 12:16:25 [INFO]: Database connected
+2024-06-24 12:16:25 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:16:25 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:16:25 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:16:25 [INFO]: asins being performed now"B073F1TBMR\r\nB07CTXRKH8"
+2024-06-24 12:16:25 [INFO]: pending asins count are now100
+2024-06-24 12:16:25 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:16:25 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B073F1TBMR' and user_id = 1
+2024-06-24 12:16:25 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B07CTXRKH8' and user_id = 1
+2024-06-24 12:16:25 [US]: proxycrawlapi 1
+2024-06-24 12:16:25 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB07CTXRKH8%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:16:25 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB07CTXRKH8%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:16:26 [US]: proxycrawlapi 1
+2024-06-24 12:16:26 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB07CTXRKH8%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:16:26 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB07CTXRKH8%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:16:33 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:16:33 [INFO]: product_type is not set
+2024-06-24 12:16:33 [ERROR]: 0
+2024-06-24 12:16:33 [INFO]: successful asin implemeted are 0
+2024-06-24 12:16:33 [INFO]: failed asin implemeted are2
+2024-06-24 12:16:33 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B073F1TBMR","B07CTXRKH8"]',`updated_at`= NOW() WHERE `id`=58
+2024-06-24 12:16:33 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 58
+2024-06-24 12:18:17 [INFO]: bulkImport Initiated
+2024-06-24 12:18:17 [INFO]: Database connected
+2024-06-24 12:18:17 [INFO]: bulk import in progress for count0 rows
+2024-06-24 12:18:57 [INFO]: bulkImport Initiated
+2024-06-24 12:18:57 [INFO]: Database connected
+2024-06-24 12:18:57 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:18:57 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:18:57 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:18:57 [INFO]: asins being performed now"B0BMGYT38K\r\nB0BWQ1133S"
+2024-06-24 12:18:57 [INFO]: pending asins count are now100
+2024-06-24 12:18:57 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:18:57 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0BMGYT38K' and user_id = 1
+2024-06-24 12:18:57 [US]: proxycrawlapi 1
+2024-06-24 12:18:57 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BMGYT38K%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:18:57 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BMGYT38K%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:19:09 [US]: proxycrawlapi 1
+2024-06-24 12:19:09 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BMGYT38K%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:19:09 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BMGYT38K%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:19:17 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:19:17 [INFO]: product_type is not set
+2024-06-24 12:19:18 [ERROR]: 0
+2024-06-24 12:19:18 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0BWQ1133S' and user_id = 1
+2024-06-24 12:19:18 [US]: proxycrawlapi 1
+2024-06-24 12:19:18 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BWQ1133S%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:19:18 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BWQ1133S%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:19:25 [US]: proxycrawlapi 1
+2024-06-24 12:19:25 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BWQ1133S%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:19:25 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BWQ1133S%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:19:33 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:19:33 [INFO]: product_type is not set
+2024-06-24 12:19:33 [ERROR]: 0
+2024-06-24 12:19:33 [INFO]: successful asin implemeted are 0
+2024-06-24 12:19:33 [INFO]: failed asin implemeted are2
+2024-06-24 12:19:33 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B0BMGYT38K","B0BWQ1133S"]',`updated_at`= NOW() WHERE `id`=59
+2024-06-24 12:19:33 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 59
+2024-06-24 12:22:19 [INFO]: bulkImport Initiated
+2024-06-24 12:22:19 [INFO]: Database connected
+2024-06-24 12:22:19 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:22:19 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:22:19 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:22:19 [INFO]: asins being performed now"B0BMGYT38K\r\nB0BWQ1133S"
+2024-06-24 12:22:19 [INFO]: pending asins count are now100
+2024-06-24 12:22:19 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:22:19 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0BMGYT38K' and user_id = 1
+2024-06-24 12:22:19 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0BWQ1133S' and user_id = 1
+2024-06-24 12:22:19 [INFO]: successful asin implemeted are 0
+2024-06-24 12:22:19 [INFO]: failed asin implemeted are2
+2024-06-24 12:22:19 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B0BMGYT38K","B0BWQ1133S"]',`updated_at`= NOW() WHERE `id`=59
+2024-06-24 12:22:19 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 59
+2024-06-24 12:22:20 [INFO]: bulkImport Initiated
+2024-06-24 12:22:20 [INFO]: Database connected
+2024-06-24 12:22:20 [INFO]: bulk import in progress for count0 rows
+2024-06-24 12:28:32 [INFO]: bulkImport Initiated
+2024-06-24 12:28:32 [INFO]: Database connected
+2024-06-24 12:28:32 [INFO]: bulk import in progress for count0 rows
+2024-06-24 12:31:25 [INFO]: bulkImport Initiated
+2024-06-24 12:31:25 [INFO]: Database connected
+2024-06-24 12:31:25 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:31:25 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:31:25 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:31:25 [INFO]: asins being performed now"B0BN3SZRRC\r\nB098P146KD"
+2024-06-24 12:31:25 [INFO]: pending asins count are now100
+2024-06-24 12:31:25 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:31:25 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0BN3SZRRC' and user_id = 1
+2024-06-24 12:31:25 [US]: proxycrawlapi 1
+2024-06-24 12:31:25 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BN3SZRRC%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:31:25 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BN3SZRRC%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:31:27 [US]: proxycrawlapi 1
+2024-06-24 12:31:27 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BN3SZRRC%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:31:27 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BN3SZRRC%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:31:35 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:31:35 [INFO]: product_type is not set
+2024-06-24 12:31:35 [ERROR]: 0
+2024-06-24 12:31:35 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B098P146KD' and user_id = 1
+2024-06-24 12:31:35 [US]: proxycrawlapi 1
+2024-06-24 12:31:35 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB098P146KD%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:31:35 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB098P146KD%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:31:36 [US]: proxycrawlapi 1
+2024-06-24 12:31:36 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB098P146KD%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:31:36 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB098P146KD%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:31:49 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:31:49 [INFO]: product_type is not set
+2024-06-24 12:31:50 [ERROR]: 0
+2024-06-24 12:31:50 [INFO]: successful asin implemeted are 0
+2024-06-24 12:31:50 [INFO]: failed asin implemeted are2
+2024-06-24 12:31:50 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B0BN3SZRRC","B098P146KD"]',`updated_at`= NOW() WHERE `id`=60
+2024-06-24 12:31:50 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 60
+2024-06-24 12:37:06 [INFO]: bulkImport Initiated
+2024-06-24 12:37:06 [INFO]: Database connected
+2024-06-24 12:37:07 [INFO]: bulk import in progress for count0 rows
+2024-06-24 12:37:11 [INFO]: bulkImport Initiated
+2024-06-24 12:37:11 [INFO]: Database connected
+2024-06-24 12:37:11 [INFO]: bulk import in progress for count0 rows
+2024-06-24 12:37:25 [INFO]: bulkImport Initiated
+2024-06-24 12:37:25 [INFO]: Database connected
+2024-06-24 12:37:25 [INFO]: bulk import in progress for count0 rows
+2024-06-24 12:38:25 [INFO]: bulkImport Initiated
+2024-06-24 12:38:25 [INFO]: Database connected
+2024-06-24 12:38:25 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:38:25 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:38:25 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:38:25 [INFO]: asins being performed now"B0CNK5GWRX\r\nB0CQ4TFV95"
+2024-06-24 12:38:25 [INFO]: pending asins count are now100
+2024-06-24 12:38:25 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:38:25 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0CNK5GWRX' and user_id = 1
+2024-06-24 12:38:25 [US]: proxycrawlapi 1
+2024-06-24 12:38:25 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CNK5GWRX%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:38:25 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CNK5GWRX%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:38:26 [US]: proxycrawlapi 1
+2024-06-24 12:38:26 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CNK5GWRX%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:38:26 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CNK5GWRX%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:38:33 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:38:33 [INFO]: product_type is not set
+2024-06-24 12:38:33 [ERROR]: 0
+2024-06-24 12:38:33 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0CQ4TFV95' and user_id = 1
+2024-06-24 12:38:33 [US]: proxycrawlapi 1
+2024-06-24 12:38:33 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CQ4TFV95%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:38:33 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CQ4TFV95%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:38:34 [US]: proxycrawlapi 1
+2024-06-24 12:38:34 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CQ4TFV95%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:38:34 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CQ4TFV95%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:38:40 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:38:40 [INFO]: product_type is not set
+2024-06-24 12:38:40 [ERROR]: 0
+2024-06-24 12:38:40 [INFO]: successful asin implemeted are 0
+2024-06-24 12:38:40 [INFO]: failed asin implemeted are2
+2024-06-24 12:38:40 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B0CNK5GWRX","B0CQ4TFV95"]',`updated_at`= NOW() WHERE `id`=61
+2024-06-24 12:38:40 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 61
+2024-06-24 12:45:21 [INFO]: bulkImport Initiated
+2024-06-24 12:45:21 [INFO]: Database connected
+2024-06-24 12:45:21 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:45:21 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:45:21 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:45:21 [INFO]: asins being performed now"B0BZPJTVKK\r\nB0CSN7ZSFY"
+2024-06-24 12:45:21 [INFO]: pending asins count are now100
+2024-06-24 12:45:21 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:45:21 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0BZPJTVKK' and user_id = 1
+2024-06-24 12:45:21 [US]: proxycrawlapi 1
+2024-06-24 12:45:21 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BZPJTVKK%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:45:21 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BZPJTVKK%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:45:22 [US]: proxycrawlapi 1
+2024-06-24 12:45:22 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BZPJTVKK%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:45:22 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0BZPJTVKK%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:45:35 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:45:35 [INFO]: product_type is not set
+2024-06-24 12:45:35 [ERROR]: 0
+2024-06-24 12:45:35 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0CSN7ZSFY' and user_id = 1
+2024-06-24 12:45:35 [US]: proxycrawlapi 1
+2024-06-24 12:45:35 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CSN7ZSFY%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:45:35 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CSN7ZSFY%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:45:36 [US]: proxycrawlapi 1
+2024-06-24 12:45:36 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CSN7ZSFY%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:45:36 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CSN7ZSFY%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:45:42 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:45:42 [INFO]: product_type is not set
+2024-06-24 12:45:42 [ERROR]: 0
+2024-06-24 12:45:42 [INFO]: successful asin implemeted are 0
+2024-06-24 12:45:42 [INFO]: failed asin implemeted are2
+2024-06-24 12:45:42 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B0BZPJTVKK","B0CSN7ZSFY"]',`updated_at`= NOW() WHERE `id`=62
+2024-06-24 12:45:42 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 62
+2024-06-24 12:48:03 [INFO]: bulkImport Initiated
+2024-06-24 12:48:03 [INFO]: Database connected
+2024-06-24 12:48:03 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:48:03 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:48:03 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:48:03 [INFO]: asins being performed now"B0CWL5J83W\r\nB0B14VV2CM"
+2024-06-24 12:48:03 [INFO]: pending asins count are now100
+2024-06-24 12:48:03 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:48:03 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0CWL5J83W' and user_id = 1
+2024-06-24 12:48:03 [US]: proxycrawlapi 1
+2024-06-24 12:48:03 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CWL5J83W%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:48:03 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CWL5J83W%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:48:04 [US]: proxycrawlapi 1
+2024-06-24 12:48:04 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CWL5J83W%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:48:04 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CWL5J83W%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:48:10 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:48:10 [INFO]: product_type is not set
+2024-06-24 12:48:10 [ERROR]: 0
+2024-06-24 12:48:10 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0B14VV2CM' and user_id = 1
+2024-06-24 12:48:10 [US]: proxycrawlapi 1
+2024-06-24 12:48:10 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0B14VV2CM%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:48:10 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0B14VV2CM%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:48:11 [US]: proxycrawlapi 1
+2024-06-24 12:48:11 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0B14VV2CM%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:48:11 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0B14VV2CM%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:48:18 [AddProduct]: Adding DATA TO DATABASE
+2024-06-24 12:48:18 [INFO]: product_type is not set
+2024-06-24 12:48:18 [ERROR]: 0
+2024-06-24 12:48:18 [INFO]: successful asin implemeted are 0
+2024-06-24 12:48:18 [INFO]: failed asin implemeted are2
+2024-06-24 12:48:18 [INFO]: updating bulk import is UPDATE `bulk_imports` SET `status`=1, `failed` = '2', `failed_asin` ='["B0CWL5J83W","B0B14VV2CM"]',`updated_at`= NOW() WHERE `id`=63
+2024-06-24 12:48:18 [INFO]: skuconsumed update query update users SET skuconsumed= '0' WHERE id = 63
+2024-06-24 12:51:16 [INFO]: bulkImport Initiated
+2024-06-24 12:51:16 [INFO]: Database connected
+2024-06-24 12:51:16 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:51:16 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:51:16 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:51:16 [INFO]: asins being performed now"B0CD1SRVR5\r\nB0CQJZWM72"
+2024-06-24 12:51:16 [INFO]: pending asins count are now100
+2024-06-24 12:51:16 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:51:16 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0CD1SRVR5' and user_id = 1
+2024-06-24 12:51:16 [US]: proxycrawlapi 1
+2024-06-24 12:51:16 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CD1SRVR5%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:51:16 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CD1SRVR5%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:51:22 [Array]: proxycrawlapi 4
+2024-06-24 12:55:16 [INFO]: bulkImport Initiated
+2024-06-24 12:55:16 [INFO]: Database connected
+2024-06-24 12:55:16 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:55:16 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:55:16 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:55:16 [INFO]: asins being performed now"B0CD1SRVR5\r\nB0CQJZWM72"
+2024-06-24 12:55:16 [INFO]: pending asins count are now100
+2024-06-24 12:55:16 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:55:16 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B0CD1SRVR5' and user_id = 1
+2024-06-24 12:55:16 [US]: proxycrawlapi 1
+2024-06-24 12:55:16 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CD1SRVR5%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:55:16 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0CD1SRVR5%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:55:21 [Array]: proxycrawlapi 4
+2024-06-24 12:56:51 [INFO]: bulkImport Initiated
+2024-06-24 12:56:51 [INFO]: Database connected
+2024-06-24 12:56:51 [INFO]: bulk import in progress for count1 rows
+2024-06-24 12:56:51 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-24 12:56:51 [ERROR]: skulimit for user 1 is 100
+2024-06-24 12:56:51 [INFO]: asins being performed now"B084H19W2F\r\nB086FV9VKV"
+2024-06-24 12:56:51 [INFO]: pending asins count are now100
+2024-06-24 12:56:51 [STARTED]: add Multiple Product Execution started
+2024-06-24 12:56:51 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B084H19W2F' and user_id = 1
+2024-06-24 12:56:51 [US]: proxycrawlapi 1
+2024-06-24 12:56:51 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB084H19W2F%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-24 12:56:51 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB084H19W2F%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-24 12:57:12 [Array]: proxycrawlapi 4
+2024-06-25 03:37:56 [INFO]: bulkImport Initiated
+2024-06-25 03:37:57 [INFO]: Database connected
+2024-06-25 03:37:58 [INFO]: bulk import in progress for count1 rows
+2024-06-25 03:37:58 [USER QUERY]: SELECT * FROM `users` WHERE `id` = '1'
+2024-06-25 03:37:58 [ERROR]: skulimit for user 1 is 100
+2024-06-25 03:37:58 [INFO]: asins being performed now"B084H19W2F\r\nB086FV9VKV"
+2024-06-25 03:37:58 [INFO]: pending asins count are now100
+2024-06-25 03:37:58 [STARTED]: add Multiple Product Execution started
+2024-06-25 03:37:58 [INFO]: SELECT * FROM `product_variants` WHERE `asin`='B084H19W2F' and user_id = 1
+2024-06-25 03:37:58 [US]: proxycrawlapi 1
+2024-06-25 03:37:58 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB084H19W2F%3Fth%3D1%26psc%3D1]: proxycrawlapi 2
+2024-06-25 03:37:58 [https://api.proxycrawl.com/?token=A8zfXIDXwsj2o5A_1upnJg&autoparse=true&country=US&url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB084H19W2F%3Fth%3D1%26psc%3D1]: proxycrawlapi 3
+2024-06-25 03:38:07 [Array]: proxycrawlapi 4

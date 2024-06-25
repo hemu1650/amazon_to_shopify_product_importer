@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 
 use Zizaco\Entrust\EntrustRole;
@@ -17,7 +17,7 @@ class Role extends EntrustRole
     ];
     public function role_user()
     {
-        return $this->belongsTo('App\role_user');
+        return $this->belongsTo('App\Models\role_user');
     }
     protected $fillable = ['name','display_name', 'description'];
 }

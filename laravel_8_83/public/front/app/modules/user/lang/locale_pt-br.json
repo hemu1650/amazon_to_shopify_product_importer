@@ -1,0 +1,39 @@
+{
+  "user":{
+    "list":{
+      "name":"Nome",
+      "email":"o email",
+      "gender":"Gênero",
+      "location":"Localização",
+      "status":"estado",
+      "createdTime":"Criado Tempo"
+    },
+    "form":{
+      "active":"Ativo",
+      "avatar":"Avatar",
+      "male":"Masculino",
+      "female":"Fêmea",
+      "country":"País",
+      "password":"Senha",
+      "role":"Função",
+      "userAddSuccess":"Usuário adicionado com sucesso",
+      "userUpdateSuccess":"Do usuário atualizado com sucesso"
+    },
+    "importWizard":{
+      "sampleFile":"arquivo de exemplo:",
+      "sampleFileDescription":"Se você não tem um arquivo xls amostra ou CSV para testar Import Feature, você pode baixar arquivo de amostra.",
+      "sampleFileDownloadBtn":"Arquivo Sample Excel",
+      "nextMapping":"Seguinte: Mapeamento",
+      "mapping":"Mapeamento:",
+      "mappingDescription":"É possível mapear campos relacionados a seus colunas com Importação Mapeamento de Recursos. Drop-down campos gerar pelo seu CSV ou xlsx file.You deve mapear as colunas do arquivo com os campos do módulo.",
+      "mappingNote":"<b>Nota:</b> você deve config seus campos no modelo como <code>$import_fields</code>.",
+      "pleaseWait":"Por favor, espere...",
+      "pleaseWaitText":"Pode demorar alguns minutos",
+      "importResult":"Resultado de importação",
+      "totalRecords":"Total de registos:",
+      "SuccessImport":"importados com êxito:",
+      "failedImport":"Falha de importação:",
+      "errors":"erros:"
+    }
+  }
+}

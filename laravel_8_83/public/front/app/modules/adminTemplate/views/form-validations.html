@@ -1,0 +1,260 @@
+<!-- main content -->
+<div id="content">
+    <div id="sortable-panel" class="">
+
+        <div id="titr-content" class="col-md-12">
+            <h2>Form Validation</h2>
+            <h5>You may also check the form validation by clicking on the form action button...</h5>
+            <div class="actions">
+                <button class="btn btn-success ">Add new</button>
+                <button class="btn btn-default ">Options</button>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 ">
+            <div  class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <i class="fa fa-edit"></i>
+                        Form Validation
+                        <div class="bars pull-right">
+                            <div class="dropdown ">
+                                <a href="" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-cog"></i>
+                                </a>
+                                <ul class="dropdown-menu yep-panel-menu">
+                                    <li>
+                                        <a href="" data-target="#">Daily<span class="badge pull-right"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="" data-target="#">Monthly<span class="badge pull-right"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="" data-target="#">Yearly<span class="badge pull-right"> 42 </span></a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="" data-target="#">All time<span class="badge pull-right">56</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="" data-target="#"><i class="maximum fa fa-expand" data-toggle="tooltip" data-placement="bottom" title="Maximize"></i></a>
+                            <a href="" data-target="#"><i class="minimize fa fa-chevron-down" data-toggle="tooltip" data-placement="bottom" title="Collapse"></i></a>
+                            <a href="" data-target="#"><i data-target="#panel2" data-dismiss="alert" data-toggle="tooltip" data-placement="bottom" title="Close" class="fa fa-times"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form name="Form" id="form1" novalidate ng-submit="form.submit(Form)">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="errorHandler alert alert-danger no-display">
+                                    <i class="fa fa-times-sign"></i> You have some form errors. Please check below.
+                                </div>
+                                <div class="successHandler alert alert-success no-display">
+                                    <i class="fa fa-ok"></i> Your form validation is successful!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" ng-class="{'has-error':Form.firstName.$dirty && Form.firstName.$invalid, 'has-success':Form.firstName.$valid}">
+                                    <label >First Name</label>
+                                    <input type="text" placeholder="Enter your First Name" class="form-control" name="firstName" ng-model="myModel.firstName" required />
+                                    <span class="error text-small block" ng-if="Form.firstName.$dirty && Form.firstName.$invalid">First Name is required</span>
+                                    <span class="success text-small" ng-if="Form.firstName.$valid">Thank You!</span>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error':Form.lastName.$dirty && Form.lastName.$invalid, 'has-success':Form.lastName.$valid}">
+                                    <label class="control-label">
+                                        Last Name 
+                                    </label>
+                                    <input type="text" placeholder="Enter your Last Name" class="form-control" name="lastName" ng-model="myModel.lastName" required />
+                                    <span class="error text-small block" ng-if="Form.lastName.$dirty && Form.lastName.$invalid">Last Name is required</span>
+                                    <span class="success text-small" ng-if="Form.lastName.$valid">Wonderful!</span>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
+                                    <label class="control-label">
+                                        Email Address 
+                                    </label>
+                                    <input type="email" placeholder="Enter a valid E-mail" class="form-control" name="email" ng-model="myModel.email" required>
+                                    <span class="error text-small block" ng-if="Form.email.$dirty && Form.email.$error.required">Email is required.</span>
+                                    <span class="error text-small block" ng-if="Form.email.$error.email">Please, enter a valid email address.</span>
+                                    <span class="success text-small" ng-if="Form.email.$valid">It's a valid e-mail!</span>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error':Form.password.$dirty && Form.password.$invalid, 'has-success':Form.password.$valid}">
+                                    <label class="control-label">
+                                        Password
+                                    </label>
+                                    <input type="password" placeholder="Enter a Password" class="form-control" name="password" ng-model="myModel.password" required/>
+                                    <span class="error text-small block" ng-if="Form.password.$dirty && Form.password.$error.required">Password is required.</span>
+                                    <span class="success text-small block" ng-if="Form.password.$valid">Ok!</span>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error':Form.password2.$dirty && Form.password2.$error.compareTo || Form.password2.$dirty && Form.password2.$invalid, 'has-success':Form.password2.$valid}">
+                                    <label class="control-label">
+                                        Confirm Password
+                                    </label>
+                                    <input type="password" placeholder="Repeat Password" class="form-control" name="password2" ng-model="myModel.password2" compare-to="myModel.password" required/>
+                                    <span class="error text-small block" ng-if="Form.password2.$dirty && Form.password2.$error.required">Repeat password is required!</span>
+                                    <span class="error text-small block" ng-if="Form.password2.$dirty && Form.password2.$error.compareTo">Passwords do not match!</span>
+                                    <span class="success text-small block" ng-if="Form.password2.$valid">Passwords match!</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group connected-group" ng-class="{'has-error':Form.dd.$dirty && Form.dd.$invalid, 'has-success':Form.dd.$valid}">
+                                    <label class="control-label">
+                                        Date of Birth 
+                                    </label>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <select class="form-control" name="dd" ng-model="myModel.dd" required>
+                                                <option value="">DD</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                            <span class="error text-small block" ng-if="Form.dd.$dirty && Form.dd.$error.required">DD is required.</span>
+                                            <span class="success text-small block" ng-if="Form.dd.$valid">Lovely place!</span>
+                                        </div>
+                                        <div class="col-md-3" ng-class="{'has-error':Form.mm.$dirty && Form.mm.$invalid, 'has-success':Form.mm.$valid}">
+                                            <select name="mm" id="mm" class="form-control" ng-model="myModel.mm">
+                                                <option value="">MM</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                            <span class="error text-small block" ng-if="Form.mm.$dirty && Form.mm.$error.required">MM is required.</span>
+
+                                        </div>
+                                        <div class="col-md-3" ng-class="{'has-error':Form.yyyy.$dirty && Form.yyyy.$invalid, 'has-success':Form.yyyy.$valid}">
+                                            <input type="text" placeholder="YYYY" id="yyyy" name="yyyy" class="form-control" ng-model="myModel.yyyy">
+                                            <span class="error text-small block" ng-if="Form.yyyy.$dirty && Form.yyyy.$error.required">YYYY is required.</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error':Form.gender.$dirty && Form.gender.$invalid, 'has-success':Form.gender.$valid}">
+                                    <label class="control-label">
+                                        Gender 
+                                    </label>
+                                    <div>
+                                        <div class="radio radio-primary radio-inline">
+                                            <input type="radio"  value="female" name="gender" id="gender_female" ng-model="myModel.gender" required>
+                                            <label for="gender_female">Female</label>
+                                        </div>
+                                        <div class="radio radio-primary radio-inline">
+                                            <input type="radio"  value="male" name="gender" id="gender_male" ng-model="myModel.gender" required>
+                                            <label for="gender_male">male</label>
+                                        </div>
+                                        <span class="error text-small block" ng-if="Form.gender.$dirty && Form.gender.$error.required">Gender is required.</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group" ng-class="{'has-error':Form.zip.$dirty && Form.zip.$invalid, 'has-success':Form.zip.$valid}">
+                                            <label class="control-label">
+                                                Zip Code 
+                                            </label>
+                                            <input class="form-control" type="number" name="zip" id="zipcode" ng-model="myModel.zip" required>
+                                            <span class="error text-small block" ng-if="Form.zip.$dirty && Form.zip.$invalid">Zip code is required</span>
+                                            <span class="success text-small" ng-if="Form.zip.$valid">Thank You!</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group" ng-class="{'has-error':Form.city.$dirty && Form.city.$invalid, 'has-success':Form.city.$valid}">
+                                            <label class="control-label">
+                                                City 
+                                            </label>
+                                            <input class="form-control tooltips" type="text" data-original-title="We'll display it when you write reviews" data-rel="tooltip"  title="" data-placement="top" name="city" id="city" ng-model="myModel.city" required>
+                                            <span class="error text-small block" ng-if="Form.city.$dirty && Form.city.$invalid">City is required</span>
+                                            <span class="success text-small" ng-if="Form.city.$valid">Thank You!</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <hr>
+                                    <label class="control-label">
+                                        <strong>Newsletter</strong> 
+                                    </label>
+                                    <p>
+                                        How do you prefer receiving newsletters?
+                                    </p>
+                                    <div>
+                                        <div class="radio radio-primary radio-inline">
+                                            <input type="radio"  value="" name="newsletter" id="no" >
+                                            <label for="no">No</label>
+                                        </div>
+                                        <div class="radio radio-primary radio-inline">
+                                            <input type="radio"  value="" name="newsletter" id="yes" >
+                                            <label for="yes">Yes</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    Required Fields *
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>
+                                    By clicking REGISTER, you are agreeing to the Policy and Terms &amp; Conditions.
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-success btn-block" type="submit">
+                                    Register <i class="fa fa-arrow-circle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div><!-- end panel -->
+        </div><!-- end .col-md-12 -->
+
+    </div><!-- end col-md-12 -->
+</div><!-- end #content -->
