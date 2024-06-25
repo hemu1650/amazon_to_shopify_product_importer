@@ -1,0 +1,66 @@
+<!-- main content -->
+<div id="content">
+    <div class="col-md-12">
+        <div class="panel panel-default yep-card">
+            <div class="panel-heading card-head">
+                <div class="panel-title">
+                    <span class="bold head-title"> {{$state.current.ncyBreadcrumb.label | translate}}</span>
+                </div>
+            </div>
+            <div class="panel-body ">
+                <hr>
+                <!-- category list -->
+                <div class="col-md-6 layout no-padding">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>{{"category.form.categoryName" | translate}}</th>
+                            <th>{{"category.form.description" | translate}}</th>
+                            <th><i class="fa fa-bolt"></i></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="category in categories">
+                            <th scope="row">{{category.id}}</th>
+                            <td>{{category.name}}</td>
+                            <td>{{category.description}}</td>
+                            <td>
+                                <a href="" data-target="#" ng-click="edit(category)" show-if-has-permit="edit_category"><i class="fa fa-pencil primary"></i></a>
+                                <a href="" data-target="#" ng-click="delete(category)" show-if-has-permit="delete_category"><i class="fa fa-trash red"></i></a> 
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- category list -->
+
+                <!-- form -->
+                <div class="col-md-6" show-if-has-any-permit="add_category, edit_category">
+                    <form role="form">
+                        <fieldset ng-disabled="isDisabled">
+                            <div class="form-group">
+                                <label for="categoryname">
+                                    {{"category.form.categoryName" | translate}}
+                                </label>
+                                <input ng-model="category.name" type="text" class="form-control" id="categoryname" />
+                            </div>
+                            <div class="form-group">
+
+                                <label for="description1">
+                                    {{"category.form.description" | translate}}
+                                </label>
+                                <textarea ng-model="category.description"  id="description1" class="form-control" rows="5"></textarea>
+                            </div>
+                            <button ng-click="create(category)" ng-if="!category.id" show-if-has-permit="add_category" class="btn btn-success" ng-class="{'working':isDisabled===true}"> {{"app.shared.common.save" | translate }}</button>
+                            <button ng-click="update(category)" ng-if="category.id" show-if-has-permit="edit_category" class="btn btn-info" ng-class="{'working':isDisabled===true}"> {{"app.shared.common.update" | translate }}</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- form -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./end content  -->

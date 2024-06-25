@@ -1,0 +1,79 @@
+<!-- main content -->
+<div id="content">
+    <div id="sortable-panel" class="">
+        <div map-lazy-load="https://maps.google.com/maps/api/js">
+            <div id="titr-content" class="col-md-12">
+                <h2>Google Map</h2>
+                <h5>Google Maps API lets you customize maps ...</h5>
+                <div class="actions">
+                    <button class="btn btn-success ">Add new</button>
+                    <button class="btn btn-default ">Options</button>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div  class="panel panel-default">
+                    <div class="panel-body no-padding">
+
+                        <div style="width:100%;height:320px;">
+                            <ng-map center="[51.508742,-0.120850]"  zoom="5">
+                                <marker position="51.508742,-0.120850"
+                                        on-click="vm.toggleBounce()"
+                                        animation="DROP"
+                                        draggable="true">
+                                </marker>
+                            </ng-map>
+                        </div>
+                        <h4 class="padding-10 bold">
+                            <i class="fa  fa-map-marker"></i>
+                            Standard Map
+                        </h4>
+                    </div>
+                </div><!-- end panel -->
+            </div><!-- end .col-md-12 -->
+
+            <div class="col-md-6 ">
+                <div  class="panel panel-default">
+                    <div class="panel-body no-padding">
+                        <div style="width:100%;height:320px;">
+                            <ng-map  center="45.518970, -122.672899"
+                                    zoom="18"
+                                    map-type-id="SATELLITE"
+                                    tilt="45"
+                                    heading="90">
+                            </ng-map>
+                        </div>
+                        <h4 class="padding-10 bold">
+                            <i class="fa fa-map-marker"></i>
+                            45° Perspective View
+                        </h4>
+                    </div>
+
+                </div><!-- end panel -->
+            </div><!-- end .col-md-6 -->
+
+            <div class="col-md-6 ">
+                <div  class="panel panel-default">
+                    <div class="panel-body no-padding">
+                        <div style="width:100%;height:320px;">
+                            <ng-map zoom="14" center="1135 Karamea-Kohaihai Rd, Kahurangi National Park, Tasman" style="height:90%" >
+                                <directions
+                                        draggable="true"
+                                        panel="directions-panel"
+                                        travel-mode="DRIVING"
+                                        origin="1135 Karamea-Kohaihai Rd, Kahurangi National Park, Tasman"
+                                        destination="Pier St, Jackson Bay, West Coast, New Zeland">
+                                </directions>
+                            </ng-map>
+                        </div>
+                        <h4 class="padding-10 bold">
+                            <i class="fa fa-map-marker"></i>
+                            Direction Path Google Map
+                        </h4>
+                    </div>
+
+                </div><!-- end panel -->
+            </div><!-- end .col-md-6 -->
+        </div>
+    </div>
+</div>

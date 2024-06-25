@@ -1,0 +1,163 @@
+<!-- main content -->
+<div id="content">
+    <div id="sortable-panel" class="">
+        <div id="titr-content" class="col-md-12">
+            <h2>Nestable Lists</h2>
+            <h5>Drag & drop hierarchical list...</h5>
+            <div class="actions">
+                <button class="btn btn-success ">Add new</button>
+                <button class="btn btn-default ">Options</button>
+            </div>
+        </div>
+
+        <div class="col-md-6 ">
+            <div  class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <i class="fa fa-cube"></i>
+                        Draggable Handlers
+                        <div class="bars pull-right">
+                            <div class="dropdown ">
+                                <a href="" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-cog"></i>
+                                </a>
+                                <ul class="dropdown-menu yep-panel-menu">
+                                    <li>
+                                        <a href="" data-target="#">Daily<span class="badge pull-right"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="" data-target="#">Monthly<span class="badge pull-right"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="" data-target="#">Yearly<span class="badge pull-right"> 42 </span></a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="" data-target="#">All time<span class="badge pull-right">56</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="" data-target="#"><i class="maximum fa fa-expand" data-toggle="tooltip" data-placement="bottom" title="Maximize"></i></a>
+                            <a href="" data-target="#"><i class="minimize fa fa-chevron-down" data-toggle="tooltip" data-placement="bottom" title="Collapse"></i></a>
+                            <a href="" data-target="#"><i data-target="#panel2" data-dismiss="alert" data-toggle="tooltip" data-placement="bottom" title="Close" class="fa fa-times"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                    <div ui-tree id="tree1-root" class="dd">
+                        <ol ui-tree-nodes="" ng-model="tree1" class="dd-list">
+                            <li class="dd-item dd3-item" ng-repeat="node in tree1" ui-tree-node ng-include="'nodes_renderer1.html'"></li>
+                        </ol>
+                    </div>
+
+                </div>
+                <div id="nestable-menu-2" class="panel-footer" >
+                    <button class="btn btn-primary" data-action="expand-all">Expand All</button>
+                    <button class="btn btn-default" data-action="collapse-all">Collapse All</button>
+                </div>
+            </div><!-- end panel -->
+        </div><!-- end .col-md-6 -->
+
+        <div class="col-md-6 ">
+            <div  class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <i class="fa fa-bars"></i>
+                        Nestable Default
+                        <div class="bars pull-right">
+                            <a href="" data-target="#"><i class="maximum fa fa-expand" data-toggle="tooltip" data-placement="bottom" title="Maximize"></i></a>
+                            <a href="" data-target="#"><i class="minimize fa fa-chevron-down" data-toggle="tooltip" data-placement="bottom" title="Collapse"></i></a>
+                            <a href="" data-target="#"><i data-target="#panel2" data-dismiss="alert" data-toggle="tooltip" data-placement="bottom" title="Close" class="fa fa-times"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                    <!-- nestable1 start -->
+                    <div class="dd" ui-tree id="tree2-root" >
+                        <ol class="dd-list" ui-tree-nodes="" ng-model="tree2">
+                            <li class="dd-item" ng-repeat="node in tree2" ui-tree-node ng-include="'nodes_renderer2.html'"></li>
+                        </ol>
+                    </div>
+                    <!-- nestable1 end -->
+                </div>
+                <div id="nestable-menu-1" class="panel-footer" >
+                    <button class="btn btn-primary" ng-click="expandAll()">Expand All</button>
+                    <button class="btn btn-default" ng-click="collapseAll()">Collapse All</button>
+                </div>
+            </div><!-- end panel -->
+        </div><!-- end .col-md-6 -->
+
+        <div class="col-md-12 ">
+            <div  class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <i class="fa fa-file-text"></i>
+                        Serialised Output
+                        <div class="bars pull-right">
+                            <a href="" data-target="#"><i class="maximum fa fa-expand" data-toggle="tooltip" data-placement="bottom" title="Maximize"></i></a>
+                            <a href="" data-target="#"><i class="minimize fa fa-chevron-down" data-toggle="tooltip" data-placement="bottom" title="Collapse"></i></a>
+                            <a href="" data-target="#"><i data-target="#panel2" data-dismiss="alert" data-toggle="tooltip" data-placement="bottom" title="Close" class="fa fa-times"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p><strong>Serialised Output (per list)</strong></p>
+                    <textarea id="nestable1-output">{{ tree1 }}</textarea>
+                    <textarea id="nestable2-output">{{ tree2 }}</textarea>
+                </div>
+
+            </div><!-- end panel -->
+        </div><!-- end .col-md-12 -->
+    </div>
+</div>
+
+
+<!-- Nested node template 1 -->
+<script type="text/ng-template" id="nodes_renderer1.html">
+    <div class="tree-node">
+        <div class="pull-left tree-handle dd-handle dd3-handle" ui-tree-handle>
+            <span class="glyphicon glyphicon-list"></span>
+        </div>
+        <div class="tree-node-content dd3-content">
+            <a  ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)">
+                <span class="fa" ng-class="{
+                  'fa-plus-circle': collapsed,
+                  'darkred fa-minus-circle': !collapsed
+                  }">
+                </span>
+            </a>
+
+            {{node.title}}
+
+            <a class="pull-right red" data-nodrag ng-click="remove(this)"><span class="fa fa-trash-o"></span></a>
+            <a class="pull-right blue" data-nodrag ng-click="newSubItem(this)" style="margin-right: 8px;"><span class="fa fa-plus"></span></a>
+        </div>
+    </div>
+    <ol  ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+        <li  ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer1.html'">
+        </li>
+    </ol>
+</script>
+
+<!-- Nested node template 2 -->
+<script type="text/ng-template" id="nodes_renderer2.html">
+    <div ui-tree-handle class="tree-node tree-node-content dd-handle">
+        <a  ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)">
+            <span class="fa" ng-class="{
+              'fa-plus-circle': collapsed,
+              'darkred fa-minus-circle': !collapsed
+              }">
+            </span>
+        </a>
+        {{node.title}}
+        <a class="pull-right red" data-nodrag ng-click="remove(this)"><span class="fa fa-trash-o"></span></a>
+        <a class="pull-right blue" data-nodrag ng-click="newSubItem(this)" style="margin-right: 8px;"><span class="fa fa-plus"></span></a>
+    </div>
+    <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+        <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer2.html'">
+        </li>
+    </ol>
+</script>
