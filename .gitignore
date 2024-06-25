@@ -1,13 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/react_aac/node_modules
-/react_aac/my-app/node_modules
-/laravel_8_83/vendor
-/aac
-/aac/api
-/aac/api/vendor
-/aac/api/node_modules
+/aac_new
+
 /.pnp
 .pnp.js
 
